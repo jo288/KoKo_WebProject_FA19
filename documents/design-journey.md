@@ -71,6 +71,10 @@ Reviews
 
 Contact
 
+Inspirational Color Palette
+![](colorpalette.png)
+We may use these colors for designing the website to answer the client's request for a bright, colorful design. The fourth color was chosen to represent the restaurant building's color and the warm colors(red, orange, yellow) were added to represent the friendly atmosphere as well as the colors of the food served.
+
 ## Information Architecture, Content, and Navigation
 
 [Lay out the plan for how you'll organize the site and which content will go where. Note any content (e.g., text, image) that you need to make/get from the client.]
