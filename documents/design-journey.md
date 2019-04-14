@@ -16,6 +16,17 @@ Your Team Name: [your team name]
 
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
+- April 13th, 2019
+  - Client wants a colorful website design with some pictures, etc.
+  - Client wants bold and clear fonts for the website.
+  - Client wants the contact information to be clearly visible.
+  - Task distribution:
+    - Tricia: menu, about
+    - Khalid: contact
+    - Jinju: index, photo gallery
+    - Kaitlyn: reviews
+  - Rough draft of design-journey by April 15th (internal deadline)
+
 
 ## Purpose & Content
 
@@ -45,6 +56,20 @@ Example:
 
 [Include exploratory idea sketches of your website.]
 
+Header & Footer Templates (header.php, footer.php)
+![](headerfooter.jpg)
+
+Home (index.php)
+![](index.jpg)
+
+Menu
+
+Gallery (gallery.php)
+![](gallery.jpg)
+
+Reviews
+
+Contact
 
 ## Information Architecture, Content, and Navigation
 
@@ -57,13 +82,21 @@ Example:
 Example:
 - **Navigation**
   - Home
-  - Portfolio
-    - Websites
-    - Mobile Apps
-    - Tablets
-  - About Me
+  - About
+  - Menu
+  - Gallery
+  - Reviews
+  - Contact
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
+  - *Home*: introduce the client's restaurant with images and short introductory sentences. Display few of the top menus and a link to see more menu.
+  - *About*:
+  - *Menu*:
+  - *Gallery*: display the pictures of client's restaurant and the dishes it serves. Allow the users to select specific tags to display certain pictures. When the image is hovered over, display the title and description of the image as an overlay.
+  - *Reviews*:
+  - *Contact*:
+
+EXAMPLE)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
   - *Websites*: showcase all the websites designed by the client, with thumbnail images and a brief description for each design;
   - *Mobile Apps*: showcase all the mobile apps designed by the client, with thumbnail images and a brief description for each design;
