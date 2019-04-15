@@ -32,8 +32,7 @@ Your Team Name: Golden Beaver
 
 [Tell us the purpose of the website and what it is all about.]
 
-The purpose of the website is to relay information about the client's restaurant and attract customers.
-
+The purpose of the website is to display information (menu, location, reviews) about the client's restaurant to potential customers.
 
 ## Target Audience(s)
 
