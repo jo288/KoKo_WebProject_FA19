@@ -90,7 +90,7 @@ We may use these colors for designing the website to answer the client's request
 
 Example:
 - **Navigation**
-  - Home
+  - Home (the logo)
   - About
   - Menu
   - Gallery
@@ -120,6 +120,8 @@ EXAMPLE)
 
 [What interactive features will your site have? What PHP elements will you include?]
 
+The site will use PHP templates for header and footer. Header template will include the website's title as well as the navigation bar which will reflect the current page the user is on. Footer template will display the copyright information for the page displayed and basic contact information of the client.
+
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
 
 The site will have the menu of the restaurant the user will be able to search for different ingredients/dishes on the menu. In addition, there will be a photo gallery where the user can view pictures of the food at the restaurant. In addition, the user will be able to filter the pictures based on specific tags.
@@ -131,10 +133,12 @@ The site also will have a contact form and a review form. The contact form will 
 
 [Describe how each of your responsibilities will be distributed among your group members.]
 
-  - Task distribution:
+  - Task distribution
     - Tricia: menu, about
     - Khalid: contact
     - Jinju: index, photo gallery
+      - 4/17: write up index.php with templates first which can then be used as a template for other pages
+      - 4/17: write up a css for the general styling of all the pages
     - Kaitlyn: reviews
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
