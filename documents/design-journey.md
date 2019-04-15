@@ -1,6 +1,6 @@
 # Project 4: Design Journey
 
-Your Team Name: [your team name]
+Your Team Name: Golden Beaver
 
 **All images must be visible in Markdown Preview. No credit will be provided for images in your repository that are not properly linked in Markdown. Assume all file paths are case sensitive!**
 
@@ -32,11 +32,16 @@ Your Team Name: [your team name]
 
 [Tell us the purpose of the website and what it is all about.]
 
+The purpose of the website is to relay information about the client's restaurant and attract customers.
+
 
 ## Target Audience(s)
 
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
 
+The target audience is people living in or visiting Ithaca who want to eat out at a restaurant. The target audience would use the site to gather information about the restaurant. The site provides them information (menu, location, other people's reviews etc.) about the restaurant.
+
+They would be able to search the menu and see pictures of the food which would help them decide if they wanted to go to the restaurant. The target audience can also see other people's review and write their own for others to see. In addition, the target audience can personally contact the client about any inquiries regarding the restaurant.
 
 ## Client Requirements & Target Audiences' Needs
 
@@ -67,7 +72,8 @@ Menu
 Gallery (gallery.php)
 ![](gallery.jpg)
 
-Reviews
+Reviews (reviews.php)
+![](reviews.jpg)
 
 Contact
 
@@ -93,7 +99,7 @@ Example:
   - *About*:
   - *Menu*:
   - *Gallery*: display the pictures of client's restaurant and the dishes it serves. Allow the users to select specific tags to display certain pictures. When the image is hovered over, display the title and description of the image as an overlay.
-  - *Reviews*:
+  - *Reviews*: display customer reviews of clients resturant. Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
   - *Contact*:
 
 EXAMPLE)
@@ -113,10 +119,20 @@ EXAMPLE)
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
 
+The site will have the menu of the restaurant the user will be able to search for different ingredients/dishes on the menu. In addition, there will be a photo gallery where the user can view pictures of the food at the restaurant. In addition, the user will be able to filter the pictures based on specific tags.
+
+The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client, and the review form will allow the other members of the target audience. The review page will also allow the client to get feedback about their restaurant.
+
 
 ## Work Distribution
 
 [Describe how each of your responsibilities will be distributed among your group members.]
+
+  - Task distribution:
+    - Tricia: menu, about
+    - Khalid: contact
+    - Jinju: index, photo gallery
+    - Kaitlyn: reviews
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
