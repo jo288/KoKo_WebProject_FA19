@@ -11,7 +11,17 @@ Your Team Name: Golden Beaver
 
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
-The client is the owner of the Korean restaurant Koko, which is located in Collegetown.
+### About the Client
+
+Our client's name is Seungyoon Hwang. She has owned the Korean restaurant Koko, which is located in Collegtown, for about a year, taking over for the previous owner. The client has tasked us with creating a website for her restaurant, because she has experienced inconveniences with not having one. For example, many customers have trouble with ordering take out over the phone because they do not have access to a menu.
+
+### Client Selection
+
+Our group decided to choose this client because most of our members have eaten at the restaurant before. These members have noticed that the restaurant does not have a website, and personally visited the restaurant to confirm the needs and wants of the client, which are explained below.
+
+### Client Goals
+
+The client has received former proposals for a site for Koko Restaurant, but were not satisfied and felt like they did not appropriately represent the restaurant. Instead, the client wants a site that is easy to navigate and shows the unique food options that Koko has to offer. They want to emphasize the quality and photography of the food but also make the site interactive and accessible for the customer. The primary goal is to engage with customers and allow them to view a gallery of food options before coming to the place in order to more easily order their food. The second goal is to be able to communicate the restaurant's hisory and mission towards the consumers and possibly communicate with them directly.
 
 
 ## Meeting Notes
@@ -19,12 +29,12 @@ The client is the owner of the Korean restaurant Koko, which is located in Colle
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
 - April 13th, 2019
-  - Client wants a colorful website design with some pictures, etc.
-  - Client wants bold and clear fonts for the website.
+  - Client wants a colorful website design with lots of pictures
+  - Client wants large and readable fonts for the website.
   - Client wants the contact information to be clearly visible.
   - Task distribution:
     - Tricia: menu, about
-    - Khalid: contact
+    - Khalid: contact, general layout of all pages
     - Jinju: index, photo gallery
     - Kaitlyn: reviews
   - Rough draft of design-journey by April 15th (internal deadline)
@@ -34,13 +44,13 @@ The client is the owner of the Korean restaurant Koko, which is located in Colle
 
 [Tell us the purpose of the website and what it is all about.]
 
-The purpose of the website is to display information (menu, location, reviews) about the client's restaurant to potential customers.
+The purpose of the website is to display information (menu, location, reviews) about the client's restaurant to potential customers. It is primarily informative about the client's services. The website will allow potential and current customers of the restaurant to become more familiar with the food options.
 
 ## Target Audience(s)
 
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
 
-The target audience is people living in or visiting Ithaca who want to eat out at a restaurant. The target audience would use the site to gather information about the restaurant. The site provides them information (menu, location, other people's reviews etc.) about the restaurant.
+The target audience is people living in or visiting Ithaca who want to eat out at a restaurant. The target audience will largely be made up of Asian Cornell students. The target audience would use the site to gather information about the restaurant. The site provides them information (menu, location, other people's reviews etc.) about the restaurant.
 
 They would be able to search the menu and see pictures of the food which would help them decide if they wanted to go to the restaurant. The target audience can also see other people's review and write their own for others to see. In addition, the target audience can personally contact the client about any inquiries regarding the restaurant.
 
@@ -48,14 +58,34 @@ They would be able to search the menu and see pictures of the food which would h
 
 [Collect your client's needs and wants for the website. Come up with several appropriate design ideas on how those needs may be met. In the **Rationale** field, justify your ideas and add any additional comments you have. There is no specific number of needs required for this, but you need enough to do the job.]
 
-Example:
-- (_pick one:_) Client Requirement/Target Audience Need
+- Target Audience Need
   - **Requirement or Need** [What does your client and audience need or want?]
-    - Client wants to cater to people who speak different languages.
+    - Target audience have different dietary restrictions
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
-    - Create web-pages manually in multiple languages.
+    - Allow users to filter for specific dietary restrictions on menu page
   - **Rationale** [Justify your decisions; additional notes.]
-    - Create multiple pages in multiple languages manually.
+    - Filtering for dietary restrictions improves accessibiliy and allows the client to cater to a wider variety of customers
+- Client Requirement
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - Client wants customers to have access to the menu with the various food options
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Create a page specifically for displaying the menu
+  - **Rationale** [Justify your decisions; additional notes.]
+    - A separate page for the menu makes the menu easy to find (e.g. can go to page via nav bar) and focuses attention on the various dishes when on the menu page
+- Client Requirement
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - Client wants customers to feel comfortable and welcomed to the website
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Use a simple but inviting design with bright colors
+  - **Rationale** [Justify your decisions; additional notes.]
+    - A simplistic design will make the website more accessible for users, and bright colors will feel more inviting
+- Client Requirement
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - Client wants lots of pictures of the food
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Create a page for a photo gallery of the food and include pictures throughout the website
+  - **Rationale** [Justify your decisions; additional notes.]
+    - A separate photo gallery will provide a group of food pictures for the users, and help the users get a sense of what the various menu items look like
 
 
 ## Initial Design
@@ -110,13 +140,14 @@ We may use these colors for designing the website to answer the client's request
   - *Menu*: display menu items with descriptions, address dietary restrictions by allowing to filter for vegetarian, vegan, and gluten free foods
   - *Gallery*: display the pictures of client's restaurant and the dishes it serves. Allow the users to select specific tags to display certain pictures. When the image is hovered over, display the title and description of the image as an overlay.
   - *Reviews*: display customer reviews of clients resturant. Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
-  - *Contact*:
+  - *Contact*:A way to contact the resturant and submit reservations or orders.
 
 - **Process**
-  - Card sort:
-  ![Card sort](card_sort.jpeg)
-  - [explanation of how your come up with your content organization and navigation.]
-
+  - Card sort 1:
+  ![Card sort 1](card_sort.jpeg)
+  - Card sort 2:
+  ![Card sort 2](cardsorting.jpg)
+  - There were multiple ideas that we had for the different navigation items we wanted. We considered creating an animation with a dropdown menu but because the client wanted a more simple design to make the website more accessible for the target audience, we decided to create a more simple cardsort with all the navigation items in one line.
 
 ## Interactivity
 
