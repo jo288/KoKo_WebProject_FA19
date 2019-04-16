@@ -84,7 +84,7 @@ Contact (contact.php)
 ![Contact page draft](contact.jpg)
 
 Inspirational Color Palette
-![](colorpalette.png)
+![Color palette](colorpalette.png)
 
 We may use these colors for designing the website to answer the client's request for a bright, colorful design. The fourth color was chosen to represent the restaurant building's color and the warm colors(red, orange, yellow) were added to represent the friendly atmosphere as well as the colors of the food served.
 
@@ -97,26 +97,20 @@ We may use these colors for designing the website to answer the client's request
 [Note: There is no specific amount to write here. You simply need enough content to do the job.]
 
 - **Navigation**
-  - Home (the logo)
+  - Home (need to get logo from client)
   - About
-  - Menu
-  - Gallery
+  - Menu (need to get menu from client)
+  - Gallery (need to get images from client)
   - Reviews
   - Contact
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Home*: introduce the client's restaurant with images and short introductory sentences. Display few of the top menus and a link to see more menu.
-  - *About*:
-  - *Menu*:
+  - *About*: explain more in depth about the restaurant, provide a brief history/information about Korean cuisine
+  - *Menu*: display menu items with descriptions, address dietary restrictions by allowing to filter for vegetarian, vegan, and gluten free foods
   - *Gallery*: display the pictures of client's restaurant and the dishes it serves. Allow the users to select specific tags to display certain pictures. When the image is hovered over, display the title and description of the image as an overlay.
   - *Reviews*: display customer reviews of clients resturant. Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
   - *Contact*:
-
-EXAMPLE)
-  - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
-  - *Websites*: showcase all the websites designed by the client, with thumbnail images and a brief description for each design;
-  - *Mobile Apps*: showcase all the mobile apps designed by the client, with thumbnail images and a brief description for each design;
-  - *Tablets*: showcase all the tablet applications designed by the client, with thumbnail images and a brief description for each design;
 
 - **Process**
   - Card sort:
@@ -132,7 +126,7 @@ The site will use PHP templates for header and footer. Header template will incl
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
 
-The site will have the menu of the restaurant the user will be able to search for different ingredients/dishes on the menu. In addition, there will be a photo gallery where the user can view pictures of the food at the restaurant. In addition, the user will be able to filter the pictures based on specific tags.
+The site will have the menu of the restaurant the user will be able to filter for dietary restrictions (vegetarian, vegan, gluten free). In addition, there will be a photo gallery where the user can view pictures of the food at the restaurant. In addition, the user will be able to filter the pictures based on specific tags.
 
 The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client, and the review form will allow the other members of the target audience. The review page will also allow the client to get feedback about their restaurant.
 
@@ -143,11 +137,16 @@ The site also will have a contact form and a review form. The contact form will 
 
   - Task distribution
     - Tricia: menu, about
+      - 4/17: draw sketches for about and menu pages
     - Khalid: contact
+      - 4/17: draw sketches for contact page
     - Jinju: index, photo gallery
       - 4/17: write up index.php with templates first which can then be used as a template for other pages
       - 4/17: write up a css for the general styling of all the pages
     - Kaitlyn: reviews
+      - 4/17: draw sketches for review page
+    - All members:
+      - 4/17: work on design-journey.md to complete Milestone 1
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
