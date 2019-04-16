@@ -21,8 +21,8 @@ Our Clients name is . They own/work for Koko's Korean and Asian Cusine in Colleg
 The client wants a website that can promote the resturant
 
 ### Client Goals
-The client has recieved former proposals for thir site design but have not felt like they appropriatly represent the resturant. Instead they want a site that is easy to navigate and shows the unique food options that Koko has to offer. They want to emphasize the quality and photography of the food but also make the site accessable and interactive for the customer.
-The primary goal is to engage with customers and allow them to view a galler yof food options before coming to the place in order to gauge what they want. The second goal is to be able to communicate the resturant's hisory and mission with the consumer and possibly communicate with them directly.
+The client has received former proposals for thir site design but have not felt like they appropriately represent the resturant. Instead they want a site that is easy to navigate and shows the unique food options that Koko has to offer. They want to emphasize the quality and photography of the food but also make the site accessable and interactive for the customer.
+The primary goal is to engage with customers and allow them to view a gallery of food options before coming to the place in order to gauge what they want. The second goal is to be able to communicate the resturant's hisory and mission with the consumer and possibly communicate with them directly.
 
 
 ## Meeting Notes
