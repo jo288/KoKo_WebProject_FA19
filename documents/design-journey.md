@@ -11,6 +11,8 @@ Your Team Name: Golden Beaver
 
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
+The client is the owner of the Korean restaurant Koko, which is located in Collegetown.
+
 
 ## Meeting Notes
 
@@ -61,23 +63,26 @@ Example:
 [Include exploratory idea sketches of your website.]
 
 Header & Footer Templates (header.php, footer.php)
-![](headerfooter.jpg)
+![Header/footer draft](headerfooter.jpg)
 
 Home (index.php)
-![](index.jpg)
+![Home page draft](index.jpg)
 
-Menu
+Menu (menu.php)
+![Menu page draft](menu.jpeg)
 
 Gallery (gallery.php)
-![](gallery.jpg)
+![Photo gallery page draft](gallery.jpg)
 
 Reviews (reviews.php)
-![](reviews.jpg)
+![Review page draft](reviews.jpg)
 
-Contact
+Contact (contact.php)
+![Contact page draft](contact.jpg)
 
 Inspirational Color Palette
 ![](colorpalette.png)
+
 We may use these colors for designing the website to answer the client's request for a bright, colorful design. The fourth color was chosen to represent the restaurant building's color and the warm colors(red, orange, yellow) were added to represent the friendly atmosphere as well as the colors of the food served.
 
 ## Information Architecture, Content, and Navigation

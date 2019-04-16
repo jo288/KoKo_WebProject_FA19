@@ -6,6 +6,5 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "workbench.enableExperiments": false,
-    "workbench.statusBar.feedback.visible": false,
-    "phpserver.browser": "firefox"
+    "workbench.statusBar.feedback.visible": false
 }
