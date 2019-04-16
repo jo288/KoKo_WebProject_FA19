@@ -96,7 +96,6 @@ We may use these colors for designing the website to answer the client's request
 
 [Note: There is no specific amount to write here. You simply need enough content to do the job.]
 
-Example:
 - **Navigation**
   - Home (the logo)
   - About
@@ -120,7 +119,8 @@ EXAMPLE)
   - *Tablets*: showcase all the tablet applications designed by the client, with thumbnail images and a brief description for each design;
 
 - **Process**
-  - [photo of card sort]
+  - Card sort:
+  ![Card sort](card_sort.jpeg)
   - [explanation of how your come up with your content organization and navigation.]
 
 
