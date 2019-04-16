@@ -12,6 +12,17 @@ Your Team Name: Golden Beaver
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
 The client is the owner of the Korean restaurant Koko, which is located in Collegetown.
+### Client Selection
+One of the group members, Tricia, who worked for Ithaca's Koko Resturant. We decided to get in contact with that individual through email and asked him what he wanted exactly. Based on our interaction through email it appeared that his specifications matched those of our capabilities and matched the project guidelines specification. We therefore confirmed the project with the client and visited the actual resturant to get a better feel for it and speak with the client directly as a group.
+
+### About the Client
+Our Clients name is . They own/work for Koko's Korean and Asian Cusine in Collegtown and has worked there...
+
+The client wants a website that can promote the resturant
+
+### Client Goals
+The client has recieved former proposals for thir site design but have not felt like they appropriatly represent the resturant. Instead they want a site that is easy to navigate and shows the unique food options that Koko has to offer. They want to emphasize the quality and photography of the food but also make the site accessable and interactive for the customer.
+The primary goal is to engage with customers and allow them to view a galler yof food options before coming to the place in order to gauge what they want. The second goal is to be able to communicate the resturant's hisory and mission with the consumer and possibly communicate with them directly.
 
 
 ## Meeting Notes
@@ -24,7 +35,7 @@ The client is the owner of the Korean restaurant Koko, which is located in Colle
   - Client wants the contact information to be clearly visible.
   - Task distribution:
     - Tricia: menu, about
-    - Khalid: contact
+    - Khalid: contact, general layout of all pages
     - Jinju: index, photo gallery
     - Kaitlyn: reviews
   - Rough draft of design-journey by April 15th (internal deadline)
@@ -34,7 +45,7 @@ The client is the owner of the Korean restaurant Koko, which is located in Colle
 
 [Tell us the purpose of the website and what it is all about.]
 
-The purpose of the website is to display information (menu, location, reviews) about the client's restaurant to potential customers.
+The purpose of the website is to display information (menu, location, reviews) about the client's restaurant to potential customers. It is primarily informative about the clients services.
 
 ## Target Audience(s)
 
@@ -83,6 +94,9 @@ Reviews (reviews.php)
 Contact (contact.php)
 ![Contact page draft](contact.jpg)
 
+Card Sorting (All pages)
+![Card Sorting draft](cardsorting.jpg)
+
 Inspirational Color Palette
 ![](colorpalette.png)
 
@@ -106,11 +120,11 @@ We may use these colors for designing the website to answer the client's request
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Home*: introduce the client's restaurant with images and short introductory sentences. Display few of the top menus and a link to see more menu.
-  - *About*:
-  - *Menu*:
+  - *About*: describes the history of the resturant, the staff, etc.
+  - *Menu*: has a listing of all the menu options
   - *Gallery*: display the pictures of client's restaurant and the dishes it serves. Allow the users to select specific tags to display certain pictures. When the image is hovered over, display the title and description of the image as an overlay.
   - *Reviews*: display customer reviews of clients resturant. Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
-  - *Contact*:
+  - *Contact*:A way to contact the resturant and submit reservations or orders.
 
 EXAMPLE)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
@@ -122,7 +136,7 @@ EXAMPLE)
   - Card sort:
   ![Card sort](card_sort.jpeg)
   - [explanation of how your come up with your content organization and navigation.]
-
+  There was multiple ideas that we had for the different navigation items we wanted. We considered creating an animation with a dropdown menu but because the target audience and client wanted a more simple design we just used a more simple cardsort with all the navigation items in one line.
 
 ## Interactivity
 
