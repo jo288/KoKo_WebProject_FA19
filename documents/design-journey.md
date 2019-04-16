@@ -68,6 +68,9 @@ Header & Footer Templates (header.php, footer.php)
 Home (index.php)
 ![Home page draft](index.jpg)
 
+About (about.php)
+![About page draft](about.jpeg)
+
 Menu (menu.php)
 ![Menu page draft](menu.jpeg)
 
