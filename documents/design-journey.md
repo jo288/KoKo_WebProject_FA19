@@ -132,7 +132,7 @@ We may use these colors for designing the website to answer the client's request
   - Menu (need to get menu from client)
   - Gallery (need to get images from client)
   - Reviews
-  - Plan Your Order
+  - Dish
   - Contact
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
@@ -150,9 +150,9 @@ We may use these colors for designing the website to answer the client's request
     - Clicking on album will take user to new page of pictures of that album
     - Allow the users to select specific tags to display certain pictures
     - When the image is hovered over, display the title and description of the image as an overlay.
-  - *Plan Your Order*:
-    - users can input their potential order
-    - will be able to see the price of their order, with and without tax
+  - *Dish*:
+    - shows the information (photo, dish name, ingredients, dietary restrictions, price, etc) about a single dish
+    - clicking on menu item in menu page or photo in photo gallery page will take user to dish page
   - *Reviews*:
     - display customer reviews of clients resturant
     - Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
@@ -210,6 +210,7 @@ The site also will have a contact form and a review form. The contact form will 
 
 [Share the feedback notes you received from your client about your initial design.]
 
+Client approved of our initial design. She liked the color scheme and layouts of our pages. However, the client expressed that she wanted the prices of the menu items to be on the website.
 
 ## Iterated Design
 
@@ -239,6 +240,10 @@ Task 1: John, a Cornell student, has never eaten Korean food before until last w
   3. ...
 
 Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko has some of the best Asian food near Cornell University. However, he is concerned about being able to find menu options that fit his dietary restriction. Thomas wants to find photos of vegetarian menu items.
+
+  1. click on photo gallery page in nav bar
+  2. scroll to find album for vegetarian food options
+  3. click on vegetarian food album
 
 
 ### Cognitive Walkthrough
