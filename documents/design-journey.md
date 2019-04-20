@@ -417,6 +417,13 @@ TODO
 - transaction for reviews
 - more involved contact page
 
+### Mistakes on Milestone
+- Interactive features are more complex than Project 3 ( Interactive features demonstrate creativity beyond just copying what's has already been done in this class.)
+  - slideshow on dish page
+  - transactions
+  - possible translation
+- Short description of work distribution includes assigned duties, work expectations, and expected internal deadlines.
+- Needs and wants
 
 --- <!-- ^^^ Milestone 2; vvv Milestone 3 -->
 
