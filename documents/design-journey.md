@@ -33,10 +33,10 @@ The client has received former proposals for a site for Koko Restaurant, but wer
   - Client wants large and readable fonts for the website.
   - Client wants the contact information to be clearly visible.
   - Task distribution:
-    - Tricia: menu, about
-    - Khalid: contact, general layout of all pages
+    - Tricia: menu, dish
+    - Khalid: contact, about, review upload
     - Jinju: index, photo gallery
-    - Kaitlyn: reviews
+    - Kaitlyn: reviews, review upload
   - Rough draft of design-journey by April 15th (internal deadline)
 
 
