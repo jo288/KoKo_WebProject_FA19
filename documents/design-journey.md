@@ -408,6 +408,15 @@ TODO
 
 [Add any additional comments you have here.]
 
+###Changes from Milestone 1 to Milestone 2
+- More involve interactivity
+- add dishes page
+- search function on the reviews
+- categories for the reviews
+- categories for menu items
+- transaction for reviews
+- more involved contact page
+
 
 --- <!-- ^^^ Milestone 2; vvv Milestone 3 -->
 
