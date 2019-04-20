@@ -238,9 +238,9 @@ We've selected our persona because Patricia/Patrick and Tim represent the majori
 
 Task 1: John, a Cornell student, has never eaten Korean food before until last week. He ate at Koko and had a wonderful experience. John wants to leave a positive review.
 
-  1. [action 1...]
-  2. [action 2...]
-  3. ...
+  1. go to Reviews Page
+  2. click write review button
+  3. fill out review form and submit
 
 Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko has some of the best Asian food near Cornell University. However, he is concerned about being able to find menu options that fit his dietary restriction. Thomas wants to find photos of vegetarian menu items.
 
@@ -259,6 +259,69 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 
 [You may need to add additional subgoals and/or actions for each task.]
 
+**Task name: Task 1 John**
+
+[Add as many subgoals as you needs]
+**Subgoal # 1 : find reviews page**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+      John would be on the homepage of the website and there are no reviews on the page. He would know then
+      to look for a different page that has reviews on it.
+
+[Add as many actions as you need...]
+**Action # 1 : click on reviews page**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      John is already familiar with basic website functions and the navigation bar on the website
+      clearly shows the different pages. Since John wants to make a review, he would know to click on the navi
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      Once he gets to the review page, he will be able to see different reviews as well as a the reviews button.
+
+**Subgoal # 2 : write review**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+     John wants to write a postive review about the restaurant since he enjoyed his experience so much and wants to let others know about the great restaurant.
+
+[Add as many actions as you need...]
+**Action # 1 : click on write review button**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      John wants to write a review and at the top of the page there is a button that says write a review, so John would know to click on it.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      John would be led to a different page once he clicks on the write a review button. This page would contain a form for him to
+      fill out.
+
+**Action # 2: fill out reviews form**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      The form has clear labels for each part of the review form, so John would know how to fill it out. There are also
+      clear buttons for John to press depending on what he wants to do with his review (submit or cancel)
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      Once he submits, there is no message that tells him that his review was succesfully submitted or succesfully cancelled.
 
 #### Task 2 - Cognitive Walkthrough
 
