@@ -110,6 +110,9 @@ Gallery (gallery.php)
 Reviews (reviews.php)
 ![Review page draft](reviews.jpg)
 
+Dish (dish.php)
+![Dish page draft](dish.jpg)
+
 Contact (contact.php)
 ![Contact page draft](contact.jpg)
 
@@ -278,9 +281,35 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
-Table: movies
-* field 1: description...
-* field...
+Table: menu
+* field 1: id
+* field 2: menu name
+* field 3: description
+* field 4: price
+* field 5: dietary restriction id
+* field 6: category id
+
+Table: categories
+* field 1: id
+* field 2: category
+
+Table: dietary restriction
+* field 1: id
+* field 2: dietary restriction
+
+Table: menu images
+* field 1: id
+* field 2: image name
+* field 3: image extention
+* field 4: menu id
+* field 5: image source
+* field 6: review id
+
+Table: reviews
+* field 1: id
+* field 2: reviewer
+* field 3: rating
+* field 4: comment
 
 
 ## Database Queries
