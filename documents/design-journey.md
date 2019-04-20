@@ -132,15 +132,33 @@ We may use these colors for designing the website to answer the client's request
   - Menu (need to get menu from client)
   - Gallery (need to get images from client)
   - Reviews
+  - Plan Your Order
   - Contact
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
-  - *Home*: introduce the client's restaurant with images and short introductory sentences. Display few of the top menus and a link to see more menu.
-  - *About*: explain more in depth about the restaurant, provide a brief history/information about Korean cuisine
-  - *Menu*: display menu items with descriptions, address dietary restrictions by allowing to filter for vegetarian, vegan, and gluten free foods
-  - *Gallery*: display the pictures of client's restaurant and the dishes it serves. Allow the users to select specific tags to display certain pictures. When the image is hovered over, display the title and description of the image as an overlay.
-  - *Reviews*: display customer reviews of clients resturant. Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
-  - *Contact*:A way to contact the resturant and submit reservations or orders.
+  - *Home*:
+    - introduce the client's restaurant with images and short introductory sentences
+    - Display few of the top menus and a link to see more menu
+  - *About*:
+    - explain more in depth about the restaurant
+    - provide a brief history/information about Korean cuisine
+  - *Menu*:
+    - display menu items with descriptions
+    - address dietary restrictions by allowing to filter for vegetarian, vegan, and gluten free foods
+  - *Gallery*:
+    - display the different albums of client's restaurant and the dishes it serves
+    - Clicking on album will take user to new page of pictures of that album
+    - Allow the users to select specific tags to display certain pictures
+    - When the image is hovered over, display the title and description of the image as an overlay.
+  - *Plan Your Order*:
+    - users can input their potential order
+    - will be able to see the price of their order, with and without tax
+  - *Reviews*:
+    - display customer reviews of clients resturant
+    - Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
+  - *Contact*:
+    - A way to contact the resturant and submit reservations or orders
+    - can ask questions
 
 - **Process**
   - Card sort 1:
@@ -204,9 +222,9 @@ The site also will have a contact form and a review form. The contact form will 
 
 [Pick a persona that you believe will help you address the gender bias within your design.]
 
-I've selected **[Abby/Patricia/Patrick/Tim]** as my persona.
+We've selected **[Abby]** as our persona.
 
-I've selected my persona because... [Tell us why you picked your persona in 1-3 sentences. Your explanation should include why your persona will help you address gender-inclusiveness bugs in your design.]
+We've selected our persona because Patricia/Patrick and Tim represent the majority of the customers of Koko. We selected Abby because she represents the minority, allowing us to address gender-inclusiveness bugs in our design.
 
 ### Tasks
 
@@ -214,13 +232,13 @@ I've selected my persona because... [Tell us why you picked your persona in 1-3 
 
 [For each task, list the ideal set of actions that you would like your users to take when working towards the task.]
 
-Task 1: [describe your task]
+Task 1: John, a Cornell student, has never eaten Korean food before until last week. He ate at Koko and had a wonderful experience. John wants to leave a positive review.
 
   1. [action 1...]
   2. [action 2...]
   3. ...
 
-Task 2:
+Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko has some of the best Asian food near Cornell University. However, he is concerned about being able to find menu options that fit his dietary restriction. Thomas wants to find photos of vegetarian menu items.
 
 
 ### Cognitive Walkthrough
