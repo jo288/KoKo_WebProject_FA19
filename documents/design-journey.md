@@ -386,7 +386,8 @@ Table: reviews
 
 * index.php - main page.
 * includes/init.php - stuff that useful for every web page.
-* TODO
+* menu.php
+* dish.php
 
 
 ## Pseudocode
@@ -400,6 +401,18 @@ Pseudocode for index.php...
 
 include init.php
 
+TODO
+```
+
+### menu.php
+
+```
+TODO
+```
+
+### dish.php
+
+```
 TODO
 ```
 

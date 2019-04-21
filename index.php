@@ -1,6 +1,8 @@
 <?php
- // INCLUDE ON EVERY TOP-LEVEL PAGE!
+// INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
+
+$title = "index";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +17,16 @@ include("includes/init.php");
 <body>
 
   <!-- TODO: This should be your main page for your site. -->
+  <?php include("includes/header.php"); ?>
+
+  <main>
+    <h2>Home</h2>
+
+
+  </main>
+
+  <?php include("includes/footer.php"); ?>
 
 </body>
+
 </html>

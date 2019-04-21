@@ -63,5 +63,3 @@ function exec_sql_query($db, $sql, $params = array())
 // ^^^ DO NOT MODIFY/REMOVE ^^^
 
 // You may place any of your code here.
-
-?>
