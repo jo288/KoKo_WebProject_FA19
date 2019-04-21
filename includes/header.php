@@ -1,9 +1,10 @@
   <header>
     <nav id="menu">
+      <h1>KOKO(LOGO GOES HERE)</h1>
       <ul>
         <?php
 
-        $nav = array('index.php' => 'Home', 'menu.php' => 'Menu', 'about.php' => 'About', 'contact.php' => 'Contact', 'reviews.php' => 'Reviews',);
+        $nav = array('about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => 'Contact');
 
         $current = basename($_SERVER['PHP_SELF']);
 

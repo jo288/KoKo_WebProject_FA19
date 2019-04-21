@@ -14,16 +14,10 @@ $index = "current";
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to the Menu page</h1>
-    </header>
-    <?php
-    include("includes/header.php");
+    <?php include("includes/header.php"); ?>
+    <main>
 
-    ?>
-    <div class="pagecontent">
-
-    </div>
+    </main>
 </body>
 
 </html>
