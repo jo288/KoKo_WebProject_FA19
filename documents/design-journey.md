@@ -178,9 +178,11 @@ The site will use PHP templates for header and footer. Header template will incl
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
 
-The site will have the menu of the restaurant the user will be able to filter for dietary restrictions (vegetarian, vegan, gluten free). In addition, there will be a photo gallery where the user can view pictures of the food at the restaurant. In addition, the user will be able to filter the pictures based on specific tags.
+The site will have the menu of the restaurant the user will be able to filter for dietary restrictions (vegetarian, vegan, gluten free). In addition, there will be a photo gallery where the user can view pictures of the food at the restaurant. In addition, the user will be able to filter the pictures based on specific tags. The gallery will also have a slideshow feature and specific page that will show all dish information.
 
-The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client, and the review form will allow the other members of the target audience. The review page will also allow the client to get feedback about their restaurant.
+The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client, and the review form will allow the other members of the target audience. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments, and even images to the site. The review page will have a search for customers to search of reviews for their specific dish orders and will have seperate categories.
+
+If time permits, the contact form might get connected to the menu to allow users to estimate their price (and potentially make orders) and using interactivity elements the site might have a feature to be viewed in either Korean or English.
 
 
 ## Work Distribution
@@ -213,11 +215,13 @@ The site also will have a contact form and a review form. The contact form will 
 
 [Share the feedback notes you received from your client about your initial design.]
 
-Client approved of our initial design. She liked the color scheme and layouts of our pages. However, the client expressed that she wanted the prices of the menu items to be on the website.
+Client approved of our initial design. She liked the color scheme and layouts of our pages. However, the client expressed that she wanted the prices of the menu items to be on the website. The client did not find that ordering online would be neccessary because there are already multiple ways of ordering online through other sources but was ok with us adding an online order form if we wanted. This made our order form less of a priority.
 
 ## Iterated Design
 
 [Improve your design based on the feedback you received from your client.]
+Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. Also the review page will now allow uploading images to the gallery which is something that will allow more interaction with the users and allow the client to have a larger array of images to display on the website.
+
 
 
 ## Evaluate your Design
@@ -228,7 +232,7 @@ Client approved of our initial design. She liked the color scheme and layouts of
 
 We've selected **[Abby]** as our persona.
 
-We've selected our persona because Patricia/Patrick and Tim represent the majority of the customers of Koko. We selected Abby because she represents the minority, allowing us to address gender-inclusiveness bugs in our design.
+We've selected our persona because Patricia/Patrick and Tim represent the majority of the customers of Koko. We selected Abby because she represents the minority, allowing us to address gender-inclusiveness bugs in our design. Also Abby is the least familiar with technology and so its possible to have some individuals like that who might use our website even if they are a minority.
 
 ### Tasks
 
@@ -338,7 +342,31 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 [Include sketches of your finalized design.]
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
+Header & Footer Templates (header.php, footer.php)
+![Header/footer final](headerfooterfinal.jpg)
 
+Home (index.php)
+![Home page final](indexfinal.jpg)
+
+About (about.php)
+![About page final](aboutfinal.jpeg)
+
+Menu (menu.php)
+![Menu page final](menufinal.jpeg)
+
+Gallery (gallery.php)
+![Photo gallery page final](galleryfinal.jpg)
+
+Reviews (reviews.php)
+![Review page final](reviewsfinal.jpg)
+
+Contact (contact.php)
+![Contact page final](contactfinal.jpg)
+
+Added Pages:
+
+Dish (dish.php)
+![Dish page final](dishFinal.jpg)
 
 ## Database Schema
 
@@ -394,13 +422,22 @@ Table: reviews
 
 [For each PHP file, plan out your pseudocode. You probably want a subheading for each file.]
 
+### General Code
+
+#### To extract info from the database:
+
+Open the database, select all the values from the table to display, except
+then create a table to input all the database values using html, then using sql code select all the values in the database and put the in array format while executing and storing all the array values in a variable. Then a function opens up all of the elements and prints them out individually as specified to be part of the table ignoring any encodings with in the characters. Every element needs to be printed in the array variable that they were stored in.
+
 ### index.php
 
 ```
-Pseudocode for index.php...
+TODO
+```
 
-include init.php
+### about.php
 
+```
 TODO
 ```
 
@@ -416,6 +453,49 @@ TODO
 TODO
 ```
 
+### gallery.php
+
+```
+TODO
+```
+
+### reviews.php
+
+```
+For the search:
+- If the user clicks search check for the information inputted and for the category inputed. If both of these elements are valid allow the search to go through.
+- Check that the search category is appropriately one of the designated categories and sanitze the information recieved to prevent harm done to the website.
+- If the elements of the search match an element retrive those elements from the database. Then show the elements to the user.
+
+For uploading a users review (incl image):
+- save all items currently in the form attributes but filter any html special characters and save them to variables to make the form sticky
+- check that the name matches the appropriate specifications or otherwise show an error
+- check that the email matches the appropriate specifications otherwise show an error
+- check that a review was given
+- check that a comment was given
+- if images were present in the upload
+- if another upload type other than jpeg or png was uploaded display: only these upload types are allowed
+- if correct image was uploaded: add new element to database with all of the required image attributes
+```
+
+### contact.php
+
+```
+Once the form is submitted:
+- Scroll down to the bottom of the screen where the form location is
+- Then Check that all the items that were submitted and store this in variable names for each item.
+Check if the name is atleast 1 character continue to allow form to be submited
+- If email is in the valid format (atleast 5 characters) also continue to allow the form to be submitted,
+one item in the selection menu for reason will be selected anyway
+If the comment is betweenn the required characters (25 and 500 characters) also allow the form to be submitted.
+- By allowing the form to submitted have a variable act as a boolean switch to alter the validation criteria.
+- If all three of these conditions are satisfied allow the form to be submitted otherwise display the error for whichever item is not satisfactory by setting the error variable to an element other than hidden.
+- If the form is submitted show the variable items on the screen after paramater names or otherwise just show the same form with the errors not hidden
+
+For accessing Database Elements from the form and then inputting them:
+- Once the form is submitted (This code is written earlier), show the user the information he submitted and give him a feedback messege if it was valid or not.
+- If it was valid, hide the form and post the users input in its place. Then open the database ot access it and insert the values into the database.
+```
 
 ## Additional Comments
 

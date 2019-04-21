@@ -1,7 +1,13 @@
--- TODO: Put ALL SQL in between `BEGIN TRANSACTION` and `COMMIT`
 BEGIN TRANSACTION;
 
--- TODO: create tables
+CREATE TABLE menu (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	menu_name TEXT NOT NULL UNIQUE,
+	description TEXT NOT NULL,
+    price TEXT NOT NULL,
+    diet_rest_id INTEGER NOT NULL UNIQUE,
+    category_id INTEGER NOT NULL UNIQUE
+);
 
 CREATE TABLE `menu`
 (

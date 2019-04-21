@@ -1,0 +1,187 @@
+/* MAIN CSS FOR ALL PAGES */
+body {
+	font-family: Comic Sans, Verdana, sans-serif;
+}
+
+header {
+	background-color: rgb(202, 206, 22);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+nav {
+	background-color: #fc9739;
+}
+
+nav ul {
+	margin: 5px;
+	height: 40px;
+	padding: 0px;
+	text-align: center;
+}
+
+nav li {
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1px #feff06 dashed;
+	font-weight: bold;
+	margin: 0px 5px;
+	margin-top: 5px;
+}
+
+nav li a {
+	text-decoration: none;
+	color: #feff06;
+}
+
+.hidden {
+	display: none;
+}
+
+.current {
+	border: 2px dashed;
+	color: rgb(230, 255, 2);
+}
+
+.form_error {
+	color: red;
+	font-weight: bold;
+}
+
+.form_error2 {
+	color: red;
+	font-weight: bold;
+}
+
+figure {
+	color: gray;
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+	font-family: "Times New Roman", Times, serif;
+	width: 100%;
+}
+
+img {
+	width: 70%;
+}
+
+.main-body {
+	display: flex;
+	margin-left: 25px;
+	flex-direction: row;
+}
+
+main {
+	background-color: white;
+	flex-grow: 15;
+	height: 800px;
+	width: 200px;
+}
+
+h1 {
+	color: rgb(255, 94, 0);
+	font-weight: bold;
+	border-color: #feff06;
+	border: double;
+	border-width: 6px;
+	padding: 10px;
+	text-align: center;
+}
+
+h2 {
+	color: rgb(255, 94, 0);
+}
+
+h3 {
+	color: rgb(255, 94, 0);
+}
+
+p {
+	color: #6f6f6f;
+	font-weight: normal;
+	font-family: Comic Sans, Verdana, sans-serif;
+}
+
+em {
+	font-style: normal;
+	font-weight: bold;
+}
+
+p em {
+	font-weight: bold;
+}
+
+li q {
+	font-weight: normal;
+	font-style: italic;
+}
+
+li em {
+	font-weight: bold;
+}
+
+body {
+	font-family: Comic Sans, Verdana, sans-serif;
+}
+
+li {
+	color: #6f6f6f;
+	font-family: Comic Sans, Verdana, sans-serif;
+
+}
+/* Form */
+#score_order div {
+	padding: 10px;
+}
+
+#formbox {
+	text-align: left;
+}
+
+.clearFix {
+	clear: both;
+}
+
+#score_order div {
+	margin: 10px 0;
+	margin-right: auto;
+	/* text-align: center; */
+}
+
+/* Table Stylings */
+table {
+	border-collapse: collapse;
+	width: 75%;
+	justify-content: center;
+	align-content: center;
+	margin:0 auto;
+}
+
+td, th {
+	border: 1px solid;
+	border-color: #db9b34;
+	border-width: 3px;
+	text-align: center;
+	padding: 10px;
+	width: 10%;
+}
+
+.score {
+	justify-content: center;
+	text-align: center;
+}
+
+/* ABOUT PAGE */
+
+/* MENU PAGE */
+
+/* DISH PAGE */
+
+/* CONTACT PAGE */
+
+/* GALLERY PAGE */
+
+/* REVIEWS PAGE */
