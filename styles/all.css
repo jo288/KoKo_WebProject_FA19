@@ -133,7 +133,7 @@ li {
 
 }
 /* Form */
-#score_order div {
+#review_order div {
 	padding: 10px;
 }
 
@@ -145,7 +145,7 @@ li {
 	clear: both;
 }
 
-#score_order div {
+#review_order div {
 	margin: 10px 0;
 	margin-right: auto;
 	/* text-align: center; */

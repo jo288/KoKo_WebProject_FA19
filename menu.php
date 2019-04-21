@@ -1,11 +1,7 @@
 <?php
-// INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
-
-$title = "menu";
+$title = "Menu";
 $index = "current";
-
-$db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,25 +9,21 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
-
+    <link href="styles/all.css" media="all" rel="stylesheet" type="text/css">
     <title>Menu</title>
 </head>
 
 <body>
+    <header>
+        <h1>Welcome to the Menu page</h1>
+    </header>
+    <?php
+    include("includes/header.php");
 
-    <!-- TODO: This should be your main page for your site. -->
-    <?php include("includes/header.php"); ?>
+    ?>
+    <div class="pagecontent">
 
-    <main>
-        <h2>Menu</h2>
-
-
-    </main>
-
-    <?php include("includes/footer.php"); ?>
-
+    </div>
 </body>
 
 </html>

@@ -18,7 +18,9 @@ $index = "current";
 </head>
 
 <body>
-
+    <header>
+        <h1>Welcome to the About page</h1>
+    </header>
     <!-- TODO: This should be your main page for your site. -->
     <?php include("includes/header.php"); ?>
 

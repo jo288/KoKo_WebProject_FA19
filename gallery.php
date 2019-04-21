@@ -19,6 +19,9 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 </head>
 
 <body>
+    <header>
+        <h1>Welcome to the Gallery page</h1>
+    </header>
 
     <!-- TODO: This should be your main page for your site. -->
     <?php include("includes/header.php"); ?>

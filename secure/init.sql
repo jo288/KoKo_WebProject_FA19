@@ -46,6 +46,7 @@ CREATE TABLE `reviews`
 (
 	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`reviewer` TEXT,
+    `email` TEXT,
 	`rating` INTEGER,
     `comment` TEXT
 );
