@@ -406,11 +406,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 
 Yes, in our first task we realized that there is no feedback for John to know that he succesfully submitted his review of the restaurant. Since John has lower self efficacy, he might think that he did something wrong unless he directly sees his review on the page or is given some confirmation. We will change our design to include displaying confirmation messages for succesfully submitting or cancelling a review as well as including error messages directly telling John if he forgot to fill out a certain filed in the review form.
 
-<<<<<<< HEAD
 In our second task we realized that people looking at the menu would probably want to see picture of the food items and people looking at pictures of the food would probably want to also see the menu. We will try to connect the two pages by linking them through the images. 
-=======
-In our second task ......
->>>>>>> 6b60b4b9a1cfb4114faf96d94a06b7e200087320
 
 ## Final Design
 
@@ -478,13 +474,8 @@ Table: reviews
 * field 4: email: TEXT
 * field 5: rating: INTEGER {Not}
 * field 6: review_title TEXT
-<<<<<<< HEAD
 * field 7: comment TEXT
 * field 8: image_id TEXT 
-=======
-* field 7: comment TEXT {Not}
-* field 8: image_id TEXT
->>>>>>> 6b60b4b9a1cfb4114faf96d94a06b7e200087320
 
 
 ## Database Queries
