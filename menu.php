@@ -45,7 +45,9 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
                     foreach ($menus as $menu) {
                         ?>
                         <div class="menu_item">
-                            <h4><?php echo htmlspecialchars($menu["menu_name"]) ?></h4>
+                            <a href="<?php echo "dish.php?" . http_build_query(array('id' => $menu['id'])) ?>">
+                                <h4><?php echo htmlspecialchars($menu["menu_name"]) ?></h4>
+                            </a>
                             <p>
                                 <?php echo htmlspecialchars($menu["description"]) ?>
                             </p>
