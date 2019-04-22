@@ -326,7 +326,76 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
       Once he submits, there is no message that tells him that his review was succesfully submitted or succesfully cancelled.  
 
+
+Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko has some of the best Asian food near Cornell University. However, he is concerned about being able to find menu options that fit his dietary restriction. Thomas wants to find photos of vegetarian menu items.
+
+  1. click on photo gallery page in nav bar
+  2. scroll to find album for vegetarian food options
+  3. click on vegetarian food album
+
 #### Task 2 - Cognitive Walkthrough
+
+**Task name: Task 2 Thomas**
+
+[Add as many subgoals as you needs]
+**Subgoal # 1 : find photos of menu items**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+      Thomas wants to find pictures of the vegetarian menu items before he goes to the actual restaurant. 
+      In the home page there are no pictures of the menu items, so Thomas would know to look for another page with pictures of the menu items. 
+      
+[Add as many actions as you need...]
+**Action # 1 : click on gallery's page**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [maybe]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    Since Thomas wants to look at pictures of the menu items, he might click on the menu's page instead of the
+    galleries page. Once Thomas clicks on the menu page and sees no pictures, he might know to then try the gallery page to find picture. However, if Thomas has especially low self efficacy, he might blame himself for the images not appearing in the menu page. 
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      He would see be able to see different images of the menu items. 
+
+**Subgoal # 2 : find vegetarian menu item pictures**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+    Since Thomas is a vegetarian, he would desire to look at the pictures of the vegetarian items. 
+
+[Add as many actions as you need...]
+**Action # 1: scroll to find the vegetarian food album**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    When Thomans is on the food gallery page, he would see different photo albums with titles that would tell the user the kind kind of photos in the albumn. Since Thomas wants to look at vegetarian dishes, he would know to look for that album. Since scrolling is fairly standard for website, Thomas would know to scroll until he found the vegetarian album. 
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+    He would see the vegetarian food album. 
+
+  **Action # 2: click on vegetarian food album**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    Since photo albums are a common way to organize photos, Thomas would be familiar with them. He would know that he has to click on the album in order to see the photos of the album.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+    He would see more photos of vegetarian dishes once he clicked on the vegetarian album.
 
 
 ### Cognitive Walk-though Results
@@ -337,7 +406,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 
 Yes, in our first task we realized that there is no feedback for John to know that he succesfully submitted his review of the restaurant. Since John has lower self efficacy, he might think that he did something wrong unless he directly sees his review on the page or is given some confirmation. We will change our design to include displaying confirmation messages for succesfully submitting or cancelling a review as well as including error messages directly telling John if he forgot to fill out a certain filed in the review form. 
 
-In our second task ...... 
+In our second task we realized that people looking at the menu would probably want to see picture of the food items and people looking at pictures of the food would probably want to also see the menu. We will try to connect the two pages by linking them through the images. 
 
 ## Final Design
 
@@ -405,7 +474,7 @@ Table: reviews
 * field 4: email: TEXT 
 * field 5: rating: INTEGER {Not}
 * field 6: review_title TEXT
-* field 7: comment TEXT {Not}
+* field 7: comment TEXT
 * field 8: image_id TEXT 
 
 
