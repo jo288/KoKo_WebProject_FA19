@@ -220,8 +220,8 @@ Client approved of our initial design. She liked the color scheme and layouts of
 ## Iterated Design
 
 [Improve your design based on the feedback you received from your client.]
-Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. Also the review page will now allow uploading images to the gallery which is something that will allow more interaction with the users and allow the client to have a larger array of images to display on the website.
 
+Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. Also the review page will now allow uploading images to the gallery which is something that will allow more interaction with the users and allow the client to have a larger array of images to display on the website.
 
 
 ## Evaluate your Design
@@ -273,7 +273,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
       John would be on the homepage of the website and there are no reviews on the page. He would know then
-      to look for a different page that has reviews on it.
+      to look for a different page that has reviews on it. 
 
 [Add as many actions as you need...]
 **Action # 1 : click on reviews page**
@@ -283,12 +283,12 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
       John is already familiar with basic website functions and the navigation bar on the website
-      clearly shows the different pages. Since John wants to make a review, he would know to click on the navi
+      clearly shows the different pages. Since John wants to make a review, he would know to click the reviews label on the navigation bar.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-      Once he gets to the review page, he will be able to see different reviews as well as a the reviews button.
+      Once he gets to the review page, he will be able to see different reviews as well as a the write a review button.
 
 **Subgoal # 2 : write review**
 	(e.g., "# 1 : Select the section of the document you want to print")
@@ -310,8 +310,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-      John would be led to a different page once he clicks on the write a review button. This page would contain a form for him to
-      fill out.
+      John would be led to a different page once he clicks on the write a review button. This page would contain a form for him to fill out.
 
 **Action # 2: fill out reviews form**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
@@ -325,7 +324,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [no]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-      Once he submits, there is no message that tells him that his review was succesfully submitted or succesfully cancelled.
+      Once he submits, there is no message that tells him that his review was succesfully submitted or succesfully cancelled.  
 
 #### Task 2 - Cognitive Walkthrough
 
@@ -336,6 +335,9 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 
 [Your responses here should be **very** thorough and thoughtful.]
 
+Yes, in our first task we realized that there is no feedback for John to know that he succesfully submitted his review of the restaurant. Since John has lower self efficacy, he might think that he did something wrong unless he directly sees his review on the page or is given some confirmation. We will change our design to include displaying confirmation messages for succesfully submitting or cancelling a review as well as including error messages directly telling John if he forgot to fill out a certain filed in the review form. 
+
+In our second task ...... 
 
 ## Final Design
 
@@ -397,10 +399,14 @@ Table: menu images
 * field 6: review id
 
 Table: reviews
-* field 1: id
-* field 2: reviewer
-* field 3: rating
-* field 4: comment
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: date: DATE {Not}
+* field 3: reviewer: TEXT {Not}
+* field 4: email: TEXT 
+* field 5: rating: INTEGER {Not}
+* field 6: review_title TEXT
+* field 7: comment TEXT {Not}
+* field 8: image_id TEXT 
 
 
 ## Database Queries
@@ -408,14 +414,32 @@ Table: reviews
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
 
 
+### reviews.php queries: 
+```
+For sort by: (ex. sort by most recent or sort by highest rating)
+SELECT * FROM reviews ORDER BY date ASC or SELECT * FROM reviews ORDER BY rating DESC
+
+For search (note: will use parameter markers):
+SELECT * FROM reviews WHERE comment LIKE "%search_field%" 
+
+For adding a review (will use parameter markers):
+INSERT INTO reviews (id, date, reviewer, email, rating, review_title, comment, image_id) VALUES (values form the form)
+
+Display reviews:
+SELECT * FROM reviews  
+```
+
 ## PHP File Structure
 
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
 
 * index.php - main page.
+* about.php
 * includes/init.php - stuff that useful for every web page.
 * menu.php
 * dish.php
+* reviews.php 
+* contact.php
 
 
 ## Pseudocode
@@ -460,24 +484,33 @@ TODO
 ```
 
 ### reviews.php
-
 ```
+For sort:
+- If user selects a drop down option (ex. most recent), then order elements of the reviews page by that option and 
+display newly ordered information (ex. for most recent would order database by date in descending order)
+
 For the search:
-- If the user clicks search check for the information inputted and for the category inputed. If both of these elements are valid allow the search to go through.
-- Check that the search category is appropriately one of the designated categories and sanitze the information recieved to prevent harm done to the website.
-- If the elements of the search match an element retrive those elements from the database. Then show the elements to the user.
+- If the user clicks search button check for the information inputted in search text field 
+- Sanitize input to prevent harm done to website
+- Query to find records of database that match input (will search for input in review description and review title)
+- If the records of the search match input retrive those records from the database. Then show those records to the user. 
 
 For uploading a users review (incl image):
+- will use data transaction in users review form
 - save all items currently in the form attributes but filter any html special characters and save them to variables to make the form sticky
-- check that the name matches the appropriate specifications or otherwise show an error
-- check that the email matches the appropriate specifications otherwise show an error
-- check that a review was given
-- check that a comment was given
-- if images were present in the upload
-- if another upload type other than jpeg or png was uploaded display: only these upload types are allowed
-- if correct image was uploaded: add new element to database with all of the required image attributes
-```
 
+  if pressed submit button:
+  - check that name field was given, if not then otherwise show an error message
+  - check that the email matches the appropriate specifications otherwise show an error message
+  - check that a rating was given, if not show error message
+  - check that a review comment was given, if not show error message
+  - if user upload some file: 
+    - check that file is a jpeg or png otherwise display error message
+  - if all fields satisfied, then display successfully submitted message and add review to database 
+
+  if pressed cancel button: 
+  - display sucesfully cancelled message and leave write a review form (go back to reviews)  
+```
 ### contact.php
 
 ```
@@ -501,7 +534,7 @@ For accessing Database Elements from the form and then inputting them:
 
 [Add any additional comments you have here.]
 
-###Changes from Milestone 1 to Milestone 2
+### Changes from Milestone 1 to Milestone 2
 - More involve interactivity
 - add dishes page
 - search function on the reviews
