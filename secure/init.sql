@@ -1,22 +1,22 @@
 BEGIN TRANSACTION;
 
-CREATE TABLE menu (
-	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	menu_name TEXT NOT NULL UNIQUE,
-	description TEXT NOT NULL,
-    price TEXT NOT NULL,
-    diet_rest_id INTEGER NOT NULL UNIQUE,
-    category_id INTEGER NOT NULL UNIQUE
-);
+-- CREATE TABLE menu (
+-- 	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+-- 	menu_name TEXT NOT NULL UNIQUE,
+-- 	description TEXT NOT NULL,
+--     price TEXT NOT NULL,
+--     diet_rest_id INTEGER NOT NULL UNIQUE,
+--     category_id INTEGER NOT NULL UNIQUE
+-- );
 
 CREATE TABLE `menu`
 (
 	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`menu_name` TEXT NOT NULL,
 	`description` TEXT,
-    `price` INTEGER NOT NULL,
+    `price` INTEGER,
 	`diet_id` INTEGER,
-	`category_id` INTEGER
+	`category_id` INTEGER NOT NULL
 );
 
 CREATE TABLE `categories`
@@ -53,7 +53,11 @@ CREATE TABLE `reviews`
 
 -- TODO: initial seed data
 
--- INSERT INTO `menu` () VALUES ();
+-- INSERT INTO `menu` (id, menu_name, description, price, diet_id, category_id) VALUES (1, "Mandoo", "Steamed or fried dumplings available in beef or vegetable", null, null, 1);
+-- INSERT INTO `menu` (id, menu_name, description, price, diet_id, category_id) VALUES (2, "Pa Jun", "Lightly pan-fried wheat batter with scallions", null, null, 1);
+-- INSERT INTO `menu` (id, menu_name, description, price, diet_id, category_id) VALUES (3, "Kimchi Pa Jun", "Lightly pan-fried wheat batter with kimchi", null, null, 1);
+-- INSERT INTO `menu` (id, menu_name, description, price, diet_id, category_id) VALUES (4, "Hae Mul Pa Jun", "Lightly pan-fried wheat batter with mixed seafood and scallions", null, null, 1);
+-- INSERT INTO `menu` (id, menu_name, description, price, diet_id, category_id) VALUES (5, "Dukk Bokki", "Rice cakes with vegetables in spicy bean paste sauce", null, null, 1);
 
 -- INSERT INTO `categories` (id, category) VALUES (1, "Appetizers");
 -- INSERT INTO `categories` (id, category) VALUES (2, "Salads");
