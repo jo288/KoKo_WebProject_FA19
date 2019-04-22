@@ -273,7 +273,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Motivations/Strategies.)
       John would be on the homepage of the website and there are no reviews on the page. He would know then
-      to look for a different page that has reviews on it. 
+      to look for a different page that has reviews on it.
 
 [Add as many actions as you need...]
 **Action # 1 : click on reviews page**
@@ -324,7 +324,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [no]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-      Once he submits, there is no message that tells him that his review was succesfully submitted or succesfully cancelled.  
+      Once he submits, there is no message that tells him that his review was succesfully submitted or succesfully cancelled.
 
 
 Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko has some of the best Asian food near Cornell University. However, he is concerned about being able to find menu options that fit his dietary restriction. Thomas wants to find photos of vegetarian menu items.
@@ -404,9 +404,13 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 
 [Your responses here should be **very** thorough and thoughtful.]
 
-Yes, in our first task we realized that there is no feedback for John to know that he succesfully submitted his review of the restaurant. Since John has lower self efficacy, he might think that he did something wrong unless he directly sees his review on the page or is given some confirmation. We will change our design to include displaying confirmation messages for succesfully submitting or cancelling a review as well as including error messages directly telling John if he forgot to fill out a certain filed in the review form. 
+Yes, in our first task we realized that there is no feedback for John to know that he succesfully submitted his review of the restaurant. Since John has lower self efficacy, he might think that he did something wrong unless he directly sees his review on the page or is given some confirmation. We will change our design to include displaying confirmation messages for succesfully submitting or cancelling a review as well as including error messages directly telling John if he forgot to fill out a certain filed in the review form.
 
+<<<<<<< HEAD
 In our second task we realized that people looking at the menu would probably want to see picture of the food items and people looking at pictures of the food would probably want to also see the menu. We will try to connect the two pages by linking them through the images. 
+=======
+In our second task ......
+>>>>>>> 6b60b4b9a1cfb4114faf96d94a06b7e200087320
 
 ## Final Design
 
@@ -471,31 +475,50 @@ Table: reviews
 * field 1: id: INTEGER {PK, U, Not, AI}
 * field 2: date: DATE {Not}
 * field 3: reviewer: TEXT {Not}
-* field 4: email: TEXT 
+* field 4: email: TEXT
 * field 5: rating: INTEGER {Not}
 * field 6: review_title TEXT
+<<<<<<< HEAD
 * field 7: comment TEXT
 * field 8: image_id TEXT 
+=======
+* field 7: comment TEXT {Not}
+* field 8: image_id TEXT
+>>>>>>> 6b60b4b9a1cfb4114faf96d94a06b7e200087320
 
 
 ## Database Queries
 
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
 
+### menu.php queries:
+```
+For getting all categories
+SELECT * FROM categories
 
-### reviews.php queries: 
+For getting all menu items in a certain category
+SELECT menu_name, description FROM menu INNER JOIN categories ON category_id = categories.id WHERE category = :category
+```
+
+### dish.php queries:
+```
+For getting id of single menu item
+SELECT * FROM menu WHERE id = :id
+```
+
+### reviews.php queries:
 ```
 For sort by: (ex. sort by most recent or sort by highest rating)
 SELECT * FROM reviews ORDER BY date ASC or SELECT * FROM reviews ORDER BY rating DESC
 
 For search (note: will use parameter markers):
-SELECT * FROM reviews WHERE comment LIKE "%search_field%" 
+SELECT * FROM reviews WHERE comment LIKE "%search_field%"
 
 For adding a review (will use parameter markers):
 INSERT INTO reviews (id, date, reviewer, email, rating, review_title, comment, image_id) VALUES (values form the form)
 
 Display reviews:
-SELECT * FROM reviews  
+SELECT * FROM reviews
 ```
 
 ## PHP File Structure
@@ -507,7 +530,7 @@ SELECT * FROM reviews
 * includes/init.php - stuff that useful for every web page.
 * menu.php
 * dish.php
-* reviews.php 
+* reviews.php
 * contact.php
 
 
@@ -523,31 +546,37 @@ Open the database, select all the values from the table to display, except
 then create a table to input all the database values using html, then using sql code select all the values in the database and put the in array format while executing and storing all the array values in a variable. Then a function opens up all of the elements and prints them out individually as specified to be part of the table ignoring any encodings with in the characters. Every element needs to be printed in the array variable that they were stored in.
 
 ### index.php
-
 ```
 TODO
 ```
 
 ### about.php
-
 ```
 TODO
 ```
 
 ### menu.php
-
 ```
-TODO
+use sql to get all categories
+for each category
+  create a header with the category as the text
+  use sql to get all menu items in the category
+  for each menu item in the category
+    create a header for the menu item that links to dish.php
+    show the description of the menu item
 ```
 
 ### dish.php
-
 ```
-TODO
+if id is set
+  use sql to get all menu items where menu id is id
+  set menu variable to the result of sql query
+
+if menu is set
+  show details of menu item (description, price, photo, etc)
 ```
 
 ### gallery.php
-
 ```
 TODO
 ```
@@ -555,14 +584,14 @@ TODO
 ### reviews.php
 ```
 For sort:
-- If user selects a drop down option (ex. most recent), then order elements of the reviews page by that option and 
+- If user selects a drop down option (ex. most recent), then order elements of the reviews page by that option and
 display newly ordered information (ex. for most recent would order database by date in descending order)
 
 For the search:
-- If the user clicks search button check for the information inputted in search text field 
+- If the user clicks search button check for the information inputted in search text field
 - Sanitize input to prevent harm done to website
 - Query to find records of database that match input (will search for input in review description and review title)
-- If the records of the search match input retrive those records from the database. Then show those records to the user. 
+- If the records of the search match input retrive those records from the database. Then show those records to the user.
 
 For uploading a users review (incl image):
 - will use data transaction in users review form
@@ -573,15 +602,15 @@ For uploading a users review (incl image):
   - check that the email matches the appropriate specifications otherwise show an error message
   - check that a rating was given, if not show error message
   - check that a review comment was given, if not show error message
-  - if user upload some file: 
+  - if user upload some file:
     - check that file is a jpeg or png otherwise display error message
-  - if all fields satisfied, then display successfully submitted message and add review to database 
+  - if all fields satisfied, then display successfully submitted message and add review to database
 
-  if pressed cancel button: 
-  - display sucesfully cancelled message and leave write a review form (go back to reviews)  
+  if pressed cancel button:
+  - display sucesfully cancelled message and leave write a review form (go back to reviews)
 ```
-### contact.php
 
+### contact.php
 ```
 Once the form is submitted:
 - Scroll down to the bottom of the screen where the form location is
