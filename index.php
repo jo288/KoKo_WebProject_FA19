@@ -20,9 +20,29 @@ $index = "current";
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php"); ?>
 
-  <main>
-    <h2>Home</h2>
-
+  <main id="home_main">
+    <div id="home_header">
+      <h2>Welcome to KoKo!</h2>
+    </div>
+    <p id="home_intro">
+      Ithaca's Best Korean Restaurant
+    </p>
+    <h3 class="home_h3">Top Menus</h3>
+    <a id="home_menulink" href="menu.php">Show All</a>
+    <div id="home_topmenus">
+      <div class="home_topmenu">
+        <img alt="menu1" src="images/home_bg.jpg" />
+        <p> Menu Name </p>
+      </div>
+      <div class="home_topmenu">
+        <img alt="menu2" src="images/home_bg.jpg" />
+        <p> Menu Name </p>
+      </div>
+      <div class="home_topmenu">
+        <img alt="menu3" src="images/home_bg.jpg" />
+        <p> Menu Name </p>
+      </div>
+    </div>
 
   </main>
 
