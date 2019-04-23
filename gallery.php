@@ -24,8 +24,8 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
     <!-- TODO: This should be your main page for your site. -->
     <?php include("includes/header.php"); ?>
 
-    <main>
-        <h2>Photo Gallery</h2>
+    <main id="gallery_main">
+        <h2>Gallery</h2>
 
 
     </main>
