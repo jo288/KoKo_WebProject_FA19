@@ -1,10 +1,12 @@
   <header>
+    <div id="logo">
+      <a href="index.php"><img alt="KoKo Logo" src="images/kokotemplogo.png" /></a>
+    </div>
     <nav id="menu">
-      <h1>KOKO(LOGO GOES HERE)</h1>
       <ul>
         <?php
 
-        $nav = array('about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => 'Contact');
+        $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => 'Contact');
 
         $current = basename($_SERVER['PHP_SELF']);
 
