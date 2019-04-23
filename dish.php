@@ -5,7 +5,23 @@ include("includes/init.php");
 $title = "dish";
 $index = "current";
 
+$db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 
+// code referenced from lecture 18
+if (isset($_GET['id'])) {
+    $menu_id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+    $sql = "SELECT * FROM menu WHERE id = :id;";
+    $params = array(
+        ':id' => $menu_id
+    );
+    $result = exec_sql_query($db, $sql, $params);
+    if ($result) {
+        $menus = $result->fetchAll();
+        if (count($menus) > 0) {
+            $menu = $menus[0];
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +41,7 @@ $index = "current";
     <?php include("includes/header.php"); ?>
 
     <main>
-        <h2>Dish</h2>
+        <h2><?php echo htmlspecialchars($menu["menu_name"]) ?></h2>
 
 
     </main>

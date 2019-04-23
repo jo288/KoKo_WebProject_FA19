@@ -220,8 +220,8 @@ Client approved of our initial design. She liked the color scheme and layouts of
 ## Iterated Design
 
 [Improve your design based on the feedback you received from your client.]
-Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. Also the review page will now allow uploading images to the gallery which is something that will allow more interaction with the users and allow the client to have a larger array of images to display on the website.
 
+Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. Also the review page will now allow uploading images to the gallery which is something that will allow more interaction with the users and allow the client to have a larger array of images to display on the website.
 
 
 ## Evaluate your Design
@@ -283,12 +283,12 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
       John is already familiar with basic website functions and the navigation bar on the website
-      clearly shows the different pages. Since John wants to make a review, he would know to click on the navi
+      clearly shows the different pages. Since John wants to make a review, he would know to click the reviews label on the navigation bar.
 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-      Once he gets to the review page, he will be able to see different reviews as well as a the reviews button.
+      Once he gets to the review page, he will be able to see different reviews as well as a the write a review button.
 
 **Subgoal # 2 : write review**
 	(e.g., "# 1 : Select the section of the document you want to print")
@@ -310,8 +310,7 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
   - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
-      John would be led to a different page once he clicks on the write a review button. This page would contain a form for him to
-      fill out.
+      John would be led to a different page once he clicks on the write a review button. This page would contain a form for him to fill out.
 
 **Action # 2: fill out reviews form**
 	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
@@ -327,7 +326,76 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
       Once he submits, there is no message that tells him that his review was succesfully submitted or succesfully cancelled.
 
+
+Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko has some of the best Asian food near Cornell University. However, he is concerned about being able to find menu options that fit his dietary restriction. Thomas wants to find photos of vegetarian menu items.
+
+  1. click on photo gallery page in nav bar
+  2. scroll to find album for vegetarian food options
+  3. click on vegetarian food album
+
 #### Task 2 - Cognitive Walkthrough
+
+**Task name: Task 2 Thomas**
+
+[Add as many subgoals as you needs]
+**Subgoal # 1 : find photos of menu items**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+      Thomas wants to find pictures of the vegetarian menu items before he goes to the actual restaurant.
+      In the home page there are no pictures of the menu items, so Thomas would know to look for another page with pictures of the menu items.
+
+[Add as many actions as you need...]
+**Action # 1 : click on gallery's page**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [maybe]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    Since Thomas wants to look at pictures of the menu items, he might click on the menu's page instead of the
+    galleries page. Once Thomas clicks on the menu page and sees no pictures, he might know to then try the gallery page to find picture. However, if Thomas has especially low self efficacy, he might blame himself for the images not appearing in the menu page.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      He would see be able to see different images of the menu items.
+
+**Subgoal # 2 : find vegetarian menu item pictures**
+	(e.g., "# 1 : Select the section of the document you want to print")
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+    Since Thomas is a vegetarian, he would desire to look at the pictures of the vegetarian items.
+
+[Add as many actions as you need...]
+**Action # 1: scroll to find the vegetarian food album**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    When Thomans is on the food gallery page, he would see different photo albums with titles that would tell the user the kind kind of photos in the albumn. Since Thomas wants to look at vegetarian dishes, he would know to look for that album. Since scrolling is fairly standard for website, Thomas would know to scroll until he found the vegetarian album.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+    He would see the vegetarian food album.
+
+  **Action # 2: click on vegetarian food album**
+	(e.g., "# 1 : Put the mouse at the beginning of the section you want to print")
+
+  - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    Since photo albums are a common way to organize photos, Thomas would be familiar with them. He would know that he has to click on the album in order to see the photos of the album.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+    He would see more photos of vegetarian dishes once he clicked on the vegetarian album.
 
 
 ### Cognitive Walk-though Results
@@ -336,6 +404,9 @@ Task 2: Thomas is a vegetarian, and loves to eat Asian food. He heard that Koko 
 
 [Your responses here should be **very** thorough and thoughtful.]
 
+Yes, in our first task we realized that there is no feedback for John to know that he succesfully submitted his review of the restaurant. Since John has lower self efficacy, he might think that he did something wrong unless he directly sees his review on the page or is given some confirmation. We will change our design to include displaying confirmation messages for succesfully submitting or cancelling a review as well as including error messages directly telling John if he forgot to fill out a certain filed in the review form.
+
+In our second task we realized that people looking at the menu would probably want to see picture of the food items and people looking at pictures of the food would probably want to also see the menu. We will try to connect the two pages by linking them through the images.
 
 ## Final Design
 
@@ -397,25 +468,61 @@ Table: menu images
 * field 6: review id
 
 Table: reviews
-* field 1: id
-* field 2: reviewer
-* field 3: rating
-* field 4: comment
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: date: DATE {Not}
+* field 3: reviewer: TEXT {Not}
+* field 4: email: TEXT
+* field 5: rating: INTEGER {Not}
+* field 6: review_title TEXT
+* field 7: comment TEXT
+* field 8: image_id TEXT
 
 
 ## Database Queries
 
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
 
+### menu.php queries:
+```
+For getting all categories
+SELECT * FROM categories
+
+For getting all menu items in a certain category
+SELECT menu_name, description FROM menu INNER JOIN categories ON category_id = categories.id WHERE category = :category
+```
+
+### dish.php queries:
+```
+For getting id of single menu item
+SELECT * FROM menu WHERE id = :id
+```
+
+### reviews.php queries:
+```
+For sort by: (ex. sort by most recent or sort by highest rating)
+SELECT * FROM reviews ORDER BY date ASC or SELECT * FROM reviews ORDER BY rating DESC
+
+For search (note: will use parameter markers):
+SELECT * FROM reviews WHERE comment LIKE "%search_field%"
+
+For adding a review (will use parameter markers):
+INSERT INTO reviews (id, date, reviewer, email, rating, review_title, comment, image_id) VALUES (values form the form)
+
+Display reviews:
+SELECT * FROM reviews
+```
 
 ## PHP File Structure
 
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
 
 * index.php - main page.
+* about.php
 * includes/init.php - stuff that useful for every web page.
 * menu.php
 * dish.php
+* reviews.php
+* contact.php
 
 
 ## Pseudocode
@@ -430,56 +537,66 @@ Open the database, select all the values from the table to display, except
 then create a table to input all the database values using html, then using sql code select all the values in the database and put the in array format while executing and storing all the array values in a variable. Then a function opens up all of the elements and prints them out individually as specified to be part of the table ignoring any encodings with in the characters. Every element needs to be printed in the array variable that they were stored in.
 
 ### index.php
-
-```
-TODO
-```
-
-### about.php
-
 ```
 TODO
 ```
 
 ### menu.php
-
 ```
-TODO
+use sql to get all categories
+for each category
+  create a header with the category as the text
+  use sql to get all menu items in the category
+  for each menu item in the category
+    create a header for the menu item that links to dish.php
+    show the description of the menu item
 ```
 
 ### dish.php
-
 ```
-TODO
+if id is set
+  use sql to get all menu items where menu id is id
+  set menu variable to the result of sql query
+
+if menu is set
+  show details of menu item (description, price, photo, etc)
 ```
 
 ### gallery.php
-
 ```
 TODO
 ```
 
 ### reviews.php
-
 ```
+For sort:
+- If user selects a drop down option (ex. most recent), then order elements of the reviews page by that option and
+display newly ordered information (ex. for most recent would order database by date in descending order)
+
 For the search:
-- If the user clicks search check for the information inputted and for the category inputed. If both of these elements are valid allow the search to go through.
-- Check that the search category is appropriately one of the designated categories and sanitze the information recieved to prevent harm done to the website.
-- If the elements of the search match an element retrive those elements from the database. Then show the elements to the user.
+- If the user clicks search button check for the information inputted in search text field
+- Sanitize input to prevent harm done to website
+- Query to find records of database that match input (will search for input in review description and review title)
+- If the records of the search match input retrive those records from the database. Then show those records to the user.
 
 For uploading a users review (incl image):
+- will use data transaction in users review form
 - save all items currently in the form attributes but filter any html special characters and save them to variables to make the form sticky
-- check that the name matches the appropriate specifications or otherwise show an error
-- check that the email matches the appropriate specifications otherwise show an error
-- check that a review was given
-- check that a comment was given
-- if images were present in the upload
-- if another upload type other than jpeg or png was uploaded display: only these upload types are allowed
-- if correct image was uploaded: add new element to database with all of the required image attributes
+
+  if pressed submit button:
+  - check that name field was given, if not then otherwise show an error message
+  - check that the email matches the appropriate specifications otherwise show an error message
+  - check that a rating was given, if not show error message
+  - check that a review comment was given, if not show error message
+  - if user upload some file:
+    - check that file is a jpeg or png otherwise display error message
+  - if all fields satisfied, then display successfully submitted message and add review to database
+
+  if pressed cancel button:
+  - display sucesfully cancelled message and leave write a review form (go back to reviews)
 ```
 
 ### contact.php
-
 ```
 Once the form is submitted:
 - Scroll down to the bottom of the screen where the form location is
@@ -501,7 +618,7 @@ For accessing Database Elements from the form and then inputting them:
 
 [Add any additional comments you have here.]
 
-###Changes from Milestone 1 to Milestone 2
+### Changes from Milestone 1 to Milestone 2
 - More involve interactivity
 - add dishes page
 - search function on the reviews

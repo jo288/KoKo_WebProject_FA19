@@ -76,13 +76,27 @@ nav li a {
 
 main {
 	background-color: white;
-	height: 800px;
-	width: 200px;
+	width: 75%;
+  margin: 0 auto;
 }
 
 /* ABOUT PAGE */
 
 /* MENU PAGE */
+.category_header {
+	border-bottom: rgb(255, 94, 0) 2px solid;
+}
+
+/* .menu_category {
+    display: flex;
+    flex-flow: row wrap;
+} */
+
+/* .menu_item {
+	display: flex;
+	width: 300px;
+	margin: 0 auto;
+} */
 
 /* DISH PAGE */
 
