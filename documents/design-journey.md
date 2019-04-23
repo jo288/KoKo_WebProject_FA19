@@ -467,7 +467,7 @@ Table: dietary restriction
 * field 1: id
 * field 2: dietary restriction
 
-Table: menu images
+Table: images
 * field 1: id
 * field 2: image name
 * field 3: image extention
@@ -503,6 +503,18 @@ SELECT menu_name, description FROM menu INNER JOIN categories ON category_id = c
 ```
 For getting id of single menu item
 SELECT * FROM menu WHERE id = :id
+
+For getting the images of a single menu item
+SELECT * FROM images WHERE menu_id = :id
+```
+
+### gallery.php queries:
+```
+For getting all albums
+SELECT * FROM categories
+
+For getting all images in an album
+SELECT * from images INNER JOIN menu ON menu_id = menu.id WHERE category = :category
 ```
 
 ### reviews.php queries:
@@ -544,9 +556,12 @@ SELECT * FROM reviews
 Open the database, select all the values from the table to display, except
 then create a table to input all the database values using html, then using sql code select all the values in the database and put the in array format while executing and storing all the array values in a variable. Then a function opens up all of the elements and prints them out individually as specified to be part of the table ignoring any encodings with in the characters. Every element needs to be printed in the array variable that they were stored in.
 
-### index.php
+### header.php
 ```
-TODO
+for all the navigation menus
+  if menu is the current page
+    then highlight it
+    else display it normally
 ```
 
 ### menu.php
@@ -572,7 +587,21 @@ if menu is set
 
 ### gallery.php
 ```
-TODO
+  Album Display:
+  if get parameter for album id isn't set
+    then display all the albums
+    else display the pictures in the album
+
+  Album Select:
+  if user clicks on the album
+    then redirect to the gallery page with get parameter set to album id
+    else do nothing
+
+  Picture Select:
+  if user clicks on the picture
+    then redirect to the dish page with the according menu id
+    else do nothing
+
 ```
 
 ### reviews.php
