@@ -110,8 +110,8 @@ Gallery (gallery.php)
 Reviews (reviews.php)
 ![Review page draft](reviews.jpg)
 
-Dish (dish.php)
-![Dish page draft](dish.jpg)
+<!-- Dish (dish.php)
+![Dish page draft](dish.jpg) -->
 
 Contact (contact.php)
 ![Contact page draft](contact.jpg)
@@ -178,7 +178,9 @@ The site will use PHP templates for header and footer. Header template will incl
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
 
-The site will have the menu of the restaurant the user will be able to filter for dietary restrictions (vegetarian, vegan, gluten free). In addition, there will be a photo gallery where the user can view pictures of the food at the restaurant. In addition, the user will be able to filter the pictures based on specific tags. The gallery will also have a slideshow feature and specific page that will show all dish information.
+The site will have the menu of the restaurant the user will be able to filter for dietary restrictions (vegetarian, vegan, gluten free). Clicking on the individual dishes will redirect the user to the page with detailed information on the dish, including the related images from the gallery displayed as a slideshow.
+
+The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it.
 
 The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client, and the review form will allow the other members of the target audience. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments, and even images to the site. The review page will have a search for customers to search of reviews for their specific dish orders and will have seperate categories.
 
@@ -413,11 +415,14 @@ In our second task we realized that people looking at the menu would probably wa
 [Include sketches of your finalized design.]
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
+
+The final design sketches will continue to be updated as the development progresses.
+
 Header & Footer Templates (header.php, footer.php)
-![Header/footer final](headerfooterfinal.jpg)
+![Header/footer final](headerfooter.jpg)
 
 Home (index.php)
-![Home page final](indexfinal.jpg)
+![Home page final](index.jpg)
 
 About (about.php)
 ![About page final](aboutfinal.jpeg)
@@ -426,7 +431,10 @@ Menu (menu.php)
 ![Menu page final](menufinal.jpeg)
 
 Gallery (gallery.php)
-![Photo gallery page final](galleryfinal.jpg)
+![Photo gallery page final](gallery_final.jpg)
+
+Gallery (when album is selected) (gallery.php)
+![Photo gallery page final](gallery_album_final.jpg)
 
 Reviews (reviews.php)
 ![Review page final](reviewsfinal.jpg)
