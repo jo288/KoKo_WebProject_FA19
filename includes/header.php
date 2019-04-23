@@ -1,5 +1,6 @@
   <header>
     <div id="logo">
+      <!-- Image Created by Jinju Ouck -->
       <a href="index.php"><img alt="KoKo Logo" src="images/kokotemplogo.png" /></a>
     </div>
     <nav id="menu">
@@ -12,7 +13,7 @@
 
         foreach ($nav as $pagename => $value) {
           if ($current == $pagename) {
-            echo "<li class = current>" . " <a href=" . $pagename . "> " . $value . "</a></li>";
+            echo "<li>" . " <a  class = current href=" . $pagename . "> " . $value . "</a></li>";
           } else {
             echo "<li class>" . " <a href=" . $pagename . "> " . $value . "</a></li>";
           }

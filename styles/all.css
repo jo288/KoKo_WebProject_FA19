@@ -7,6 +7,7 @@
 	font-family: Verdana, Geneva, Tahoma, sans-serif, serif;
 }
 
+
 .hidden {
 	display: none;
 }
@@ -14,10 +15,12 @@
 /* HEADER START */
 
 header {
-	background-color: white;
-	height: 300px;
+	/* Image Source: https://www.toptal.com/designers/subtlepatterns/inspiration-geometry/ */
+	background-image: url("../images/geometry.png");
+  background-size: auto;
+	/* height: 280px; */
 	/* debugging */
-	border-bottom: 1px red solid;
+	border-bottom: 1px solid black;
 }
 
 #logo {
@@ -25,54 +28,62 @@ header {
 }
 
 #logo img{
-	max-width: 250px;
-
+	max-width: 220px;
 	/* debugging */
 	/* border: red 2px solid; */
 }
 
-/* h1 {
-	color: rgb(255, 94, 0);
-	font-weight: bold;
-	text-align: center;
-	padding: 10px;
-	border:black solid 2px;
-} */
-
-nav {
-	/* Why even use flex if we're just gonna make lists inline-block? */
-	/* display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center; */
-}
-
 nav ul {
-	margin: 5px;
+	margin-bottom: 10px;
 	height: 40px;
-	padding: 0px;
 	text-align: center;
+	/* debugging */
+	/* border: red 2px solid; */
 }
 
 nav li {
-	color: black;
+	font-weight: bold;
 	display: inline-block;
 	padding: 5px 10px;
-	font-weight: normal;
-	margin: 0px 5px;
-	margin-top: 5px;
+	margin: 5px 20px;
+	/* debugging */
+	/* border: 1px solid red; */
 }
 
 nav li a {
 	text-decoration: none;
 	color: black;
+	/* debugging */
+	/* border: 1px solid blue; */
+}
+
+nav li a:hover {
+	color: #ff8946;
 }
 
 .current {
-	font-weight: bold;
+	color: #ff8946;
 }
 
 /* HEADER END */
+
+/* FOOTER START */
+
+footer {
+	margin-top: 100px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding: 30px 20px;
+  background-color: #3b3b3b;
+  color: white;
+}
+
+footer p {
+  padding: 0 50px 0 0;
+}
+
+/* FOOTER END */
 
 main {
 	background-color: white;
