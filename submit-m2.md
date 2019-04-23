@@ -23,23 +23,23 @@ See the course website for a detailed citation policy with more information on u
 
 **Place an x between the [] after you have completed each step.** (example: [x])
 
-- [] We have checked that each resource included in our submission adheres to the course citation policy.
+- [s] We have checked that each resource included in our submission adheres to the course citation policy.
 
     Failure to adhere to the citation policy will result in a _minimum_ of a letter grade penalty for the assignment.
 
-- [] All of the code we am submitting is our own work.
+- [s] All of the code we am submitting is our own work.
 
     If you used other code as reference when writing your own code, please cite the resource via a comment.
 
-- [] **We have checked that our _entire_ submission has been pushed to Cornell's GitHub.**
+- [s] **We have checked that our _entire_ submission has been pushed to Cornell's GitHub.**
 
     Failure to push to GitHub is the same as not submitting an assignment.
 
     Your assignment's **submission time** is the time of your **last push** and _not_ the time of your last commit (the dates next to commits in GitHub).
 
-- [] We am ready to have our assignment graded.
+- [s] We am ready to have our assignment graded.
 
 Each team member should sign their name and include today's date and time to submit **MILESTONE 2**.
 
-- Full Name of Each Contributing Team Member:
-- Date & Time:
+- Full Name of Each Contributing Team Member: Jinju Ouck, Kaitlyn Li, Khalid Nadi, Tricia Park
+- Date & Time: 4/23/19, 2:22 pm

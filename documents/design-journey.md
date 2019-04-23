@@ -428,7 +428,7 @@ About (about.php)
 ![About page final](aboutfinal.jpeg)
 
 Menu (menu.php)
-![Menu page final](menufinal.jpeg)
+![Menu page final](menufinal.jpg)
 
 Gallery (gallery.php)
 ![Photo gallery page final](gallery_final.jpg)
@@ -445,7 +445,7 @@ Contact (contact.php)
 Added Pages:
 
 Dish (dish.php)
-![Dish page final](dishFinal.jpg)
+![Dish page final](dishfinal.jpg)
 
 ## Database Schema
 
