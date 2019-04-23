@@ -45,10 +45,14 @@ CREATE TABLE `images`
 CREATE TABLE `reviews`
 (
 	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`reviewer` TEXT,
+	`date` DATE NOT NULL,
+	`reviewer` TEXT NOT NULL,
     `email` TEXT,
-	`rating` INTEGER,
+	`rating` INTEGER NOT NULL,
+	`review_title` TEXT
     `comment` TEXT
+	`image_id` INTEGER
+	
 );
 
 -- TODO: initial seed data
