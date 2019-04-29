@@ -22,9 +22,21 @@ $index = "current";
     <!-- TODO: This should be your main page for your site. -->
     <?php include("includes/header.php"); ?>
 
-    <main>
+    <main id="about_main">
         <h2>About</h2>
 
+        <div class="about_section">
+            <h3 class="about_header">Koko</h3>
+            <p>
+            </p>
+        </div>
+
+        <div class="about_section">
+            <h3 class="about_header">Korean Cuisine</h3>
+            <p>
+                For more information about Korean cuisine, please see <a href="https://en.wikipedia.org/wiki/Korean_cuisine" target="_blank">this website</a>.
+            </p>
+        </div>
 
     </main>
 
