@@ -45,15 +45,28 @@ CREATE TABLE `images`
 CREATE TABLE `reviews`
 (
 	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`date` DATE NOT NULL,
 	`reviewer` TEXT NOT NULL,
+	`date` TEXT NOT NULL,
     `email` TEXT,
 	`rating` INTEGER NOT NULL,
-	`review_title` TEXT
-    `comment` TEXT
-	`image_id` INTEGER
-	
+	`review_title` TEXT,
+    `comment` TEXT	
 );
+
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
+VALUES (1, "Kaitlyn", "2019-4-27", "kml284@cornell.edu", 4, "ok seed", "seed comment");
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
+VALUES (2, "Kaitlyn2", "2018-4-27", "kml284@cornell.edu", 1, "ok2 seed", "seed2 comment");
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
+VALUES (3, "Kaitlyn3", "2019-3-27", "kml284@cornell.edu", 3, "ok3 seed", "seed3 comment");
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
+VALUES (4, "Kaitlyn4", "2019-4-29", "kml284@cornell.edu", 3, "ok3 seed", "seed3 comment");
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
+VALUES (5, "Kaitlyn", "2017-6-27", "kml284@cornell.edu", 5, "ok3 seed", "seed3 comment");
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
+VALUES (6, "Kaitlyn6", "2019-2-15", "kml284@cornell.edu", 2, "ok3 seed", "seed3 comment");
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
+VALUES (7, "Kaitlyn7", "2019-4-27", "kml284@cornell.edu", 2, "ok3 seed", "seed3 comment");
 
 -- TODO: initial seed data
 

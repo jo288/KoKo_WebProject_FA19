@@ -199,3 +199,105 @@ main {
 }
 
 /* REVIEWS PAGE */
+
+#review_form{
+	font-size: 12pt; 
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+}
+input.review{
+	font-size: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+textarea.review{
+  width: 400px;
+  height: 200px;
+	font-size: 17px;
+	margin-left: 20px;
+}
+
+table.review {
+	/* margin-left: auto;
+	margin-right: auto; */
+	margin-left: 70px;
+	text-align: center;
+}
+
+#review_filter{
+	font-size: 12pt; 
+	margin-top: 0px;
+	margin-left: 70px;
+	margin-bottom: 20px;
+}
+
+th.review {
+	padding: 10px; 
+  text-align: left;
+  background-color: #FA594C;
+  color: whitesmoke;
+}
+td.review {
+  padding: 10px; 
+  text-align: left;
+}
+.review_button {
+	display:inline-block;
+	text-decoration: none;
+  color: whitesmoke;
+	font-size: 16px;
+	background-color: #333333;
+	padding-top:5px;
+	padding-bottom: 5px;
+	width: 80px;
+	height: 30px;
+	border-radius: 3px;
+	margin-right: 50px;
+}
+
+#write_review_button{
+	margin-left: 1100px;
+	margin-bottom: 20px;
+	width: 150px;
+	height: 40px;
+	padding: 10px;
+
+}
+
+#review_more_button{
+	margin-top: 50px;
+	width: 150px;
+	height: 40px;
+	padding: 10px;
+
+}
+
+#review_more{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+
+.review_error {
+  color: #FA594C;
+}
+#review_sort{
+	display:inline-block;
+	text-decoration: none;
+	/* color: white; */
+	font-size: 13px;
+	padding-top:10px;
+	width: 200px;
+	height: 30px;
+	/* background-color: #333333; */
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+#review_search_field{
+	margin: 0px;
+	width: 150px;
+}
