@@ -262,7 +262,10 @@ h2 {
 }
 
 /* REVIEWS PAGE */
+#reviews_main{
+	width: 80%;
 
+}
 #review_form{
 	font-size: 12pt; 
 	margin-top: 20px;
@@ -284,16 +287,14 @@ textarea.review{
 }
 
 table.review {
-	/* margin-left: auto;
-	margin-right: auto; */
-	margin-left: 70px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }
 
 #review_filter{
 	font-size: 12pt; 
 	margin-top: 0px;
-	margin-left: 70px;
 	margin-bottom: 20px;
 }
 
@@ -322,7 +323,8 @@ td.review {
 }
 
 #write_review_button{
-	margin-left: 1100px;
+	/* margin-left: 1100px; */
+	/* float: right; */
 	margin-bottom: 20px;
 	width: 150px;
 	height: 40px;
@@ -330,12 +332,19 @@ td.review {
 
 }
 
-#review_more_button{
+#review_next_button{
 	margin-top: 50px;
-	width: 150px;
+	width: 100px;
 	height: 40px;
 	padding: 10px;
 
+}
+
+#review_back_button{
+	margin-top: 50px;
+	width: 100px;
+	height: 40px;
+	padding: 10px;
 }
 
 #review_more{
@@ -363,4 +372,9 @@ td.review {
 #review_search_field{
 	margin: 0px;
 	width: 150px;
+}
+
+#review_section{
+	border-bottom: rgb(255, 94, 0) 2px solid;
+
 }

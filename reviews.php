@@ -15,15 +15,15 @@ function create_select_sql($filter, $page)
 {
   if (!empty($filter)) {
     if ($filter == "highest-rating")
-      $sql = "SELECT * FROM reviews order by rating DESC LIMIT 10 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews order by rating DESC LIMIT 5 OFFSET " . $page;
     else if ($filter == "lowest-rating")
-      $sql = "SELECT * FROM reviews order by rating ASC LIMIT 10 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews order by rating ASC LIMIT 5 OFFSET " . $page;
     else if ($filter == "most-recent")
-      $sql = "SELECT * FROM reviews order by date DESC LIMIT 10 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews order by date DESC LIMIT 5 OFFSET " . $page;
     else if ($filter == "oldest")
-      $sql = "SELECT * FROM reviews order by date ASC LIMIT 10 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews order by date ASC LIMIT 5 OFFSET " . $page;
   } else
-    $sql = "SELECT * FROM reviews LIMIT 10 OFFSET " . $page;
+    $sql = "SELECT * FROM reviews LIMIT 5 OFFSET " . $page;
   return $sql;
 }
 
@@ -31,13 +31,13 @@ function create_select_sql($filter, $page)
 if (isset($_POST['submit_search'])) {
   $search_term = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_STRING);
   $search_term = trim($search_term);
-  if (isset($search_term)) {
-    // $sql = "SELECT * FROM reviews WHERE comment LIKE :search_term";
-    // $params = array(
-    //   ':search_term' => "%$search_term%"
-    // );
-    echo ("many sorrows");
-  }
+  // if (isset($search_term)) {
+  //   $sql = "SELECT * FROM reviews WHERE comment LIKE :search_term";
+  //   $params = array(
+  //     ':search_term' => "%$search_term%"
+  //   );
+  //   echo ("many sorrows");
+  // }
 }
 
 //to filter review by rating or date
@@ -46,14 +46,12 @@ if (isset($_POST['submit_filter'])) {
 }
 
 //to view more reviews on page
-if (isset($_POST['submit_more'])) {
-  // $sql = "SELECT COUNT(*) FROM reviews";
-  // $params = array();
-  // $result = exec_sql_query($db, $sql, $params);
-  // if ($page + 10 > $result) {
-  //   $page = $page + $result;
-  // } else
-  $page = $page + 10;
+if (isset($_POST['submit_next'])) {
+  $page = $page + 5;
+}
+
+if (isset($_POST['submit_back'])) {
+  $page = $page - 5;
 }
 
 const MAX_FILE_SIZE = 1000000;
@@ -137,7 +135,7 @@ if (isset($_POST['submit_review'])) {
     echo "<p class=message><strong>" . htmlspecialchars($message) . "</strong></p>\n";
   } ?>
 
-  <main>
+  <main id = "reviews_main">
     <h2>Reviews</h2>
 
     <?php if (isset($_POST["write_review"]) || !empty($errors)) { ?>
@@ -186,11 +184,6 @@ if (isset($_POST['submit_review'])) {
     <?php 
   } else { ?>
   <!-- main review page display --> 
-   <!-- write a review button --> 
-   <form id="write_review_form" class="form-inline" action="reviews.php" method="post">
-    <input id="write_review_button" class="review_button" type="submit" name="write_review" value ="Write a review">
-   </form>
-
   <form id="review_filter" class="form-inline" action="reviews.php" method="post">
       <!-- filter form --> 
       <select id="review_sort" name="sorting">
@@ -205,6 +198,8 @@ if (isset($_POST['submit_review'])) {
     <label>Show reviews that mention:</label>
       <input id="review_search_field" class = "review" type = "text" name="search" placeholder="Search:" value="<?php echo htmlspecialchars($search_tag); ?>"/>
       <input id="review_search_button" class = "review_button" type = "submit" name = "submit_search" value = "Search">
+       <!-- write a review button --> 
+    <input id="write_review_button" class="review_button" type="submit" name="write_review" value ="Write a review">
     </form>
 
     <!-- SHOW Reviews -->
@@ -248,8 +243,9 @@ if (isset($_POST['submit_review'])) {
       </tbody>
     </table>
     <!-- Show More reviews --> 
-    <form id="review_more" action="reviews.php" method="post">     
-        <button id="review_more_button" class="review_button" type = "submit" name = "submit_more">More Reviews</button>
+    <form id="review_more" action="reviews.php" method="post"> 
+      <button id="review_back_button" class="review_button" type = "submit" name = "submit_back"> < Back </button>
+      <button id="review_next_button" class="review_button" type = "submit" name = "submit_next"> Next > </button>
     </form>
     </div> 
   <?php 
