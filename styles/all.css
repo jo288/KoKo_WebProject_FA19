@@ -189,6 +189,10 @@ h2 {
 	margin-bottom: 30px;
 }
 
+.about_info {
+	margin-top: 10px;
+}
+
 /* MENU PAGE */
 .category_header {
 	border-bottom: rgb(255, 94, 0) 2px solid;
@@ -257,6 +261,7 @@ h2 {
 	width: 70%;
 	text-align: center;
 }
+
 #gallery_main h2{
 	margin: 20px 0;
 }
@@ -266,19 +271,22 @@ h2 {
 	width: 80%;
 
 }
+
 #review_form{
-	font-size: 12pt; 
+	font-size: 12pt;
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-bottom: 20px;
 	border: 1px solid #ccc;
 }
+
 input.review{
 	font-size: 100%;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 20px;
 }
+
 textarea.review{
   width: 400px;
   height: 200px;
@@ -293,21 +301,23 @@ table.review {
 }
 
 #review_filter{
-	font-size: 12pt; 
+	font-size: 12pt;
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
 
 th.review {
-	padding: 10px; 
+	padding: 10px;
   text-align: left;
   background-color: #FA594C;
   color: whitesmoke;
 }
+
 td.review {
-  padding: 10px; 
+  padding: 10px;
   text-align: left;
 }
+
 .review_button {
 	display:inline-block;
 	text-decoration: none;
@@ -352,10 +362,10 @@ td.review {
 	margin-bottom: 50px;
 }
 
-
 .review_error {
   color: #FA594C;
 }
+
 #review_sort{
 	display:inline-block;
 	text-decoration: none;
