@@ -10,34 +10,39 @@ $errors = array();
 $filter = "";
 $page = 0;
 $messages = array();
+$search = null;
 
-function create_select_sql($filter, $page)
+function create_select_sql($filter, $page, $search)
 {
   if (!empty($filter)) {
     if ($filter == "highest-rating")
-      $sql = "SELECT * FROM reviews order by rating DESC LIMIT 5 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews ORDER BY rating DESC LIMIT 5 OFFSET " . $page;
     else if ($filter == "lowest-rating")
-      $sql = "SELECT * FROM reviews order by rating ASC LIMIT 5 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews ORDER BY rating ASC LIMIT 5 OFFSET " . $page;
     else if ($filter == "most-recent")
-      $sql = "SELECT * FROM reviews order by date DESC LIMIT 5 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews ORDER BY date DESC LIMIT 5 OFFSET " . $page;
     else if ($filter == "oldest")
-      $sql = "SELECT * FROM reviews order by date ASC LIMIT 5 OFFSET " . $page;
+      $sql = "SELECT * FROM reviews ORDER BY date ASC LIMIT 5 OFFSET " . $page;
+  } else if (isset($search)) {
+    $sql = "SELECT * FROM reviews WHERE comment LIKE '%' || :search || '%' LIMIT 5 OFFSET " . $page;
   } else
     $sql = "SELECT * FROM reviews LIMIT 5 OFFSET " . $page;
   return $sql;
 }
 
+function create_search_param($search)
+{
+  $params = array(
+    ':search' => $search
+  );
+  return $params;
+}
+
 //to search for specific term in comment form
 if (isset($_POST['submit_search'])) {
-  $search_term = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_STRING);
-  $search_term = trim($search_term);
-  // if (isset($search_term)) {
-  //   $sql = "SELECT * FROM reviews WHERE comment LIKE :search_term";
-  //   $params = array(
-  //     ':search_term' => "%$search_term%"
-  //   );
-  //   echo ("many sorrows");
-  // }
+  $search = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_STRING);
+  $search = trim($search);
+
 }
 
 //to filter review by rating or date
@@ -64,7 +69,7 @@ if (isset($_POST['submit_review'])) {
     $reviewer = filter_input(INPUT_POST, 'reviewer', FILTER_SANITIZE_STRING);
 
   $email = filter_input(INPUT_POST, 'reviewer_email', FILTER_SANITIZE_EMAIL);
-  $rating = $_POST['rating'];
+  $rating = filter_input(INPUT_POST, 'rating', FILTER_VALIDATE_INT);
   $review_title = filter_input(INPUT_POST, 'review_title', FILTER_SANITIZE_STRING);
   $comment = filter_input(INPUT_POST, 'comment', FILTER_SANITIZE_STRING);
   $date = date("Y-m-d");
@@ -77,12 +82,14 @@ if (isset($_POST['submit_review'])) {
       ':reviewer' => $reviewer,
       ':date' => $date,
       ':email' => $email,
+      ':rating' => $rating,
       ':review_title' => $review_title,
       ':comment' => $comment
     );
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       $review_id = $db->lastInsertId("id");
+      array_push($messages, "Review successfully submitted!");
     } else
       array_push($errors, "Add review failed!");
 
@@ -109,6 +116,9 @@ if (isset($_POST['submit_review'])) {
   }
 }
 
+if (isset($_POST['cancel_review'])) {
+  array_push($messages, "Review successfully cancelled!");
+}
 
 ?>
 <!DOCTYPE html>
@@ -183,6 +193,7 @@ if (isset($_POST['submit_review'])) {
     </form>
     <?php 
   } else { ?>
+
   <!-- main review page display --> 
   <form id="review_filter" class="form-inline" action="reviews.php" method="post">
       <!-- filter form --> 
@@ -217,8 +228,12 @@ if (isset($_POST['submit_review'])) {
     </thead>
       <tbody>
         <?php 
-        $sql = create_select_sql($filter, $page);
-        $params = array();
+
+        $sql = create_select_sql($filter, $page, $search);
+        if (isset($search))
+          $params = create_search_param($search);
+        else
+          $params = array();
         $result = exec_sql_query($db, $sql, $params);
         $records = $result->fetchAll();
         foreach ($records as $record) { ?>
