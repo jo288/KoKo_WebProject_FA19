@@ -38,6 +38,9 @@ if (isset($_GET['id'])) {
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
 
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/dish.js"></script>
+
     <title>Dish</title>
 </head>
 
@@ -52,6 +55,36 @@ if (isset($_GET['id'])) {
         <div id="single_menu">
 
             <!-- add image here -->
+            <div id="dish_slideshow">
+                <p id="slide_prev">&#10094;</p>
+                <?php
+                $sql = "SELECT * FROM images WHERE menu_id = :id";
+                $params = array(
+                    ':id' => $_GET["id"]
+                );
+                $image_records = exec_sql_query($db, $sql, $params)->fetchAll();
+
+                echo "<script> var image_sources = new Array();";
+                foreach ($image_records as $image_record) {
+                    echo "image_sources.push('uploads/" . $image_record["id"] . "." . $image_record["image_ext"] . "');";
+                }
+                echo "</script>";
+
+                echo "
+                    <img id='slide_image' alt = 'dish' src='uploads/" . $image_records[0]["id"] . "." . $image_records[0]["image_ext"] . "'>";
+                ?>
+                <p id="slide_next">&#10095;</p>
+                <div id="slide_dots">
+                    <?php
+                    for ($i = 0; $i < sizeof($image_records); $i++) {
+                        if ($i == 0)
+                            echo "<p class='slide_dot selected_dot'></p>";
+                        else
+                            echo "<p class='slide_dot'></p>";
+                    }
+                    ?>
+                </div>
+            </div>
 
             <div id="menu_info">
                 <p class="single_info">

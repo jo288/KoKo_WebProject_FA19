@@ -63,7 +63,7 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
                 echo "<h3>" . $album_name . "</h3>\n";
                 if (array_search($album_name, $categories) == 0) {
                     // ALL
-                    $sql = "SELECT images.id, images.image_ext, images.description, images.menu_id FROM images INNER JOIN menu ON images.menu_id = menu.id";
+                    $sql = "SELECT images.id, images.image_ext, images.description, images.menu_id FROM images LEFT OUTER JOIN menu ON images.menu_id = menu.id";
                     $params = null;
                 } else if (array_search($album_name, $categories) <= sizeof($category_records)) {
                     // MENU CATEGORY
@@ -87,9 +87,12 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
                     echo "<div class='gallery_column'>";
                     for ($i = $j; $i < sizeof($records); $i += 4) {
                         $record = $records[$i];
-                        if ($record["menu_id"] != null) {
+                        if ($record["menu_id"] != "") {
                             $dishlinkop = "<a href = 'dish.php?id=" . $record["menu_id"] . "'>";
                             $dishlinked = "</a>";
+                        } else {
+                            $dishlinkop = "";
+                            $dishlinked = "";
                         }
                         echo "
                         <div class='album_image'>" . $dishlinkop . "
