@@ -49,11 +49,11 @@ if (isset($_POST['submit_filter'])) {
 }
 
 //to view more reviews on page
-if (isset($_POST['submit_next'])) {
+if (isset($_GET['submit_next'])) {
   $page = $page + 4;
 }
 
-if (isset($_POST['submit_back'])) {
+if (isset($_GET['submit_back'])) {
   $page = $page - 4;
 }
 
@@ -76,7 +76,7 @@ if (isset($_POST['submit_review'])) {
 
   //add review to database
   if (empty($errors)) {
-    $sql = "INSERT INTO reviews (reviewer, date, email, rating, review_title, comment) 
+    $sql = "INSERT INTO reviews (reviewer, date, email, rating, review_title, comment)
     VALUES (:reviewer,:date, :email, :rating, :review_title, :comment)";
     $params = array(
       ':reviewer' => $reviewer,
@@ -114,7 +114,6 @@ if (isset($_POST['submit_review'])) {
         array_push($errors, "Upload image file failed!");
     }
     $db->commit();
-
   }
 }
 
@@ -147,117 +146,118 @@ if (isset($_POST['cancel_review'])) {
     echo "<p class=message><strong>" . htmlspecialchars($message) . "</strong></p>\n";
   } ?>
 
-  <main id = "reviews_main">
+  <main id="reviews_main">
     <?php if (isset($_POST["write_review"]) || !empty($errors)) { ?>
-    <h2>Write a Review</h2>
-    <form id="review_form" action="reviews.php" method="post" enctype="multipart/form-data">
-      <fieldset class = "review">
-        <p>
-          <label>Name:</label>
-          <input class = "review" type="text" name="reviewer" value="<?php echo htmlspecialchars($reviewer); ?>"/>
-        </p>
-        <p>
-          <label>Email:</label>
-          <input class="review" type="email" name="reviewer_email" value="<?php echo htmlspecialchars($email); ?>"/>
-        </p>
-        <p>
-          <label>Rating:</label>
-          <input class="review" type="radio" name="rating" value="5" checked />5
-          <input class="review" type="radio" name="rating" value="4" <?php if (isset($rating) && $rating == "4") echo "checked"; ?>/>4
-          <input class="review" type="radio" name="rating" value="3" <?php if (isset($rating) && $rating == "3") echo "checked"; ?>/>3
-          <input class="review" type="radio" name="rating" value="2" <?php if (isset($rating) && $rating == "2") echo "checked"; ?>/>2
-          <input class="review" type="radio" name="rating" value="1" <?php if (isset($rating) && $rating == "1") echo "checked"; ?>/>1
-        </p>
+      <h2>Write a Review</h2>
+      <form id="review_form" action="reviews.php" method="post" enctype="multipart/form-data">
+        <fieldset class="review">
+          <p>
+            <label>Name:</label>
+            <input class="review" type="text" name="reviewer" value="<?php echo htmlspecialchars($reviewer); ?>" />
+          </p>
+          <p>
+            <label>Email:</label>
+            <input class="review" type="email" name="reviewer_email" value="<?php echo htmlspecialchars($email); ?>" />
+          </p>
+          <p>
+            <label>Rating:</label>
+            <input class="review" type="radio" name="rating" value="5" checked />5
+            <input class="review" type="radio" name="rating" value="4" <?php if (isset($rating) && $rating == "4") echo "checked"; ?> />4
+            <input class="review" type="radio" name="rating" value="3" <?php if (isset($rating) && $rating == "3") echo "checked"; ?> />3
+            <input class="review" type="radio" name="rating" value="2" <?php if (isset($rating) && $rating == "2") echo "checked"; ?> />2
+            <input class="review" type="radio" name="rating" value="1" <?php if (isset($rating) && $rating == "1") echo "checked"; ?> />1
+          </p>
 
-        <p>
-          <label>Review Title:</label>
-          <input class="review" type="text" name="review_title"value="<?php echo htmlspecialchars($review_title); ?>" />
-        </p>
-        <p>
-          <label>Comment:</label>
-          <textarea class="review" name="comment"><?php echo htmlspecialchars($comment); ?></textarea>
-        </p>
+          <p>
+            <label>Review Title:</label>
+            <input class="review" type="text" name="review_title" value="<?php echo htmlspecialchars($review_title); ?>" />
+          </p>
+          <p>
+            <label>Comment:</label>
+            <textarea class="review" name="comment"><?php echo htmlspecialchars($comment); ?></textarea>
+          </p>
 
-        <p>
-          <!-- MAX_FILE_SIZE must precede the file input field -->
-          <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>"/>
-          Images to Share? Upload it!
-          <label>Image:</label>
-          <input class="review" type="file" name="img_file" />
-        </p>
-        <p>
-          <input class="review" name="submit_review" type="submit" value="Add Review">
-          <input class="review" name="cancel_review" type="submit" value="Cancel Review">
-        </p>
-      </fieldset>
-    </form>
-    <?php 
+          <p>
+            <!-- MAX_FILE_SIZE must precede the file input field -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+            Images to Share? Upload it!
+            <label>Image:</label>
+            <input class="review" type="file" name="img_file" />
+          </p>
+          <p>
+            <input class="review" name="submit_review" type="submit" value="Add Review">
+            <input class="review" name="cancel_review" type="submit" value="Cancel Review">
+          </p>
+        </fieldset>
+      </form>
+    <?php
   } else { ?>
-  <h2>Reviews</h2>
-  <!-- main review page display --> 
-    <form id="review_filter_forms" class="form-inline" action="reviews.php" method="post">
-      <!-- filter form --> 
-      <select id="review_sort" name="sorting">
-        <option value="" selected>Sort By ...</option>
-        <option value="highest-rating">Sort by rating: high to low</option>
-        <option value="lowest-rating">Sort by rating: low to high</option>
-        <option value="most-recent">Sort by date: Most Recent</option>
-        <option value="oldest">Sort by date: Oldest</option>
-      </select>
-    <input class="review_button" id="review_sort_button" type = "submit" name = "submit_filter" value = "Filter">
-    <!-- search form -->
-    <label>Show reviews that mention:</label>
-      <input id="review_search_field" class = "review" type = "text" name="search" placeholder="Search:" value="<?php echo htmlspecialchars($search_tag); ?>"/>
-      <input id="review_search_button" class = "review_button" type = "submit" name = "submit_search" value = "Search">
-       <!-- write a review button --> 
-    <input id="write_review_button" class="review_button" type="submit" name="write_review" value ="Write a review">
-    </form>
+      <h2>Reviews</h2>
+      <!-- main review page display -->
+      <form id="review_filter_forms" class="form-inline" action="reviews.php" method="post">
+        <!-- filter form -->
+        <select id="review_sort" name="sorting">
+          <option value="" selected>Sort By ...</option>
+          <option value="highest-rating">Sort by rating: high to low</option>
+          <option value="lowest-rating">Sort by rating: low to high</option>
+          <option value="most-recent">Sort by date: Most Recent</option>
+          <option value="oldest">Sort by date: Oldest</option>
+        </select>
+        <input class="review_button" id="review_sort_button" type="submit" name="submit_filter" value="Filter">
+        <!-- search form -->
+        <label>Show reviews that mention:</label>
+        <input id="review_search_field" class="review" type="text" name="search" placeholder="Search:" value="<?php echo htmlspecialchars($search_tag); ?>" />
+        <input id="review_search_button" class="review_button" type="submit" name="submit_search" value="Search">
+        <!-- write a review button -->
+        <input id="write_review_button" class="review_button" type="submit" name="write_review" value="Write a review">
+      </form>
 
 
 
-    <!-- SHOW Reviews -->
-        <?php 
-        $sql = create_select_sql($filter, $page, $search);
-        if (isset($search))
-          $params = create_search_param($search);
-        else
-          $params = array();
-        $result = exec_sql_query($db, $sql, $params);
-        $records = $result->fetchAll();
-        foreach ($records as $record) { ?>
-        <div class = "display_review">
-            <!--Each table column is echoed into a td cell-->
-            <div id = "left" class = "inner_display_review">
-              <p><?php echo htmlspecialchars($record['reviewer']); ?></p>
-              <p><?php echo htmlspecialchars($record['date']); ?></p>
-            </div>
-            <div id = "right" class = "inner_display_review">
-              <p>
-                <?php $stars = intval($record["rating"]);
-                for ($i = 1; $i <= 5; $i++) {
-                  if ($i <= $stars) {
-                    echo "★";
-                  } else {
-                    echo "☆";
-                  }
-                }
-                ?></p>
-              <p id="display_review_title"><?php echo htmlspecialchars($record['review_title']); ?></p>
-              <p><?php echo htmlspecialchars($record['comment']); ?></p>
-            </div>
+      <!-- SHOW Reviews -->
+      <?php
+      $sql = create_select_sql($filter, $page, $search);
+      if (isset($search))
+        $params = create_search_param($search);
+      else
+        $params = array();
+      $result = exec_sql_query($db, $sql, $params);
+      $records = $result->fetchAll();
+      foreach ($records as $record) { ?>
+        <div class="display_review">
+          <!--Each table column is echoed into a td cell-->
+          <div id="left" class="inner_display_review">
+            <p><?php echo htmlspecialchars($record['reviewer']); ?></p>
+            <p><?php echo htmlspecialchars($record['date']); ?></p>
           </div>
-            <?php 
-          } ?>
-    
-    <div>
-    <!-- Show More reviews --> 
-    <form id="review_more" action="reviews.php" method="post"> 
-      <button id="review_back_button" class="review_button" type = "submit" name = "submit_back"> < Back </button>
-      <button id="review_next_button" class="review_button" type = "submit" name = "submit_next"> Next > </button>
-    </form>
-    </div> 
-  <?php 
-} ?>
+          <div id="right" class="inner_display_review">
+            <p>
+              <?php $stars = intval($record["rating"]);
+              for ($i = 1; $i <= 5; $i++) {
+                if ($i <= $stars) {
+                  echo "★";
+                } else {
+                  echo "☆";
+                }
+              }
+              ?></p>
+            <p id="display_review_title"><?php echo htmlspecialchars($record['review_title']); ?></p>
+            <p><?php echo htmlspecialchars($record['comment']); ?></p>
+          </div>
+        </div>
+      <?php
+    } ?>
+
+      <div>
+        <!-- Show More reviews -->
+        <form id="review_more" action="reviews.php" method="get">
+          <button id="review_back_button" class="review_button" type="submit" name="submit_back">
+            < Back </button> <button id="review_next_button" class="review_button" type="submit" name="submit_next"> Next >
+          </button>
+        </form>
+      </div>
+    <?php
+  } ?>
 
 
   </main>
