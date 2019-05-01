@@ -550,3 +550,44 @@ div.inner_display_review{
 	color: red;
 
 }
+/* Form Errors */
+
+.hidden {
+	display: none;
+}
+.current {
+	border: 2px dashed;
+	color: blue;
+}
+.form_error {
+	color: red;
+	font-weight: bold;
+}
+.form_error2 {
+	color: red;
+	font-weight: bold;
+}
+.form_error3 {
+	color: red;
+	font-weight: bold;
+}
+#contact_order div {
+	padding: 1px;
+}
+#formbox {
+	text-align: left;
+}
+.clearFix {
+	clear: both;
+}
+textarea {
+	display: inline-block;
+	height: 200px;
+	width: 50%;
+	justify-content: center;
+}
+#contact_order div {
+	margin: 10px 0;
+	margin-right: auto;
+	/* text-align: center; */
+}

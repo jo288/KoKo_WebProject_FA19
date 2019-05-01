@@ -67,6 +67,7 @@ function exec_sql_query($db, $sql, $params = array())
 
 
 /* Source: Code adapted from Lab 8 init */
+$db = open_or_init_sqlite_db("secure/site.sqlite", "secure/init.sql");
 function open_sqlite_db($db_filename)
 {
   $db2 = new PDO('sqlite:' . $db_filename);

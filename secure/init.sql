@@ -18,6 +18,22 @@ CREATE TABLE `sessions` (
 	session TEXT NOT NULL UNIQUE
 );
 
+CREATE TABLE `contact` (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	name TEXT NOT NULL,
+	email TEXT NOT NULL,
+	reason TEXT NOT NULL,
+	text TEXT NOT NULL,
+	delivery TEXT TEXT NOT NULL
+);
+
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (1, "Emily", "ec23@cornell.edu", "Request More Information", "Do you still serve that Kimchi dish?", "Grubhub");
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (2, "John", "se82@cornell.edu", "Make A Reservation", "Birthday Party coming up", "IthacaToGo");
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (3, "Simon", "sf15@cornell.edu", "Other", "Are you closed for the holidays?", "DeliverIthaca");
+
 
 CREATE TABLE `menu`
 (
