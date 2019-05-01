@@ -11,11 +11,15 @@
 	display: none;
 }
 
+img {
+	image-orientation: from-image;
+}
+
 /* HEADER */
 
 header {
 	/* Image Source: https://www.toptal.com/designers/subtlepatterns/inspiration-geometry/ */
-	background-image: url("../images/geometry.png");
+	background-image: url("../images/background_korean_edit2.png");
 	background-size: auto;
 	background-attachment: fixed;
 	border-bottom: 3px solid black;
@@ -26,7 +30,8 @@ header {
 }
 
 #logo img{
-	max-width: 220px;
+	max-width: 180px;
+	margin-top: 20px;
 }
 
 nav ul {
@@ -100,7 +105,7 @@ main {
 /* HOME PAGE */
 #home_main {
 	/* Image Source: https://www.toptal.com/designers/subtlepatterns/inspiration-geometry/ */
-	background-image: url("../images/geometry.png");
+	background-image: url("../images/background_korean_edit2.png");
 	background-size: auto;
 	background-attachment: fixed;
 	padding-bottom: 100px;
@@ -238,6 +243,9 @@ h2 {
 #dish_main {
 	width: 70%;
 }
+#dish_main h2{
+	margin-top:30px;
+}
 
 #menu_info {
 	margin-top: 20px;
@@ -254,16 +262,149 @@ h2 {
 	margin-left: 50px;
 }
 
+#dish_slideshow {
+	height: 600px;
+	text-align: center;
+	position: relative;
+	margin: 40px 0;
+}
+#slide_image{
+	max-height: 100%;
+	max-width: 80%;
+	/* border: 1px red solid; */
+}
+#slide_prev, #slide_next{
+	position: absolute;
+	top: 50%;
+	color: rgb(255, 94, 0);
+	font-size: 50px;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	/* border: 1px solid yellow; */
+	transition: 0.3s ease;
+	border-radius: 30px;
+}
+#slide_prev{
+	left:40px;
+}
+#slide_next{
+	right:40px;
+}
+#slide_prev:hover, #slide_next:hover{
+	color: rgb(255,255,255);
+	background-color: rgb(255,94,0);
+}
+#slide_dots{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin: 0 auto;
+
+}
+.slide_dot{
+	display:inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.6);
+	margin: 5px;
+	cursor: pointer;
+	transition: 0.3s ease;
+	/* border: black 2px solid; */
+}
+.slide_dot:hover {
+	background-color:  rgba(255,255,255,0.9);
+}
+.selected_dot{
+	background-color: rgba(255,255,255,0.9);
+}
+
 /* CONTACT PAGE */
 
 /* GALLERY PAGE */
 #gallery_main{
 	width: 70%;
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 #gallery_main h2{
-	margin: 20px 0;
+	margin: 30px 0 50px 0;
+}
+#albums_container {
+	margin: 20px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.album{
+	width: 21%;
+	height: 200px;
+	background-color: grey;
+	margin-bottom: 50px;
+	position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.album_cover{
+	width:100%;
+	height:100%;
+}
+.album_name{
+	position: absolute;
+  left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 37% 0;
+	color: white;
+	text-shadow: 0 0 3px rgba(255,255,255,0.5);
+	background-image: radial-gradient(circle, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+	font-size: 20px;
+	transition: 0.3s ease;
+	/* border: 1px solid pink; */
+}
+
+.album_name:hover{
+	background-image: radial-gradient(circle, rgba(0,0,0,0.0), rgba(0,0,0,0.1));
+	color: rgba(0,0,0,0);
+}
+
+#gallery_container{
+	margin: 30px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.gallery_column{
+	width: 23%;
+	margin-bottom: 20px;
+}
+.album_image{
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.album_image_file{
+	width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.album_image_desc{
+	/* TODO: JAVASCRIPT HOVER */
+	position: absolute;
+	background-image: none;
+	color: rgba(0,0,0,0);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 15%;
+	transition: 0.3s ease;
+}
+.album_image_desc:hover{
+	background-image: radial-gradient(circle, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+	color:white;
 }
 
 /* REVIEWS PAGE */
