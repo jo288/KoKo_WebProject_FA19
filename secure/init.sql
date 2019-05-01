@@ -51,19 +51,19 @@ CREATE TABLE `reviews`
 );
 
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
-VALUES (1, "Kaitlyn", "2019-4-27", "kml284@cornell.edu", 4, "ok seed", "seed comment");
+VALUES (1, "Kaitlyn", "2019-4-27", "kml284@cornell.edu", 4, "Really Great Food", "I loved the seafood");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
-VALUES (2, "Kaitlyn2", "2018-4-27", "kml284@cornell.edu", 1, "ok2 seed", "seed2 comment");
+VALUES (2, "Kaitlyn2", "2018-4-27", "kml284@cornell.edu", 1, "Yuck", "I don't like korean food");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
-VALUES (3, "Kaitlyn3", "2019-3-27", "kml284@cornell.edu", 3, "ok3 seed", "seed3 comment");
+VALUES (3, "Kaitlyn3", "2019-3-27", "kml284@cornell.edu", 3, "Decent Food", "It was just okay");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
-VALUES (4, "Kaitlyn4", "2019-4-29", "kml284@cornell.edu", 3, "ok3 seed", "seed3 comment");
+VALUES (4, "Kaitlyn4", "2019-4-29", "kml284@cornell.edu", 3, "Pretty Good", "I liked the chicken");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
-VALUES (5, "Kaitlyn", "2017-6-27", "kml284@cornell.edu", 5, "ok3 seed", "seed3 comment");
+VALUES (5, "Kaitlyn", "2017-6-27", "kml284@cornell.edu", 5, "AMAZING", "Went there for lunch with friends and really enjoyed the food");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
-VALUES (6, "Kaitlyn6", "2019-2-15", "kml284@cornell.edu", 2, "ok3 seed", "seed3 comment");
+VALUES (6, "Kaitlyn6", "2019-2-15", "kml284@cornell.edu", 2, "Not worth the wait", "The food was good but took a long time to get it");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment) 
-VALUES (7, "Kaitlyn7", "2019-4-27", "kml284@cornell.edu", 2, "ok3 seed", "seed3 comment");
+VALUES (7, "Kaitlyn7", "2019-4-27", "kml284@cornell.edu", 2, "Yuck again", "The seafood was bland and orange");
 
 -- TODO: initial seed data
 
