@@ -404,3 +404,8 @@ div.inner_display_review{
 	font-size: 18px;
 	margin-bottom: 5px;
 }
+/* Logout Button */
+#logout_but{
+	color: red;
+
+}

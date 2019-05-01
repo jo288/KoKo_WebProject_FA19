@@ -74,63 +74,71 @@ if (isset($_POST['submit'])) {
 
     } else {
       ?>
-
-        <h2>Please leave your feedback here:</h2>
-        <p>Please leave us a messege here between 25 and 500 characters.</p>
-
-        <form id="contact_order" method="post" action="about.php#contact">
-          <fieldset>
-            <legend>Contact us Form</legend>
-
-            <p class="form_error <?php
-                                echo $error;
-                                ?>"id = "nameError">Please provide a name for your response: </p>
-            <div class = "namecontain">
-              <label for="name_field">Name on Order:</label>
-              <input id="name_field" type="text" name="order_name"
-              value="<?php
-                    echo htmlspecialchars($name);
-                    ?>"/>
-            </div>
-            <p class="form_error2 <?php
-                                  echo $error2;
-                                  ?>"id = "nameError">Please provide a valid email for your order in the form example@example.___:</p>
-           <div class="emailcontainer">
-            <label for="email_field">Email:</label>
-              <input id="emailfield" type="text" name="userEmail"
-              value="<?php
-                    echo htmlspecialchars($email);
-                    ?>"/>
-              </div>
-              <div>
-                <label for="reason">Please select your reason of Contact:</label> <select id="reason" name="reason">
-                    <option value="Mistake">
-                        Correct a mistake on the site.
-                    </option>
-                    <option value="Help">
-                        Get Help.
-                    </option>
-                    <option value="Feedback">
-                        Provide feedback.
-                    </option>
-                    <option value="Other">
-                    Other.
-                    </option>
-                </select>
-                        </div>
-             <p class="form_error3 <?php
-                                  echo $error3;
-                                  ?>"id = "responseError">Your response did not meet the character requirement.</p>
-                        <div>
-              <label for="response">Please share your thoughts here:</label>
-              <div>
-                            <textarea id="response"  name="response" value=" ?>"><?php
-                  echo htmlspecialchars($response);  ?> </textarea>
+  <h2>Frequently Asked Questions</h2>
+  	<form action="contact.php" id="contact_order" method="post" name="contact_order">
+	<div>
+		<label for="faq">Frequently Asked Questions:</label> <select id="faq" name="faq">
+			<option value="ithacatogo">
+				What are the store Hours?
+			</option>
+			<option value="deliverithaca">
+				What is the store Adress?
+			</option>
+			<option value="grubhub">
+				What Delivery Options are offered?
+      </option>
+       <input type="submit" name="faqsubmit" value="ANSWER"/>
+		</select>
+  </div>
+    </form>
+	<h2>Please leave your feedback here:</h2>
+	<p>Please leave us a messege here between 25 and 500 characters.</p>
+	<form action="contact.php" id="contact_order" method="post" name="contact_order">
+		<fieldset>
+			<legend>Contact us Form</legend>
+			<p class="form_error &lt;?php echo $error; ?&gt;" id="nameError">Please provide a name for your response:</p>
+			<div class="namecontain">
+				<label for="name_field">Name on Order:</label> <input id="name_field" name="order_name" type="text" value="<?php echo htmlspecialchars($name); ?>">
+			</div>
+			<p class="form_error2 &lt;?php echo $error2; ?&gt;" id="nameError">Please provide a valid email for your order in the form example@example.___:</p>
+			<div class="emailcontainer">
+				<label for="email_field">Email:</label> <input id="emailfield" name="userEmail" type="text" value="<?php echo htmlspecialchars($email); ?>">
+			</div>
+			<div>
+				<label for="reason">Please select your reason of Contact:</label> <select id="reason" name="reason">
+					<option value="reqinfo">
+						Request More Information.
+					</option>
+					<option value="resrev">
+						Make a reservation.
+					</option>
+					<option value="Feedback">
+						Provide feedback or Get Help.
+					</option>
+					<option value="Other">
+						Other.
+					</option>
+				</select>
+			</div>
+			<div>
+				<label for="ordertype">Delivery Method:</label> <select id="ordertype" name="ordertype">
+					<option value="ithacatogo">
+						Ithaca To Go
+					</option>
+					<option value="deliverithaca">
+						Deliver Ithaca
+					</option>
+					<option value="grubhub">
+						Grubhub
+					</option>
+					<option value="picup">
+						Pick Up From Store
+					</option><?php  echo htmlspecialchars($response);  ?>
+				</select>
       </div>
-                        </div>
-            <input type="submit" name="submit" value="Submit"/>
-          </fieldset>
-        </form>
+       <input type="submit" name="contactsubmit" value="ASK"/>
+		</fieldset>
+	</form>
 
       <?php
 
