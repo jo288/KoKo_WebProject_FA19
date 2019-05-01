@@ -251,8 +251,11 @@ if (isset($_POST['cancel_review'])) {
       <div>
         <!-- Show More reviews -->
         <form id="review_more" action="reviews.php" method="get">
+          <?php if($page != 0 && isset($search)){ ?>
           <button id="review_back_button" class="review_button" type="submit" name="submit_back">
-            < Back </button> <button id="review_next_button" class="review_button" type="submit" name="submit_next"> Next >
+            < Back </button> <?php }
+                              if ($page != 0) { ?> <button id="review_next_button" class="review_button" type="submit" name="submit_next"> Next >
+              <?php } ?>
           </button>
         </form>
       </div>
