@@ -189,6 +189,10 @@ h2 {
 	margin-bottom: 30px;
 }
 
+.about_info {
+	margin-top: 10px;
+}
+
 /* MENU PAGE */
 .category_header {
 	border-bottom: rgb(255, 94, 0) 2px solid;
@@ -257,6 +261,7 @@ h2 {
 	width: 70%;
 	text-align: center;
 }
+
 #gallery_main h2{
 	margin: 20px 0;
 }
@@ -267,12 +272,13 @@ h2 {
 }
 /*write a review form*/
 #review_form{
-	font-size: 12pt; 
+	font-size: 12pt;
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-bottom: 20px;
 	/* text-align: center; */
 }
+
 input.review{
 	font-size: 100%;
 	margin: 5px 5px 5px 20px;
