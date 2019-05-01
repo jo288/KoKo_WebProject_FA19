@@ -678,6 +678,8 @@ For accessing Database Elements from the form and then inputting them:
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
 
+- database had to be updated for diet tags
+
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
 

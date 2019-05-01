@@ -1,5 +1,24 @@
 BEGIN TRANSACTION;
 
+CREATE TABLE users (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	username TEXT NOT NULL UNIQUE,
+	password TEXT NOT NULL
+);
+
+INSERT INTO users (id, username, password)
+VALUES (1, 'ec23', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
+INSERT INTO users (id, username, password)
+VALUES (2, 'abc123', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
+
+-- Sessions Table
+CREATE TABLE `sessions` (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	user_id INTEGER NOT NULL,
+	session TEXT NOT NULL UNIQUE
+);
+
+
 CREATE TABLE `menu`
 (
 	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -51,21 +70,19 @@ CREATE TABLE `reviews`
 );
 
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (1, "Kaitlyn", "2019-4-27", "kml284@cornell.edu", 4, "ok seed", "seed comment");
+VALUES (1, "Kaitlyn", "2019-4-27", "kml284@cornell.edu", 4, "Really Great Food", "I loved the seafood");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (2, "Kaitlyn2", "2018-4-27", "kml284@cornell.edu", 1, "ok2 seed", "seed2 comment");
+VALUES (2, "Kaitlyn2", "2018-4-27", "kml284@cornell.edu", 1, "Yuck", "I don't like korean food");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (3, "Kaitlyn3", "2019-3-27", "kml284@cornell.edu", 3, "ok3 seed", "seed3 comment");
+VALUES (3, "Kaitlyn3", "2019-3-27", "kml284@cornell.edu", 3, "Decent Food", "It was just okay");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (4, "Kaitlyn4", "2019-4-29", "kml284@cornell.edu", 3, "ok3 seed", "seed3 comment");
+VALUES (4, "Kaitlyn4", "2019-4-29", "kml284@cornell.edu", 3, "Pretty Good", "I liked the chicken");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (5, "Kaitlyn", "2017-6-27", "kml284@cornell.edu", 5, "ok3 seed", "seed3 comment");
+VALUES (5, "Kaitlyn", "2017-6-27", "kml284@cornell.edu", 5, "AMAZING", "Went there for lunch with friends and really enjoyed the food");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (6, "Kaitlyn6", "2019-2-15", "kml284@cornell.edu", 2, "ok3 seed", "seed3 comment");
+VALUES (6, "Kaitlyn6", "2019-2-15", "kml284@cornell.edu", 2, "Not worth the wait", "The food was good but took a long time to get it");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (7, "Kaitlyn7", "2019-4-27", "kml284@cornell.edu", 2, "ok3 seed", "seed3 comment");
-
--- TODO: initial seed data
+VALUES (7, "Kaitlyn7", "2019-4-27", "kml284@cornell.edu", 2, "Yuck again", "The seafood was bland and orange");
 
 -- MENU SEED DATA
 -- appetizers
@@ -144,7 +161,7 @@ INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (61, 
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (62, "Mul Naeng Myun", "Thin noodles with radish, cucumber, boiled egg, beef, and thinly sliced apples served in a cold broth", 12.99, 13);
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (63, "Bibim Naeng Myun", "Mul Naeng Myun with spicy sauce instead of cold broth", 13.99, 13);
 
--- -- DIET TAGS SEED DATA
+-- DIET TAGS SEED DATA
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 1, 1);
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (2, 2, 1);
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (3, 5, 1);
@@ -152,76 +169,64 @@ INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (4, 5, 2);
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (5, 6, 1);
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (6, 6, 2);
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (7, 6, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 8, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 8, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 9, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 10, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 14, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 14, 2);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 15, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 15, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 16, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 17, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 18, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 19, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 19, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 19, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 20, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 20, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 20, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 21, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 21, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 21, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 22, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 22, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 23, 3);	-- ???
--- -- -- check gluten free for a la carte
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 22, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 31, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 31, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 31, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 32, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 32, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 32, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 33, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 33, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 33, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 34, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 35, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 35, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 35, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 36, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 37, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 38, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 39, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 40, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 41, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 42, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 43, 3);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 46, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 47, 3);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 49, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 49, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 49, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 53, 1);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 53, 2);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 53, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 56, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 56, 2);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 58, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 58, 2);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 59, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 59, 2);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 60, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 60, 2);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 61, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 61, 2);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 62, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 62, 2);	-- ???
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 63, 1);
--- INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 63, 2);	-- ???
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (8, 8, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (9, 8, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (10, 9, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (11, 10, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (12, 14, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (13, 14, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (14, 15, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (15, 15, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (16, 18, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (17, 19, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (18, 19, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (19, 19, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (20, 20, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (21, 20, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (22, 20, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (23, 21, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (24, 21, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (25, 21, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (26, 22, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (27, 22, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (28, 22, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (29, 31, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (30, 31, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (31, 31, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (32, 32, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (33, 32, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (34, 32, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (35, 33, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (36, 33, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (37, 33, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (38, 34, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (39, 35, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (40, 35, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (41, 35, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (42, 36, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (43, 37, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (44, 38, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (45, 41, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (46, 42, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (47, 43, 3);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (48, 49, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (49, 49, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (50, 49, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (51, 53, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (52, 56, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (53, 56, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (54, 58, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (55, 59, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (56, 60, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (57, 60, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (58, 61, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (59, 61, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (60, 62, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (61, 62, 2);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (62, 63, 1);
+INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (63, 63, 2);
 
--- -- CATEGORIES SEED DATA
+-- CATEGORIES SEED DATA
 INSERT INTO `categories` (id, category) VALUES (1, "Appetizers");
 INSERT INTO `categories` (id, category) VALUES (2, "Salads");
 INSERT INTO `categories` (id, category) VALUES (3, "Broiled Fish");
@@ -236,10 +241,10 @@ INSERT INTO `categories` (id, category) VALUES (11, "Noodles in Soup");
 INSERT INTO `categories` (id, category) VALUES (12, "Noodles in Sauce");
 INSERT INTO `categories` (id, category) VALUES (13, "Cold Noodles");
 
--- -- DIETS SEED DATA
+-- DIETS SEED DATA
 INSERT INTO `diets` (id, diet) VALUES (1, "Vegetarian");
 INSERT INTO `diets` (id, diet) VALUES (2, "Vegan");
-INSERT INTO `diets` (id, diet) VALUES (3, "Gluten Free");
+INSERT INTO `diets` (id, diet) VALUES (3, "GlutenFree");
 
 -- IMAGES SEED DATA
 INSERT INTO images
@@ -251,9 +256,6 @@ INSERT INTO images
 VALUES
 	(2, 62, 'mulnaengmyun2.jpg', 'jpg', 'Mul Naeng Myun', 'Jinju Ouck');
 -- INSERT INTO `images` () VALUES ();
-
--- REVIEWS SEED DATA
--- INSERT INTO `reviews` () VALUES ();
 
 -- TODO: FOR HASHED PASSWORDS, LEAVE A COMMENT WITH THE PLAIN TEXT PASSWORD!
 
