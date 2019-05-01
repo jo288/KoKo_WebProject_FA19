@@ -10,7 +10,7 @@ $email = '';
 $response = '';
 $reason  = '';
 $delivery  = '';
-
+$faqresponse  = '';
 
 
 if (isset($_POST['contactsubmit'])) {
@@ -106,7 +106,9 @@ if (isset($_POST['contactsubmit'])) {
     } else {
       ?>
   <h2>Frequently Asked Questions</h2>
-  	<form action="contact.php" id="contact_order" method="post" name="contact_order">
+  	<form action="contact.php" id="contact_order" method="post" name="contact_order"value="<?php
+                    echo htmlspecialchars($faqresponse);
+                    ?>">
 	<div>
 		<label for="faq">Frequently Asked Questions:</label> <select id="faq" name="faq">
 			<option value=hours>

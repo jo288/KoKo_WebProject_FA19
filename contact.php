@@ -25,32 +25,20 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
     <?php include("includes/header.php"); ?>
 
     <?php if ($current_user == null) {
-        include("includes/contact.php");} ?>
-        <main>
-            <h2>Employee Contact Responses</h2>
+        include("includes/contact.php");
+    } ?>
+    <main>
+        <h2>Employee Contact Responses</h2>
 
-            <p><strong>You need to log in to view the submitted Contact Information. Go to the login page by clicking LOGIN</strong></p>
+        <p><strong>You need to log in to view the submitted Contact Information. Go to the login page by clicking LOGIN</strong></p>
 
-            <?php
+        <?php
+        if ($current_user == null) {
             if (isset($_GET["submit"])) {
                 echo ($messeges2);
+                include("includes/login.php");
                 ?>
-                <!-- // This code is adpted from Lab 8 -->
-                <form id="loginForm" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-                    <ul>
-                        <li>
-                            <label for="username">Username:</label>
-                            <input id="username" type="text" name="username" />
-                        </li>
-                        <li>
-                            <label for="password">Password:</label>
-                            <input id="password" type="password" name="password" />
-                        </li>
-                        <li>
-                            <button name="login" type="submit">Sign In</button>
-                        </li>
-                    </ul>
-                </form>
+
 
             <?php
         } else {
@@ -58,7 +46,7 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
                 <form action="contact.php" id="login_but" method="get" name="login_but">
                     <input name="submit" value="LOGIN" type="submit"> </form>
 
-            <?php }
+            <?php }}
         if ($current_user != null) {
             include("includes/contactsubmit.php");
         }
