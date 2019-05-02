@@ -237,11 +237,11 @@ if (isset($_POST['login']) && isset($_POST['username']) && isset($_POST['passwor
       $messages2 = "Invalid username or password";
       $showMessege = false;
       $loginerror='';
-      echo (htmlspecialchars("nvalid username or pass"));
+      // echo (htmlspecialchars("nvalid username or pass"));
     }
   } else {
     $messages2 = "Invalid username or password";
-    echo (htmlspecialchars("nvalid username or pass"));
+    // echo (htmlspecialchars("nvalid username or pass"));
     $loginerror = '';
     $showMessege = false;
   }

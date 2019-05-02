@@ -606,7 +606,7 @@ textarea {
 #contact_order{
 	font-size: 12pt;
 	margin-top: 20px;
-	margin-left: 20px;
+	/* margin-left: 20px; */
 	margin-bottom: 20px;
 	/* text-align: center; */
 }
@@ -621,7 +621,7 @@ fieldset.contactform {
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid;
-	padding: 15px;
+	/* padding: 15px; */
 }
 .contactsubmiss{
 	margin-left: 55px;
@@ -669,11 +669,11 @@ textarea.contactform{
 	margin-left: auto;
 	text-decoration: none;
   color: whitesmoke;
-	font-size: 12px;
+	font-size: 16px;
 	background-color: #333333;
 	padding-top: 2px;
-	width: 80px;
-	height: 22px;
+	width: 100px;
+	height: 30px;
 	border-radius: 3px;
 }
 
