@@ -67,6 +67,7 @@ function exec_sql_query($db, $sql, $params = array())
 
 
 /* Source: Code adapted from Lab 8 init */
+$loginerror = 'hidden';
 $db = open_or_init_sqlite_db("secure/site.sqlite", "secure/init.sql");
 function open_sqlite_db($db_filename)
 {
@@ -225,6 +226,7 @@ if (isset($_POST['login']) && isset($_POST['username']) && isset($_POST['passwor
         setcookie("session", $session, time() + SESSION_COOKIE_DURATION);
 
         $current_user = $account;
+        $loginerror = 'hidden';
         return $current_user;
       } else {
         $messages = "Log in failed";
@@ -234,11 +236,13 @@ if (isset($_POST['login']) && isset($_POST['username']) && isset($_POST['passwor
     } else {
       $messages2 = "Invalid username or password";
       $showMessege = false;
+      $loginerror='';
       echo (htmlspecialchars("nvalid username or pass"));
     }
   } else {
     $messages2 = "Invalid username or password";
     echo (htmlspecialchars("nvalid username or pass"));
+    $loginerror = '';
     $showMessege = false;
   }
 

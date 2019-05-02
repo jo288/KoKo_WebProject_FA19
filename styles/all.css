@@ -615,14 +615,21 @@ input.contactform{
 	margin: 5px 5px 5px 20px;
 }
 
-fieldset.contactform{
+fieldset.contactform {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid;
 	padding: 15px;
 }
+.contactsubmiss{
+	margin-left: 55px;
+	margin-right: 55px;
+	border: 1px solid;
+	padding: 15px;
 
+
+}
 textarea.contactform{
   width: 400px;
   height: 200px;
@@ -646,6 +653,12 @@ textarea.contactform{
 	width: 80px;
 	height: 30px;
 	border-radius: 3px;
+
+}
+#loginclick {
+	display: block;
+	   margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -695,4 +708,28 @@ textarea.contactform{
 	display:block;
 	margin-right: auto;
 	margin-left: auto;
+}
+#loginset{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+#loginmessege{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	justify-content: center;
+
+}
+#loginlist{
+	list-style-type:none;
+
+}
+#submitter, #uname, #pword {
+	margin: 10px;
+	padding: 5px;
 }

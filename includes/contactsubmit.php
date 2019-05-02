@@ -1,4 +1,5 @@
     <!-- Show Contact Submissions -->
+    <fieldset class='contactsubmiss'>
         <?php
         $sql = "SELECT * FROM contact";
         $params = array();
@@ -21,3 +22,4 @@
             </div>
         <?php
     } ?>
+    </fieldset>
