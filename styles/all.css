@@ -52,11 +52,11 @@ nav li a {
 	color: black;
 }
 
-nav li a:hover, .current {
+nav li a:hover, .current_page {
 	color: #ff8946;
 }
 
-.current {
+.current_page {
 	text-transform: uppercase;
 }
 
@@ -182,7 +182,11 @@ h2 {
 
 /* ABOUT PAGE */
 #about_main {
-	width: 80%;
+	width: 60%;
+}
+
+#about_main h2{
+	margin-top: 30px;
 }
 
 .about_header {
@@ -191,11 +195,12 @@ h2 {
 }
 
 .about_section {
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 
 .about_info {
 	margin-top: 10px;
+	line-height: 24px;
 }
 
 /* MENU PAGE */

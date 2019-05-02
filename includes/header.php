@@ -13,7 +13,7 @@
 
         foreach ($nav as $pagename => $value) {
           if ($current == $pagename) {
-            echo "<li>" . " <a  class = current href=" . $pagename . "> " . $value . "</a></li>";
+            echo "<li>" . " <a  class = current_page href=" . $pagename . "> " . $value . "</a></li>";
           } else {
             echo "<li class>" . " <a href=" . $pagename . "> " . $value . "</a></li>";
           }
