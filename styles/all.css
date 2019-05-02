@@ -636,7 +636,7 @@ textarea.contactform{
     margin-right: auto;
 }
 
-#contactsubmit {
+#contactsubmit, #loginclick  {
 	text-decoration: none;
   color: whitesmoke;
 	font-size: 16px;

@@ -44,7 +44,7 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
         } else {
             ?>
                 <form action="contact.php#employee" id="login_but" method="get" name="login_but">
-                    <input name="submit" value="LOGIN" type="submit"> </form>
+                    <input name="submit" id='loginclick' value="LOGIN" type="submit"> </form>
 
             <?php }
     }
