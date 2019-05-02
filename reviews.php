@@ -8,24 +8,22 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 
 $errors = array();
 $page = 0;
+$filter = "";
+$search = "";
 $messages = array();
 
 //to view more reviews on page
 if (isset($_GET['submit_next'])) {
-  $page = $_GET['page'];
-  $sql = "SELECT COUNT(*) FROM reviews";
-  $result = exec_sql_query($db, $sql, array());
-  $count = $result->fetchColumn();
-  echo ($count);
-  if (($page + 4 < $count)) $page = $page + 4;
+  $page = $_GET['page'] + 4;
   $filter = $_GET['filter'];
-
+  $search = $_GET['search'];
 }
 
 if (isset($_GET['submit_back'])) {
   $page = $_GET['page'] - 4;
   if ($page < 0) $page = 0;
   $filter = $_GET['filter'];
+  $search = $_GET['search'];
 }
 
 function create_select_sql($filter, $page, $search)
@@ -39,7 +37,7 @@ function create_select_sql($filter, $page, $search)
       $sql = "SELECT * FROM reviews ORDER BY date DESC LIMIT 4 OFFSET " . $page;
     else if ($filter == "oldest")
       $sql = "SELECT * FROM reviews ORDER BY date ASC LIMIT 4 OFFSET " . $page;
-  } else if (isset($search)) {
+  } else if (!empty($search)) {
     $sql = "SELECT * FROM reviews WHERE comment LIKE '%' || :search || '%' OR review_title LIKE '%' || :search || '%' LIMIT 4 OFFSET " . $page;
   } else
     $sql = "SELECT * FROM reviews LIMIT 4 OFFSET " . $page;
@@ -206,16 +204,16 @@ if (isset($_POST['cancel_review'])) {
       <form id="review_filter_forms" class="form-inline" action="reviews.php" method="post">
         <!-- filter form -->
         <select id="review_sort" name="sorting">
-          <option value="" selected>Sort By ...</option>
-          <option value="highest-rating">Sort by rating: high to low</option>
-          <option value="lowest-rating">Sort by rating: low to high</option>
-          <option value="most-recent">Sort by date: Most Recent</option>
-          <option value="oldest">Sort by date: Oldest</option>
+        <option value="" selected>Sort By ...</option>
+          <option value="highest-rating" <?php if ($filter == "highest-rating") echo "selected"; ?>>Sort by rating: high to low</option>
+          <option value="lowest-rating" <?php if ($filter == "lowest-rating") echo "selected"; ?>>Sort by rating: low to high</option>
+          <option value="most-recent" <?php if ($filter == "most-recent") echo "selected"; ?>>Sort by date: Most Recent</option>
+          <option value="oldest" <?php if ($filter == "oldest") echo "selected"; ?>>Sort by date: Oldest</option>
         </select>
         <input class="review_button" id="review_sort_button" type="submit" name="submit_filter" value="Filter">
         <!-- search form -->
         <label>Show reviews that mention:</label>
-        <input id="review_search_field" class="review" type="text" name="search" placeholder="Search:" value="<?php echo htmlspecialchars($search_tag); ?>" />
+        <input id="review_search_field" class="review" type="text" name="search" placeholder="Search:" value="<?php echo htmlspecialchars($search); ?>" />
         <input id="review_search_button" class="review_button" type="submit" name="submit_search" value="Search">
         <!-- write a review button -->
         <input id="write_review_button" class="review_button" type="submit" name="write_review" value="Write a review">
@@ -224,7 +222,7 @@ if (isset($_POST['cancel_review'])) {
       <!-- SHOW Reviews -->
       <?php
       $sql = create_select_sql($filter, $page, $search);
-      if (isset($search))
+      if (!empty($search))
         $params = create_search_param($search);
       else
         $params = array();
@@ -261,9 +259,11 @@ if (isset($_POST['cancel_review'])) {
         <form id="review_more" action="reviews.php" method="get"> 
           <input type="hidden" name="page" value="<?php echo $page; ?>" />
           <input type="hidden" name="filter" value="<?php echo $filter; ?>" />
-          <button id="review_back_button" class="review_button" type="submit" name="submit_back"> < Back </button>
-          <button id="review_next_button" class="review_button" type="submit" name="submit_next"> Next > </button>
-        </form>
+          <input type="hidden" name="search" value="<?php echo $search; ?>" />
+          <button id="review_back_button" class="review_button" type="submit" name="submit_back" 
+            <?php if ($page <= 0) echo "disabled"; ?>> < Back </button>          
+          <button id="review_next_button" class="review_button" type="submit" name="submit_next"
+            <?php if (sizeof($records) < 4) echo "disabled"; ?>> Next > </button>        </form>
       </div>
     <?php
 
