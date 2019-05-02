@@ -6,11 +6,6 @@ CREATE TABLE users (
 	password TEXT NOT NULL
 );
 
-INSERT INTO users (id, username, password)
-VALUES (1, 'ec23', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
-INSERT INTO users (id, username, password)
-VALUES (2, 'abc123', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
-
 -- Sessions Table
 CREATE TABLE `sessions` (
 	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -26,14 +21,6 @@ CREATE TABLE `contact` (
 	text TEXT NOT NULL,
 	delivery TEXT TEXT NOT NULL
 );
-
-INSERT INTO `contact` (id, name, email, reason, text, delivery)
-VALUES (1, "Emily", "ec23@cornell.edu", "Request More Information", "Do you still serve that Kimchi dish?", "Grubhub");
-INSERT INTO `contact` (id, name, email, reason, text, delivery)
-VALUES (2, "John", "se82@cornell.edu", "Make A Reservation", "Birthday Party coming up", "IthacaToGo");
-INSERT INTO `contact` (id, name, email, reason, text, delivery)
-VALUES (3, "Simon", "sf15@cornell.edu", "Other", "Are you closed for the holidays?", "DeliverIthaca");
-
 
 CREATE TABLE `menu`
 (
@@ -85,6 +72,21 @@ CREATE TABLE `reviews`
   `comment` TEXT
 );
 
+-- USERS SEED DATA
+INSERT INTO users (id, username, password)
+VALUES (1, 'ec23', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
+INSERT INTO users (id, username, password)
+VALUES (2, 'abc123', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
+
+-- CONTACT SEED DATA
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (1, "Emily", "ec23@cornell.edu", "Request More Information", "Do you still serve that Kimchi dish?", "Grubhub");
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (2, "John", "se82@cornell.edu", "Make A Reservation", "Birthday Party coming up", "IthacaToGo");
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (3, "Simon", "sf15@cornell.edu", "Other", "Are you closed for the holidays?", "DeliverIthaca");
+
+-- REVIEWS SEED DATA
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
 VALUES (1, "Kaitlyn", "2019-04-27", "kml284@cornell.edu", 4, "Really Great Food", "I loved the seafood");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
