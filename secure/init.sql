@@ -377,7 +377,6 @@ INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
 	(27, 21, 'bokeumbap2.jpg', 'jpg', 'Bokeum Bap', 'KoKo');
-	-- TODO: GYERANJJIM MENU ID?
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -402,7 +401,6 @@ INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
 	(33, 62, 'mulnaengmyun3.jpg', 'jpg', 'Mul Naeng Myun', 'KoKo');
-	-- TODO: NOT SURE IF THIS IS ACTUALLY JAEYOOKBOKEUM
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
