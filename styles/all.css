@@ -447,7 +447,7 @@ textarea.review{
 }
 
 /*buttons on main review page*/
-.review_button {
+.review_button, #deleter {
 	display:inline-block;
 	text-decoration: none;
   color: whitesmoke;
