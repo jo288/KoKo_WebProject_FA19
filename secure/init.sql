@@ -406,7 +406,7 @@ VALUES
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(34, 16, 'Jaeyookbokeum1.jpg', 'jpg', 'Jaeyook Bokeum', 'KoKo');
+	(34, 44, 'Bulgogi.jpg', 'jpg', 'Bul Go Gi', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES

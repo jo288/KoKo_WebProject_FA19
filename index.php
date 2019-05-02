@@ -31,16 +31,16 @@ $index = "current";
     <a id="home_menulink" href="menu.php">Show All</a>
     <div id="home_topmenus">
       <div class="home_topmenu">
-        <img alt="menu1" src="images/home_bg.jpg" />
-        <p> Menu Name </p>
+        <img alt="menu1" src="images/home1.jpg" />
+        <p> Mul Naeng Myun </p>
       </div>
       <div class="home_topmenu">
-        <img alt="menu2" src="images/home_bg.jpg" />
-        <p> Menu Name </p>
+        <img alt="menu2" src="images/home2.jpg" />
+        <p> Budae Jjigae </p>
       </div>
       <div class="home_topmenu">
-        <img alt="menu3" src="images/home_bg.jpg" />
-        <p> Menu Name </p>
+        <img alt="menu3" src="images/home3.jpg" />
+        <p> Doobu Kimchi Bokeum </p>
       </div>
     </div>
 
