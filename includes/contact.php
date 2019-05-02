@@ -109,8 +109,8 @@ if (isset($_POST['contactsubmit'])) {
   	<form action="contact.php" id="contact_order" method="post" name="contact_order"value="<?php
                     echo htmlspecialchars($faqresponse);
                     ?>">
-	<div>
-		<label for="faq">Frequently Asked Questions:</label> <select id="faq" name="faq">
+	<div class='question'>
+		<label for="faq"></label> <select id="faq" name="faq">
 			<option value=hours>
 				What are the store Hours?
 			</option>
@@ -120,7 +120,7 @@ if (isset($_POST['contactsubmit'])) {
 			<option value="options">
 				What Delivery Options are offered?
       </option>
-       <input type="submit" name="faqsubmit" value="ANSWER"/>
+       <input type="submit" name="faqsubmit" id= 'faqsubmit'value="ANSWER"/>
 		</select>
   </div>
     </form>
@@ -133,9 +133,9 @@ if (isset($_POST['faqsubmit'])) {
 
   if ($faqresponse == "hours"){
 ?>
-	<fieldset>
+	<fieldset class='hours'>
 		<legend>Store Hours</legend>
-		<ul>
+		<ul id='storehours'>
 			<li>Wednesday 11:30AM–9:30PM</li>
 			<li>Thursday 11:30AM–9:30PM</li>
 			<li>Friday 11:30AM–9:30PM</li>
@@ -149,7 +149,7 @@ if (isset($_POST['faqsubmit'])) {
   }
   if ($faqresponse == "options")  {
 ?>
-	<fieldset>
+	<fieldset class='options'>
 		<legend>Delivery Options</legend>
 		<ul>
 			<li>Ithaca To Go</li>
@@ -163,7 +163,7 @@ if (isset($_POST['faqsubmit'])) {
   if ($faqresponse == "adress")  {
 
 ?>
-	<fieldset>
+	<fieldset class='adress'>
 		<legend>Adress</legend>
 321 College Ave, Ithaca, NY 14850
 	</fieldset>
@@ -177,7 +177,7 @@ if (isset($_POST['faqsubmit'])) {
 	<h2>Please leave your feedback here:</h2>
 
    <form id="contact_order" method="post" action="contact.php">
-          <fieldset>
+          <fieldset class="review">
             <legend>Contact us Form</legend>
 	<p>Please leave us a messege here between 25 and 500 characters.</p>
             <p class="form_error <?php
@@ -246,7 +246,7 @@ if (isset($_POST['faqsubmit'])) {
                   echo htmlspecialchars($response);  ?> </textarea>
       </div>
                         </div>
-       <input type="submit" name="contactsubmit" value="ASK"/>
+       <input type="submit" name="contactsubmit" id= 'contactsubmit'value="ASK"/>
 		</fieldset>
 	</form>
 

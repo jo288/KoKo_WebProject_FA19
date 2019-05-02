@@ -1,4 +1,5 @@
      <!-- // This code is adpted from Lab 8 -->
+<fieldset id = 'loginset'>
      <form id="loginForm" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
          <ul>
              <li>
@@ -10,7 +11,8 @@
                  <input id="password" type="password" name="password" />
              </li>
              <li>
-                 <button name="login" type="submit">Sign In</button>
+                 <button name="login" id= 'login'type="submit">Sign In</button>
              </li>
          </ul>
      </form>
+ </fieldset>

@@ -425,7 +425,7 @@ input.review{
 	margin: 5px 5px 5px 20px;
 }
 
-fieldset.review{
+fieldset.review, fieldset.adress,fieldset.hours,fieldset.options{
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
@@ -581,13 +581,113 @@ div.inner_display_review{
 	clear: both;
 }
 textarea {
-	display: inline-block;
+	display: block;
 	height: 200px;
-	width: 50%;
+	width: 100%;
 	justify-content: center;
+	   margin-left: auto;
+    margin-right: auto;
+
 }
 #contact_order div {
 	margin: 10px 0;
 	margin-right: auto;
 	/* text-align: center; */
+}
+
+/* Contact Form Writing */
+
+#contact_order{
+	font-size: 12pt;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	/* text-align: center; */
+}
+
+input.contactform{
+	font-size: 100%;
+	margin: 5px 5px 5px 20px;
+}
+
+fieldset.contactform{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+	padding: 15px;
+}
+
+textarea.contactform{
+  width: 400px;
+  height: 200px;
+	font-size: 17px;
+	margin-left: 20px;
+}
+
+#contactsubmit{
+	display: block;
+	   margin-left: auto;
+    margin-right: auto;
+}
+
+#contactsubmit {
+	text-decoration: none;
+  color: whitesmoke;
+	font-size: 16px;
+	background-color: #333333;
+	padding-top:5px;
+	padding-bottom: 5px;
+	width: 80px;
+	height: 30px;
+	border-radius: 3px;
+
+}
+
+#faqsubmit {
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+	text-decoration: none;
+  color: whitesmoke;
+	font-size: 12px;
+	background-color: #333333;
+	padding-top: 2px;
+	width: 80px;
+	height: 22px;
+	border-radius: 3px;
+}
+
+#hours, #adress, #options{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+#storehours{
+	list-style-type:none;
+}
+#login{
+	text-decoration: none;
+  color: whitesmoke;
+	font-size: 16px;
+	background-color: #333333;
+	padding-top:5px;
+	padding-bottom: 5px;
+	width: 80px;
+	height: 30px;
+	border-radius: 3px;
+
+}
+.question{
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+#faq {
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
 }
