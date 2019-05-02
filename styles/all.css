@@ -52,11 +52,11 @@ nav li a {
 	color: black;
 }
 
-nav li a:hover, .current {
+nav li a:hover, .current_page {
 	color: #ff8946;
 }
 
-.current {
+.current_page {
 	text-transform: uppercase;
 }
 
