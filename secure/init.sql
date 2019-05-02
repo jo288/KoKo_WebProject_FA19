@@ -6,11 +6,6 @@ CREATE TABLE users (
 	password TEXT NOT NULL
 );
 
-INSERT INTO users (id, username, password)
-VALUES (1, 'ec23', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
-INSERT INTO users (id, username, password)
-VALUES (2, 'abc123', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
-
 -- Sessions Table
 CREATE TABLE `sessions` (
 	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -26,14 +21,6 @@ CREATE TABLE `contact` (
 	text TEXT NOT NULL,
 	delivery TEXT TEXT NOT NULL
 );
-
-INSERT INTO `contact` (id, name, email, reason, text, delivery)
-VALUES (1, "Emily", "ec23@cornell.edu", "Request More Information", "Do you still serve that Kimchi dish?", "Grubhub");
-INSERT INTO `contact` (id, name, email, reason, text, delivery)
-VALUES (2, "John", "se82@cornell.edu", "Make A Reservation", "Birthday Party coming up", "IthacaToGo");
-INSERT INTO `contact` (id, name, email, reason, text, delivery)
-VALUES (3, "Simon", "sf15@cornell.edu", "Other", "Are you closed for the holidays?", "DeliverIthaca");
-
 
 CREATE TABLE `menu`
 (
@@ -85,6 +72,21 @@ CREATE TABLE `reviews`
   `comment` TEXT
 );
 
+-- USERS SEED DATA
+INSERT INTO users (id, username, password)
+VALUES (1, 'ec23', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
+INSERT INTO users (id, username, password)
+VALUES (2, 'abc123', '$2y$10$sBphaM4LM8le9DDE4gdxguSrBxiRU9qi0yrBXhIA4lLDm48M3yqh2'); -- password: test
+
+-- CONTACT SEED DATA
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (1, "Emily", "ec23@cornell.edu", "Request More Information", "Do you still serve that Kimchi dish?", "Grubhub");
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (2, "John", "se82@cornell.edu", "Make A Reservation", "Birthday Party coming up", "IthacaToGo");
+INSERT INTO `contact` (id, name, email, reason, text, delivery)
+VALUES (3, "Simon", "sf15@cornell.edu", "Other", "Are you closed for the holidays?", "DeliverIthaca");
+
+-- REVIEWS SEED DATA
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
 VALUES (1, "Kaitlyn", "2019-04-27", "kml284@cornell.edu", 4, "Really Great Food", "I loved the seafood");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
@@ -178,6 +180,8 @@ INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (60, 
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (61, "Jjol Myun", "Thick cold noodles with vegetables in spicy pepper paste", 10.99, 13);
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (62, "Mul Naeng Myun", "Thin noodles with radish, cucumber, boiled egg, beef, and thinly sliced apples served in a cold broth", 12.99, 13);
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (63, "Bibim Naeng Myun", "Mul Naeng Myun with spicy sauce instead of cold broth", 13.99, 13);
+INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (64, "Steamed Egg", "", 3.00, 1);
+INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (65, "Koko Wings", "", 8.99, 1);
 
 -- DIET TAGS SEED DATA
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 1, 1);
@@ -284,19 +288,19 @@ VALUES
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(5, 12, 'chickenteriyaki1.jpg', 'jpg', 'Chicken Teriyaki', 'KoKo');
+	(5, 65, 'chickenwings1.jpg', 'jpg', 'Koko Wings', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(6, 12, 'chickenteriyaki2.jpg', 'jpg', 'Chicken Teriyaki', 'KoKo');
+	(6, 65, 'chickenwings2.jpg', 'jpg', 'Koko Wings', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(7, 12, 'chickenteriyaki3.jpg', 'jpg', 'Chicken Teriyaki', 'KoKo');
+	(7, 65, 'chickenwings3.jpg', 'jpg', 'Koko Wings', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(8, 12, 'chickenteriyaki4.jpg', 'jpg', 'Chicken Teriyaki', 'KoKo');
+	(8, 65, 'chickenwings4.jpg', 'jpg', 'Koko Wings', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -328,11 +332,11 @@ VALUES
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(16, 4, 'hamulpajun1.jpg', 'jpg', 'Hamul Pajun', 'KoKo');
+	(16, 4, 'hamulpajun1.jpg', 'jpg', 'Haemul Pajun', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(17, 4, 'hamulpajun2.jpg', 'jpg', 'Hamul Pajun', 'KoKo');
+	(17, 4, 'hamulpajun2.jpg', 'jpg', 'Haemul Pajun', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -353,11 +357,10 @@ INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
 	(22, 1, 'mandoo2.jpg', 'jpg', 'Mandoo', 'KoKo');
-	-- TODO: ADD CHICKEN WING MENU ID
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(23, NULL, 'chickenwing.jpg', 'jpg', 'Soy Sauce Chicken Wings', 'KoKo');
+	(23, 65, 'chickenwing.jpg', 'jpg', 'Koko Wings', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -374,15 +377,14 @@ INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
 	(27, 21, 'bokeumbap2.jpg', 'jpg', 'Bokeum Bap', 'KoKo');
-	-- TODO: GYERANJJIM MENU ID?
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(28, NULL, 'gyeranjjim1.jpg', 'jpg', 'Gyeranjjim', 'KoKo');
+	(28, 64, 'gyeranjjim1.jpg', 'jpg', 'Steamed Egg', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(29, NULL, 'gyeranjjim2.jpg', 'jpg', 'Gyeranjjim', 'KoKo');
+	(29, 64, 'gyeranjjim2.jpg', 'jpg', 'Steamed Egg', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -399,15 +401,14 @@ INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
 	(33, 62, 'mulnaengmyun3.jpg', 'jpg', 'Mul Naeng Myun', 'KoKo');
-	-- TODO: NOT SURE IF THIS IS ACTUALLY JAEYOOKBOKEUM
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(34, 16, 'Jaeyookbokeum1.jpg', 'jpg', 'Jaeyook Bokeum', 'KoKo');
+	(34, 44, 'Bulgogi.jpg', 'jpg', 'Bul Go Gi', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(35, 36, 'yukgaejang.jpg', 'jpg', 'Yukgaejang', 'KoKo');
+	(35, 36, 'yukgaejang.jpg', 'jpg', 'Yuk Gae Jang', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -424,6 +425,17 @@ INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
 	(39, 62, 'mulnaengmyun4.jpg', 'jpg', 'Mul Naeng Myun', 'KoKo');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (40, 19, 'bibimbap1.jpg', 'jpg', 'Bibimbap', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (41, 19, 'bibimbap2.jpg', 'jpg', 'Bibimbap', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (42, 65, 'kokowings1.jpg', 'jpg', 'Koko Wings', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (43, 65, 'kokowings2.jpg', 'jpg', 'Koko Wings', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (44, 65, 'kokowings3.jpg', 'jpg', 'Koko Wings', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (45, 65, 'kokowings4jpg', 'jpg', 'Koko Wings', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (46, 58, 'rabokki1.jpg', 'jpg', 'Rabokki', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (47, 58, 'rabokki2.jpg', 'jpg', 'Rabokki', 'Tricia Park');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (48, 11, 'salmonteriyaki.jpg', 'jpg', 'Salmon Teriyaki', 'Koko');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (49, 9, 'godeunguh.jpg', 'jpg', 'Godeunguh Gui', 'Koko');
+INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (50, 58, 'rabokki3.jpg', 'jpg', 'Rabokki', 'Koko');
 -- INSERT INTO `images` () VALUES ();
 
 -- TODO: FOR HASHED PASSWORDS, LEAVE A COMMENT WITH THE PLAIN TEXT PASSWORD!

@@ -118,7 +118,7 @@ main {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)
   ),url("../images/home_bg.jpg");
 	background-size: 100%;
-	background-position: center;
+	background-position-y: 55%;
 	background-attachment: fixed;
 	border-bottom: 3px solid black;
 }
@@ -162,6 +162,7 @@ main {
 	margin: 30px auto;
 }
 .home_topmenu {
+	width: 30%;
 	margin: 0 30px;
 	text-align: left;
 	background-color: #333333;
