@@ -180,6 +180,8 @@ INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (60, 
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (61, "Jjol Myun", "Thick cold noodles with vegetables in spicy pepper paste", 10.99, 13);
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (62, "Mul Naeng Myun", "Thin noodles with radish, cucumber, boiled egg, beef, and thinly sliced apples served in a cold broth", 12.99, 13);
 INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (63, "Bibim Naeng Myun", "Mul Naeng Myun with spicy sauce instead of cold broth", 13.99, 13);
+INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (64, "Steamed Egg", "", 3.00, 1);
+INSERT INTO `menu` (id, menu_name, description, price, category_id) VALUES (65, "Koko Wings", "", 8.99, 1);
 
 -- DIET TAGS SEED DATA
 INSERT INTO `diet_tags` (id, menu_id, diet_id) VALUES (1, 1, 1);
@@ -330,11 +332,11 @@ VALUES
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(16, 4, 'hamulpajun1.jpg', 'jpg', 'Hamul Pajun', 'KoKo');
+	(16, 4, 'hamulpajun1.jpg', 'jpg', 'Haemul Pajun', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(17, 4, 'hamulpajun2.jpg', 'jpg', 'Hamul Pajun', 'KoKo');
+	(17, 4, 'hamulpajun2.jpg', 'jpg', 'Haemul Pajun', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -380,11 +382,11 @@ VALUES
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(28, NULL, 'gyeranjjim1.jpg', 'jpg', 'Gyeranjjim', 'KoKo');
+	(28, NULL, 'gyeranjjim1.jpg', 'jpg', 'Steamed Egg', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(29, NULL, 'gyeranjjim2.jpg', 'jpg', 'Gyeranjjim', 'KoKo');
+	(29, NULL, 'gyeranjjim2.jpg', 'jpg', 'Steamed Egg', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
@@ -409,7 +411,7 @@ VALUES
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
-	(35, 36, 'yukgaejang.jpg', 'jpg', 'Yukgaejang', 'KoKo');
+	(35, 36, 'yukgaejang.jpg', 'jpg', 'Yuk Gae Jang', 'KoKo');
 INSERT INTO images
 	(id, menu_id, image_name, image_ext, description, source)
 VALUES
