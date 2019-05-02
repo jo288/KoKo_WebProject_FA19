@@ -7,9 +7,26 @@ $index = "current";
 $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 
 $errors = array();
-$filter = "";
 $page = 0;
 $messages = array();
+
+//to view more reviews on page
+if (isset($_GET['submit_next'])) {
+  $page = $_GET['page'];
+  $sql = "SELECT COUNT(*) FROM reviews";
+  $result = exec_sql_query($db, $sql, array());
+  $count = $result->fetchColumn();
+  echo ($count);
+  if (($page + 4 < $count)) $page = $page + 4;
+  $filter = $_GET['filter'];
+
+}
+
+if (isset($_GET['submit_back'])) {
+  $page = $_GET['page'] - 4;
+  if ($page < 0) $page = 0;
+  $filter = $_GET['filter'];
+}
 
 function create_select_sql($filter, $page, $search)
 {
@@ -46,15 +63,6 @@ if (isset($_POST['submit_search'])) {
 //to filter review by rating or date
 if (isset($_POST['submit_filter'])) {
   $filter = $_POST['sorting'];
-}
-
-//to view more reviews on page
-if (isset($_GET['submit_next'])) {
-  $page = $page + 4;
-}
-
-if (isset($_GET['submit_back'])) {
-  $page = $page - 4;
 }
 
 const MAX_FILE_SIZE = 1000000;
@@ -191,6 +199,7 @@ if (isset($_POST['cancel_review'])) {
         </fieldset>
       </form>
     <?php
+
   } else { ?>
       <h2>Reviews</h2>
       <!-- main review page display -->
@@ -211,8 +220,6 @@ if (isset($_POST['cancel_review'])) {
         <!-- write a review button -->
         <input id="write_review_button" class="review_button" type="submit" name="write_review" value="Write a review">
       </form>
-
-
 
       <!-- SHOW Reviews -->
       <?php
@@ -246,22 +253,21 @@ if (isset($_POST['cancel_review'])) {
           </div>
         </div>
       <?php
+
     } ?>
 
       <div>
         <!-- Show More reviews -->
-        <form id="review_more" action="reviews.php" method="get">
-          <?php if($page != 0 && isset($search)){ ?>
-          <button id="review_back_button" class="review_button" type="submit" name="submit_back">
-            < Back </button> <?php }
-                              if ($page != 0) { ?> <button id="review_next_button" class="review_button" type="submit" name="submit_next"> Next >
-              <?php } ?>
-          </button>
+        <form id="review_more" action="reviews.php" method="get"> 
+          <input type="hidden" name="page" value="<?php echo $page; ?>" />
+          <input type="hidden" name="filter" value="<?php echo $filter; ?>" />
+          <button id="review_back_button" class="review_button" type="submit" name="submit_back"> < Back </button>
+          <button id="review_next_button" class="review_button" type="submit" name="submit_next"> Next > </button>
         </form>
       </div>
     <?php
-  } ?>
 
+  } ?>
 
   </main>
 

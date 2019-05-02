@@ -79,26 +79,28 @@ CREATE TABLE `reviews`
 	`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`reviewer` TEXT NOT NULL,
 	`date` TEXT NOT NULL,
-    `email` TEXT,
+  `email` TEXT,
 	`rating` INTEGER NOT NULL,
 	`review_title` TEXT,
-    `comment` TEXT
+  `comment` TEXT
 );
 
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (1, "Kaitlyn", "2019-4-27", "kml284@cornell.edu", 4, "Really Great Food", "I loved the seafood");
+VALUES (1, "Kaitlyn", "2019-04-27", "kml284@cornell.edu", 4, "Really Great Food", "I loved the seafood");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (2, "Kaitlyn2", "2018-4-27", "kml284@cornell.edu", 1, "Yuck", "I don't like korean food");
+VALUES (2, "Kaitlyn2", "2018-04-27", "kml284@cornell.edu", 1, "Yuck", "I don't like korean food");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (3, "Kaitlyn3", "2019-3-27", "kml284@cornell.edu", 3, "Decent Food", "It was just okay");
+VALUES (3, "Kaitlyn3", "2019-03-27", "kml284@cornell.edu", 3, "Decent Food", "It was just okay");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (4, "Kaitlyn4", "2019-4-29", "kml284@cornell.edu", 3, "Pretty Good", "I liked the chicken");
+VALUES (4, "Kaitlyn4", "2019-04-29", "kml284@cornell.edu", 3, "Pretty Good", "I liked the chicken");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (5, "Kaitlyn", "2017-6-27", "kml284@cornell.edu", 5, "AMAZING", "Went there for lunch with friends and really enjoyed the food");
+VALUES (5, "Kaitlyn", "2017-06-27", "kml284@cornell.edu", 5, "AMAZING", "Went there for lunch with friends and really enjoyed the food");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (6, "Kaitlyn6", "2019-2-15", "kml284@cornell.edu", 2, "Not worth the wait", "The food was good but took a long time to get it");
+VALUES (6, "Kaitlyn6", "2019-02-15", "kml284@cornell.edu", 2, "Not worth the wait", "The food was good but took a long time to get it");
 INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
-VALUES (7, "Kaitlyn7", "2019-4-27", "kml284@cornell.edu", 2, "Yuck again", "The seafood was bland and orange");
+VALUES (7, "Kaitlyn7", "2019-04-27", "kml284@cornell.edu", 2, "Yuck again", "The seafood was bland and orange");
+INSERT INTO `reviews` (id, reviewer, date, email, rating, review_title, comment)
+VALUES(8, "Jamie", "2019-05-01", "jamie@gmail.com", 5, "Good Service", "They gave us free sikhye when we went!!! awesome service!!!!");
 
 -- MENU SEED DATA
 -- appetizers
