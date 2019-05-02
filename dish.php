@@ -54,7 +54,6 @@ if (isset($_GET['id'])) {
 
         <div id="single_menu">
 
-            <!-- add image here -->
             <?php
             $sql = "SELECT * FROM images WHERE menu_id = :id";
             $params = array(
