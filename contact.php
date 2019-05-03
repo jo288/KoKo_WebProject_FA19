@@ -24,10 +24,11 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
     <!-- TODO: This should be your main page for your site. -->
     <?php include("includes/header.php"); ?>
 
-    <?php if ($current_user == null) {
-        include("includes/contact.php");
-    } ?>
-    <main>
+    <main id="contact_main">
+        <?php if ($current_user == null) {
+            include("includes/contact.php");
+        } ?>
+
         <h2 id='employee'>Employee Contact Responses</h2>
 
 
@@ -45,7 +46,7 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
             ?>
                 <p id='loginmessege'><strong>You need to log in to view the submitted Contact Information. Go to the login page by clicking LOGIN</strong></p>
                 <!-- <form action="contact.php#employee" id="login_but" method="get" name="login_but">
-                                    <input name="submit" id='loginclick' value="LOGIN" type="submit"> </form> -->
+                                                                                    <input name="submit" id='loginclick' value="LOGIN" type="submit"> </form> -->
 
 
                 <?php include("includes/login.php");
