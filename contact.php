@@ -14,7 +14,6 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
 
     <title>Contact</title>
@@ -46,7 +45,7 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
             ?>
                 <p id='loginmessege'><strong>You need to log in to view the submitted Contact Information. Go to the login page by clicking LOGIN</strong></p>
                 <!-- <form action="contact.php#employee" id="login_but" method="get" name="login_but">
-                                                                                    <input name="submit" id='loginclick' value="LOGIN" type="submit"> </form> -->
+                                                                                            <input name="submit" id='loginclick' value="LOGIN" type="submit"> </form> -->
 
 
                 <?php include("includes/login.php");

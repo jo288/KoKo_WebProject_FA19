@@ -13,7 +13,6 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="styles/all.css" media="all" rel="stylesheet" type="text/css">
     <title>Menu</title>
 </head>
