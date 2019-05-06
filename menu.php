@@ -81,26 +81,30 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
             } else {
                 foreach ($categories as $category) {
                     ?>
-                        <h3 class="category_header"><?php echo htmlspecialchars($category["category"]) ?></h3>
-                        <div class="menu_category">
-                            <?php
-                            $sql = "SELECT menu.id, menu_name, description FROM menu INNER JOIN diet_tags ON menu.id = diet_tags.menu_id INNER JOIN diets ON diet_tags.diet_id = diets.id WHERE menu.category_id = :cat AND diets.diet = :diet;";
-                            $params = array(
-                                ':cat' => $category["id"],
-                                ':diet' => $filter
-                            );
-                            $menus = exec_sql_query($db, $sql, $params)->fetchAll();
-                            foreach ($menus as $menu) {
-                                ?>
-                                <div class="menu_item">
-                                    <a href="<?php echo "dish.php?" . http_build_query(array('id' => $menu['id'])) ?>" class="menu_name">
-                                        <h4><?php echo htmlspecialchars($menu["menu_name"]) ?></h4>
-                                    </a>
-                                    <p class="menu_description">
-                                        <?php echo htmlspecialchars($menu["description"]) ?>
-                                    </p>
-                                </div>
-                            <?php
+                        <?php
+                        $sql = "SELECT menu.id, menu_name, description FROM menu INNER JOIN diet_tags ON menu.id = diet_tags.menu_id INNER JOIN diets ON diet_tags.diet_id = diets.id WHERE menu.category_id = :cat AND diets.diet = :diet;";
+                        $params = array(
+                            ':cat' => $category["id"],
+                            ':diet' => $filter
+                        );
+                        $menus = exec_sql_query($db, $sql, $params)->fetchAll();
+                        if (count($menus) != 0) {
+                            ?>
+                            <h3 class="category_header"><?php echo htmlspecialchars($category["category"]) ?></h3>
+                            <div class="menu_category">
+                                <?php
+                                foreach ($menus as $menu) {
+                                    ?>
+                                    <div class="menu_item">
+                                        <a href="<?php echo "dish.php?" . http_build_query(array('id' => $menu['id'])) ?>" class="menu_name">
+                                            <h4><?php echo htmlspecialchars($menu["menu_name"]) ?></h4>
+                                        </a>
+                                        <p class="menu_description">
+                                            <?php echo htmlspecialchars($menu["description"]) ?>
+                                        </p>
+                                    </div>
+                                <?php
+                            }
                         }
                         ?>
                         </div>
