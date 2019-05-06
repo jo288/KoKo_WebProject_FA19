@@ -187,6 +187,7 @@ main {
 .home_topmenu p{
 	padding: 5px;
 	color:white;
+	text-align: center;
 }
 .home_topmenu img{
 	width: 100%;
@@ -488,6 +489,10 @@ textarea.review{
 	border-radius: 3px;
 	margin-right: 50px;
 }
+#deleter{
+	margin-bottom: 50px;
+}
+
 
 #write_review_button{
 	/* margin-left: 1100px; */

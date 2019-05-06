@@ -115,18 +115,18 @@ if (isset($_GET['id'])) {
         if ($current_user != null) {
             ?>
 
-            <form id="deleterform" action="contact.php" method="get">
+            <form id="deleterform" action="gallery.php" method="get">
                 <button name="deleter <?php echo ($menu['id']) ?>" id='deleter' type="submit">Delete</button>
-                <?php
+            <?php
 
         }
-                ?>
+        ?>
 
-            </form>
-        </main>
+        </form>
+    </main>
 
-        <?php include("includes/footer.php"); ?>
+    <?php include("includes/footer.php"); ?>
 
-    </body>
+</body>
 
-    </html>
+</html>
