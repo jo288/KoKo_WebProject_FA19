@@ -19,6 +19,11 @@ if (isset($_POST['contactsubmit'])) {
     // ':image_name' => $image_name,
     // ':image_ext' => $image_ext,
     // ':description' => $desc,
+    $upload_info = $_FILES["box_file"];
+    $upload_name = basename($upload_info["name"]);
+
+    // Get the file extension of the uploaded file
+    $upload_ext = strtolower(pathinfo($upload_name, PATHINFO_EXTENSION));
 
     $name = filter_input(INPUT_POST, 'menu_id', FILTER_SANITIZE_STRING);
     $desc = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);

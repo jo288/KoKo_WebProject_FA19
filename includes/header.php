@@ -10,8 +10,8 @@
           $contact = 'Add Image';
           $employee = 'Responses';
         } else {
-          $contact = 'contact';
-          $employee = 'login';
+          $contact = 'Contact';
+          $employee = ':Login';
         }
         $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => $contact, 'employee.php' => $employee);
 
