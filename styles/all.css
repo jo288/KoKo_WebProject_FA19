@@ -22,7 +22,7 @@ header {
 	background-image: url("../images/background_korean_edit2.png");
 	background-size: auto;
 	background-attachment: fixed;
-	border-bottom: 3px solid black;
+	border-bottom: 2px solid black;
 }
 
 #logo {
@@ -53,11 +53,13 @@ nav li a {
 }
 
 nav li a:hover, .current_page {
-	color: #ff8946;
+	/* color: #ff8946; */
+	color: rgb(255, 94, 0);
 }
 
 .current_page {
 	text-transform: uppercase;
+	font-weight: bolder;
 }
 
 /* FOOTER */
@@ -112,19 +114,19 @@ main {
 	text-align: center;
 }
 #home_header {
-	height: 350px;
+	height: 300px;
 	text-align: center;
 	/* Image Source: Jinju Ouck */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)
   ),url("../images/home_bg.jpg");
 	background-size: 100%;
-	background-position-y: 55%;
+	background-position-y: 60%;
 	background-attachment: fixed;
-	border-bottom: 3px solid black;
+	border-bottom: 2px solid black;
 }
 #home_header h2{
 	display:inline-block;
-	margin-top: 100px;
+	margin-top: 80px;
 	padding-top: 50px;
 	width: 30%;
 	height: 100px;
@@ -243,6 +245,10 @@ h2 {
 
 #menu_main {
 	width: 80%;
+}
+
+#menu_main h2{
+	margin-top: 30px;
 }
 
 /* DISH PAGE */
@@ -416,6 +422,9 @@ h2 {
 /* REVIEWS PAGE */
 #reviews_main{
 	width: 80%;
+}
+#reviews_main h2{
+	margin: 30px 0;
 }
 /*write a review form*/
 #review_form{
