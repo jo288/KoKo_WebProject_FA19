@@ -11,7 +11,7 @@
           $employee = 'Responses';
         } else {
           $contact = 'Contact';
-          $employee = ':Login';
+          $employee = 'Login';
         }
         $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => $contact, 'employee.php' => $employee);
 
