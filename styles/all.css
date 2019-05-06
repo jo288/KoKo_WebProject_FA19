@@ -214,6 +214,10 @@ h2 {
 	color: black;
 }
 
+.menu_name:hover {
+	color: rgb(255, 94, 0);
+}
+
 .menu_description {
 	color: gray;
 }
