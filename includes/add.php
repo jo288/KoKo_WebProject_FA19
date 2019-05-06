@@ -1,29 +1,10 @@
 <?php
 
-$error = 'hidden';
-$error2 = 'hidden';
-$error3 = 'hidden';
-$submiterror = 'hidden';
-$name = '';
-$email = '';
-$response = '';
-$reason  = '';
-$delivery  = '';
-$faqresponse  = '';
-
-
 if (isset($_POST['contactsubmit'])) {
-    // ':name' => $name,
-    // ':menu_id' => $menu_id,
-    // ':reason' => $reason,
-    // ':image_name' => $image_name,
-    // ':image_ext' => $image_ext,
-    // ':description' => $desc,
-    $upload_info = $_FILES["box_file"];
-    $upload_name = basename($upload_info["name"]);
 
-    // Get the file extension of the uploaded file
-    $upload_ext = strtolower(pathinfo($upload_name, PATHINFO_EXTENSION));
+    $upload_info = $_FILES["img_file"];
+    $upload_name = basename($upload_info["name"]);
+    $image_ext = strtolower(pathinfo($upload_name, PATHINFO_EXTENSION));
 
     $name = filter_input(INPUT_POST, 'menu_id', FILTER_SANITIZE_STRING);
     $desc = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
@@ -37,7 +18,7 @@ if (isset($_POST['contactsubmit'])) {
         $params = array(
             ':name' => $name,
             ':menu_id' => $menu_id,
-            ':image_name' => $image_name,
+            ':image_name' => $upload_name,
             ':image_ext' => $image_ext,
             ':description' => $desc,
             ':source' => "",
@@ -45,7 +26,6 @@ if (isset($_POST['contactsubmit'])) {
         );
         $result = exec_sql_query($db, $sql, $params);
         if ($result) {
-            $review_id = $db->lastInsertId("id");
             echo ("Image Successfully Submitted!");
             $submiterror = 'hidden';
         } else {
@@ -55,19 +35,14 @@ if (isset($_POST['contactsubmit'])) {
 }
 ?>
 
-
 <h2>Add to Gallery</h2>
 <form id="review_form" action="reviews.php" method="post" enctype="multipart/form-data">
     <fieldset class="review">
 
 
         <p>
-            <label>Menu ID:</label>
-            <input class="review" type="radio" name="rating" value="5" checked />5
-            <input class="review" type="radio" name="rating" value="4" <?php if (isset($rating) && $rating == "4") echo "checked"; ?> />4
-            <input class="review" type="radio" name="rating" value="3" <?php if (isset($rating) && $rating == "3") echo "checked"; ?> />3
-            <input class="review" type="radio" name="rating" value="2" <?php if (isset($rating) && $rating == "2") echo "checked"; ?> />2
-            <input class="review" type="radio" name="rating" value="1" <?php if (isset($rating) && $rating == "1") echo "checked"; ?> />1
+            <label for="menu_id">Menu ID:</label>
+            <input type="number" id="menu_id" name="menu_id" min="1" value="<?php echo $menu_id; ?>" />
         </p>
 
         <p>

@@ -111,11 +111,22 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
         </div>
+        <?php
+        if ($current_user != null) {
+            ?>
 
-    </main>
+            <form id="deleterform" action="contact.php" method="get">
+                <button name="deleter <?php echo ($menu['id']) ?>" id='deleter' type="submit">Delete</button>
+                <?php
 
-    <?php include("includes/footer.php"); ?>
+        }
+                ?>
 
-</body>
+            </form>
+        </main>
 
-</html>
+        <?php include("includes/footer.php"); ?>
+
+    </body>
+
+    </html>
