@@ -2,8 +2,10 @@
     <div id="copyright_container">
         <h3> Copyright </h3>
         <p id="footer_copyright">
-            Design By: KoKo & Golden Beaver Team<br>
-            Background Image: Welsley, <a href="https://www.toptal.com/designers/subtlepatterns/inspiration-geometry/">Subtle Patterns</a>
+            Design: Golden Beaver Team<br>
+            Gallery Images: KoKo & Golden Beaver Team<br>
+            Background Image: Kjoonlee, <a href="https://commons.wikimedia.org/wiki/File:Hunmin_Jeongeum.svg">Wikimedia</a>, Public Domain<br>
+            Font: <a href="https://fonts.google.com/selection?selection.family=Montserrat">Montserrat</a> by Julieta Ulanovsky from Google Fonts
         </p>
     </div>
     <div id="contact_container">

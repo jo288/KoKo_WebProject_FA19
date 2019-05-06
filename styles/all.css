@@ -1,6 +1,19 @@
 /* MAIN CSS FOR ALL PAGES */
 
 /* INIT */
+@font-face{
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face{
+	font-family: "Montserrat_Medium";
+	src: url("../fonts/Montserrat-Medium.ttf");
+}
+@font-face{
+	font-family: "Montserrat_Bold";
+	src: url("../fonts/Montserrat-Bold.ttf");
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -18,11 +31,11 @@ img {
 /* HEADER */
 
 header {
-	/* Image Source: https://www.toptal.com/designers/subtlepatterns/inspiration-geometry/ */
+	/* Image Source: Kjoonlee, "https://commons.wikimedia.org/wiki/File:Hunmin_Jeongeum.svg", Public Domain */
 	background-image: url("../images/background_korean_edit2.png");
 	background-size: auto;
 	background-attachment: fixed;
-	border-bottom: 3px solid black;
+	border-bottom: 2px solid black;
 }
 
 #logo {
@@ -48,16 +61,20 @@ nav li {
 }
 
 nav li a {
+	font-family: 'Montserrat_Medium', serif;
 	text-decoration: none;
 	color: black;
 }
 
 nav li a:hover, .current_page {
-	color: #ff8946;
+	/* color: #ff8946; */
+	color: rgb(255, 94, 0);
 }
 
 .current_page {
+	font-family: 'Montserrat_Bold', serif;
 	text-transform: uppercase;
+	font-weight: bolder;
 }
 
 /* FOOTER */
@@ -104,7 +121,7 @@ main {
 
 /* HOME PAGE */
 #home_main {
-	/* Image Source: https://www.toptal.com/designers/subtlepatterns/inspiration-geometry/ */
+	/* Image Source: Kjoonlee, "https://commons.wikimedia.org/wiki/File:Hunmin_Jeongeum.svg", Public Domain */
 	background-image: url("../images/background_korean_edit2.png");
 	background-size: auto;
 	background-attachment: fixed;
@@ -112,19 +129,19 @@ main {
 	text-align: center;
 }
 #home_header {
-	height: 350px;
+	height: 300px;
 	text-align: center;
 	/* Image Source: Jinju Ouck */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.1)
   ),url("../images/home_bg.jpg");
 	background-size: 100%;
-	background-position-y: 55%;
+	background-position-y: 60%;
 	background-attachment: fixed;
-	border-bottom: 3px solid black;
+	border-bottom: 2px solid black;
 }
 #home_header h2{
 	display:inline-block;
-	margin-top: 100px;
+	margin-top: 80px;
 	padding-top: 50px;
 	width: 30%;
 	height: 100px;
@@ -247,6 +264,10 @@ h2 {
 
 #menu_main {
 	width: 80%;
+}
+
+#menu_main h2{
+	margin-top: 30px;
 }
 
 /* DISH PAGE */
@@ -420,6 +441,9 @@ h2 {
 /* REVIEWS PAGE */
 #reviews_main{
 	width: 80%;
+}
+#reviews_main h2{
+	margin: 30px 0;
 }
 /*write a review form*/
 #review_form{

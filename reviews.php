@@ -134,7 +134,6 @@ if (isset($_POST['cancel_review'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="styles/all.css" media="all" rel="stylesheet" type="text/css">
   <title>Reviews</title>
 </head>
@@ -204,7 +203,7 @@ if (isset($_POST['cancel_review'])) {
       <form id="review_filter_forms" class="form-inline" action="reviews.php" method="post">
         <!-- filter form -->
         <select id="review_sort" name="sorting">
-        <option value="" selected>Sort By ...</option>
+          <option value="" selected>Sort By ...</option>
           <option value="highest-rating" <?php if ($filter == "highest-rating") echo "selected"; ?>>Sort by rating: high to low</option>
           <option value="lowest-rating" <?php if ($filter == "lowest-rating") echo "selected"; ?>>Sort by rating: low to high</option>
           <option value="most-recent" <?php if ($filter == "most-recent") echo "selected"; ?>>Sort by date: Most Recent</option>
@@ -256,14 +255,13 @@ if (isset($_POST['cancel_review'])) {
 
       <div>
         <!-- Show More reviews -->
-        <form id="review_more" action="reviews.php" method="get"> 
+        <form id="review_more" action="reviews.php" method="get">
           <input type="hidden" name="page" value="<?php echo $page; ?>" />
           <input type="hidden" name="filter" value="<?php echo $filter; ?>" />
           <input type="hidden" name="search" value="<?php echo $search; ?>" />
-          <button id="review_back_button" class="review_button" type="submit" name="submit_back" 
-            <?php if ($page <= 0) echo "disabled"; ?>> < Back </button>          
-          <button id="review_next_button" class="review_button" type="submit" name="submit_next"
-            <?php if (sizeof($records) < 4) echo "disabled"; ?>> Next > </button>        </form>
+          <button id="review_back_button" class="review_button" type="submit" name="submit_back" <?php if ($page <= 0) echo "disabled"; ?>>
+            < Back </button> <button id="review_next_button" class="review_button" type="submit" name="submit_next" <?php if (sizeof($records) < 4) echo "disabled"; ?>> Next >
+          </button> </form>
       </div>
     <?php
 

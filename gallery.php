@@ -14,7 +14,6 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
 
     <title>Photo Gallery</title>
@@ -115,7 +114,7 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
                         // ALL
                         $sql = "SELECT images.id, images.image_ext FROM images INNER JOIN menu ON images.menu_id = menu.id LIMIT 1";
                         $params = null;
-                    } else if (array_search($album_name, $categories) <= sizeof($category_records)) {
+                    } else if (array_search($category, $categories) <= sizeof($category_records)) {
                         // MENU CATEGORY
                         $sql = "SELECT images.id, images.image_ext from images INNER JOIN menu ON images.menu_id = menu.id INNER JOIN categories ON menu.category_id = categories.id WHERE categories.category = :category LIMIT 1";
                         $params = array(
@@ -123,7 +122,7 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
                         );
                     } else {
                         // DIETARY RESTRICTION
-                        $sql = "SELECT mages.id, images.image_ext from images LEFT OUTER JOIN menu ON images.menu_id = menu.id LEFT OUTER JOIN diet_tags ON menu.id = diet_tags.menu_id LEFT OUTER JOIN diets ON diet_tags.diet_id = diets.id WHERE diets.diet = :diet LIMIT 1";
+                        $sql = "SELECT images.id, images.image_ext from images LEFT OUTER JOIN menu ON images.menu_id = menu.id LEFT OUTER JOIN diet_tags ON menu.id = diet_tags.menu_id LEFT OUTER JOIN diets ON diet_tags.diet_id = diets.id WHERE diets.diet = :diet LIMIT 1";
                         $params = array(
                             ':diet' => $category
                         );
