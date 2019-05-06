@@ -41,7 +41,7 @@ if (isset($_POST['contactsubmit'])) {
       }
     }
   }
-  //add review to database
+  //add contact to database
   if ($valid_order) {
     $sql = "INSERT INTO contact (name, email, reason, text, delivery)
     VALUES (:name,:email, :reason, :text, :delivery)";

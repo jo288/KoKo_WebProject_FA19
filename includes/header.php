@@ -6,8 +6,14 @@
     <nav id="menu">
       <ul>
         <?php
-
-        $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => 'Contact');
+        if ($current_user != null) {
+          $contact = 'Add Image';
+          $employee = 'Responses';
+        } else {
+          $contact = 'contact';
+          $employee = 'login';
+        }
+        $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => $contact, 'employee.php' => $employee);
 
         $current = basename($_SERVER['PHP_SELF']);
 
