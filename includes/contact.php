@@ -9,8 +9,11 @@ $email = '';
 $response = '';
 $reason  = '';
 $delivery  = '';
-$faqresponse  = '';
+// $faqresponse  = '';
 
+if (isset($_POST['faqsubmit'])) {
+  $faqresponse = filter_input(INPUT_POST, 'faq', FILTER_SANITIZE_STRING);
+}
 
 if (isset($_POST['contactsubmit'])) {
   $name = filter_input(INPUT_POST, 'order_name', FILTER_SANITIZE_STRING);
@@ -90,18 +93,16 @@ if (isset($_POST['contactsubmit'])) {
       <form action="contact.php" id="faqform" method="post" name="faqform">
         <div class='question'>
           <label for="faq"></label>
-          <select id="faq" name="faq" value="<?php
-                                              echo htmlspecialchars($faqresponse);
-                                              ?>">
+          <select id="faq" name="faq">
 
-            <option value=hours>
+            <option value="hours" <?php if ($faqresponse == "hours") echo "selected"; ?>>
               What are the store Hours?
 
             </option>
-            <option value="adress">
+            <option value="adress" <?php if ($faqresponse == "adress") echo "selected"; ?>>
               What is the store Adress?
             </option>
-            <option value="options">
+            <option value="options" <?php if ($faqresponse == "options") echo "selected"; ?>>
               What Delivery Options are offered?
             </option>
             <input type="submit" name="faqsubmit" id='faqsubmit' value="ANSWER" />
@@ -112,7 +113,7 @@ if (isset($_POST['contactsubmit'])) {
       <?php
 
       if (isset($_POST['faqsubmit'])) {
-        $faqresponse = filter_input(INPUT_POST, 'faq', FILTER_SANITIZE_STRING);
+        // $faqresponse = filter_input(INPUT_POST, 'faq', FILTER_SANITIZE_STRING);
         if ($faqresponse == "hours") {
           ?>
           <fieldset class='hours'>
