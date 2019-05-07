@@ -42,9 +42,21 @@ The client has received former proposals for a site for Koko Restaurant, but wer
   - Task distribution:
     - Tricia: menu, dish
     - Khalid: contact, about, review upload
-    - Jinju: index, photo gallery
+    - Jinju: index, photo gallery, styling
     - Kaitlyn: reviews, review upload
   - Rough draft of design-journey by April 15th (internal deadline)
+
+- April 20th, 2019
+  - Continue working on individual pages
+  - Add images to the review form maybe
+  - Create login for the KoKo administrators so that they can view the contact form responses
+  - Start working with databases
+
+- May 3rd, 2019
+  - check the navigation menu's color(orange) against the grey background for contrast ratio
+  - ajax/javascript for menu, if possible
+  - shrink down the home cover image a little
+  - add upload/delete images functionality for logged-in users
 
 
 ## Purpose & Content
@@ -217,11 +229,14 @@ We may use these colors for designing the website to answer the client's request
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
 
-The site will use PHP templates for header and footer. Header template will include the website's title as well as the navigation bar which will reflect the current page the user is on. Footer template will display the copyright information for the page displayed and basic contact information of the client.
+The site will have the menu of the restaurant the user will be able to filter for dietary restrictions (vegetarian, vegan, gluten free), allowing the target audience to easily find the menus that meet their requirements. Clicking on the individual dishes will redirect the user to the page with detailed information on the dish, including the related images from the gallery displayed as a slideshow.
 
-The site will have the menu of the restaurant the user will be able to filter by dietary restrictions (vegetarian, vegan, gluten free). Clicking on the individual dishes will redirect the user to a page with detailed information about the dish, including the related images from the gallery displayed as a slideshow.
+The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it. Clicking on the iindividual images will redirect the user to the page with details on the dish mentioned above, allowing the users to easily find out which menu is in which picture.
 
-The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it. Clicking on an image of a dish will redirect the user to a page with detailed information about the dish.
+The site also will have a review form and a contact form. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. The contact form will allow the user to directly interact with the client
+and the client will be able to login to see the contact form responses from the users. The client also will be able to delete a response after they have responded to it. The review form will allow the other members of the target audience.
+
+In addition, the client and the authorized users can add or delete image in the gallery. This allows the client to easily manage the gallery without manually handling the images on the server after the website is actually deployed.
 
 The site also will have a review form and a contact form. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. The contact form will allow the user to directly interact with the client and the client will be able to login to see the contact form responses from the users. Employees will also be able to delete a response after they have responded to it. The review form will allow the other members of the target audience. In addition, when logged in, an employee can add or delete image in the gallery.
 
@@ -246,7 +261,7 @@ The site also will have a review form and a contact form. The review form will b
       - 4/17: write up a css for the general styling of all the pages
       - 4/23: create database schema for images, plan php code and sql queries for their page
       - 5/3: finish all html/css and most functionality in time for demo
-      - 5/7: finalize photo gallery page based on peer feedback
+      - 5/7: implement the upload/delete images in gallery
     - Kaitlyn: reviews
       - 4/17: draw sketches for review page
       - 4/23: create database schema for reviews, plan php code and sql queries for their page
@@ -256,6 +271,17 @@ The site also will have a review form and a contact form. The review form will b
       - 4/17: work on design-journey.md to complete Milestone 1
       - 4/23: work on design-journey.md to complete Milestone 2
       - 5/7: put finishing touches of respective parts for Final Submission and work on design-journey
+  - Dependencies:
+    - Tricia (menu, about, dish)
+      - dish page relies on images database for the slideshow -> Jinju
+    - Khalid (contact, login)
+      - no dependencies; independent module
+    - Jinju (index, photo gallery, upload image)
+      - photo gallery relies on menu database for sorting the albums -> Tricia
+      - uploading image relies on menu database for getting all the available menus -> Tricia
+      - uploading/deleting image relies on login for authorization -> Khalid
+    - Kaitlyn (reviews)
+      - no dependencies; independent module
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
