@@ -99,26 +99,26 @@ if (isset($_POST['submit_review'])) {
     } else
       array_push($errors, "Add review failed!");
 
-    //get image info
-    $upload_info = $_FILES['img_file'];
-    if ($_FILES['img_file']['error'] == UPLOAD_ERR_OK) {
-      $upload_file = basename($upload_info['name']);
-      $upload_ext = strtolower(pathinfo($upload_file, PATHINFO_EXTENSION));
-      $sql = "INSERT INTO images (review_id, image_name, image_ext) VALUES(:review_id, :image_name, :image_ext)";
-      $params = array(
-        ':review_id' => $review_id,
-        ':image_name' => $upload_file,
-        ':image_ext' => $upload_ext
-      );
-      $result = exec_sql_query($db, $sql, $params);
-      if ($result) {
-        $doc_id = $db->lastInsertId("id");
-        $new_path = "uploads/images/$doc_id.$upload_ext";
-        move_uploaded_file($_FILES["img_file"]["tmp_name"], $new_path);
-        array_push($messages, "Upload file is success!");
-      } else
-        array_push($errors, "Upload image file failed!");
-    }
+    // //get image info
+    // $upload_info = $_FILES['img_file'];
+    // if ($_FILES['img_file']['error'] == UPLOAD_ERR_OK) {
+    //   $upload_file = basename($upload_info['name']);
+    //   $upload_ext = strtolower(pathinfo($upload_file, PATHINFO_EXTENSION));
+    //   $sql = "INSERT INTO images (review_id, image_name, image_ext) VALUES(:review_id, :image_name, :image_ext)";
+    //   $params = array(
+    //     ':review_id' => $review_id,
+    //     ':image_name' => $upload_file,
+    //     ':image_ext' => $upload_ext
+    //   );
+    //   $result = exec_sql_query($db, $sql, $params);
+    //   if ($result) {
+    //     $doc_id = $db->lastInsertId("id");
+    //     $new_path = "uploads/images/$doc_id.$upload_ext";
+    //     move_uploaded_file($_FILES["img_file"]["tmp_name"], $new_path);
+    //     array_push($messages, "Upload file is success!");
+    //   } else
+    //     array_push($errors, "Upload image file failed!");
+  // }
     $db->commit();
   }
 }
@@ -182,16 +182,16 @@ if (isset($_POST['cancel_review'])) {
             <textarea class="review" name="comment"><?php echo htmlspecialchars($comment); ?></textarea>
           </p>
 
-          <p>
+          <!-- <p> -->
             <!-- MAX_FILE_SIZE must precede the file input field -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
+            <!-- <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_FILE_SIZE; ?>" />
             Images to Share? Upload it!
             <label>Image:</label>
-            <input class="review" type="file" name="img_file" />
-          </p>
+            <input class="review" type="file" name="img_file" /> -->
+          <!-- </p> -->
           <p>
-            <input class="review" name="submit_review" type="submit" value="Add Review">
-            <input class="review" name="cancel_review" type="submit" value="Cancel Review">
+            <input class="input_review" name="submit_review" type="submit" value="Add Review">
+            <input class="input_review" name="cancel_review" type="submit" value="Cancel Review">
           </p>
         </fieldset>
       </form>
@@ -259,9 +259,12 @@ if (isset($_POST['cancel_review'])) {
           <input type="hidden" name="page" value="<?php echo $page; ?>" />
           <input type="hidden" name="filter" value="<?php echo $filter; ?>" />
           <input type="hidden" name="search" value="<?php echo $search; ?>" />
-          <button id="review_back_button" class="review_button" type="submit" name="submit_back" <?php if ($page <= 0) echo "disabled"; ?>>
-            < Back </button> <button id="review_next_button" class="review_button" type="submit" name="submit_next" <?php if (sizeof($records) < 4) echo "disabled"; ?>> Next >
-          </button> </form>
+          <button id="review_back_button" class="review_button" type="submit" name="submit_back"
+             <?php if ($page <= 0) echo "disabled"; ?>>< Back </button> 
+          <button id="review_next_button" class="review_button" type="submit" name="submit_next" 
+            <?php if (sizeof($records) < 4) echo "disabled"; ?>> Next >
+          </button>
+         </form>
       </div>
     <?php
 
