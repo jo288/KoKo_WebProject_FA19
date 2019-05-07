@@ -776,6 +776,24 @@ For accessing Database Elements from the form and then inputting them:
 - If it was valid, hide the form and post the users input in its place. Then open the database ot access it and insert the values into the database.
 ```
 
+### init.php
+```
+
+If user is logged in show a different set of buttons:
+add the button upload image for the user along with the contact submit.
+if the user clicks this button initiate the upload template and allow the user to upload an image from browse of the computer. If the image uploads successfully give the user a messege that it was uploaded successfully.
+if the user opens an image and the image database sets the variable UserUploadedimage to true, then add the function for the user to delete that image or to delete the image.
+If the user clicks these buttons delete the image from the database and the server or delete the tag from the database and server
+
+
+By defult set user to not logged in. If user is not logged in show
+If user submits approprate form for loginng in and clicks login then chance the variable status to logged in
+
+If the variable logged in is false: show the login page that contains the login section for a user
+
+If the variable logged in is true: show the template for the users information as evident in the html/css and in the design sketches.
+```
+
 ### upload_image.php
 ```
 if upload form is submitted
