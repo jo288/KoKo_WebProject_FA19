@@ -432,7 +432,7 @@ input.review {
 	font-size: 100%;
 	margin: 5px 5px 5px 20px;
 }
-fieldset.review, fieldset.adress, fieldset.hours, fieldset.options {
+fieldset.review, fieldset.adress, fieldset.hours, fieldset.options, fieldset.feedback {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
@@ -558,6 +558,8 @@ div.inner_display_review_right, .inner_display_contactr {
 	font-size: 18px;
 	margin-bottom: 5px;
 }
+
+
 /* Logout Button */
 
 #logout_but {
@@ -677,16 +679,20 @@ textarea.contactform {
 	height: 30px;
 	border-radius: 3px;
 }
-#hours, #adress, #options {
+/* #hours, #adress, #options, #feedback {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 10px;
-}
+} */
 .options ul {
 	margin-left: 30px;
 }
 #storehours {
+	list-style-type: none;
+	line-height: 150%;
+}
+#feedbacker {
 	list-style-type: none;
 	line-height: 150%;
 }

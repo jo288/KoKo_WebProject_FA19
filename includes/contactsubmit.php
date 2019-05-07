@@ -10,7 +10,6 @@
             if (isset($_GET[$deleterkey])) {
                 echo ("Contact issue successfully deleted from entries.");
             }
-
             if (isset($_GET["deleter"])) {
                 //DELETE CCONTACT RESPONSE
                 $sql = "SELECT * FROM contact WHERE id = :id;";
@@ -27,19 +26,13 @@
                         $records = exec_sql_query($db, $sql, $params);
                         if ($records) {
                             header("Refresh:0");
-                         } else {
+                        } else {
                             echo "<h2 class='delete_alert'> Failed to delete Contact Submission </h2>";
                         }
                     }
                 }
             }
-
             ?>
-
-
-
-
-
             <div class="display_review">
                 <!--Each table column is echoed into a td cell-->
                 <div class="inner_display_contactl">
@@ -50,8 +43,8 @@
                 </div>
                 <div class="inner_display_contactr">
                     <p>
-                        <p><?php echo htmlspecialchars($record['review_title']); ?></p>
-                        <p><?php echo htmlspecialchars($record['text']); ?></p>
+                    <p><?php echo htmlspecialchars($record['review_title']); ?></p>
+                    <p><?php echo htmlspecialchars($record['text']); ?></p>
                 </div>
                 <div>
                     <form action="employee.php" method="get">

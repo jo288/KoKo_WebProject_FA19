@@ -1,5 +1,4 @@
 <?php
-// INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
 
 $title = "about";
@@ -18,14 +17,10 @@ $index = "current";
 </head>
 
 <body>
-    <!-- TODO: This should be your main page for your site. -->
     <?php include("includes/header.php"); ?>
-
     <main id="about_main">
         <h2>About</h2>
-
         <!-- include some images of Koko -->
-
         <div class="about_section">
             <h3 class="about_header">Koko</h3>
             <p class="about_info">

@@ -1,5 +1,4 @@
 <?php
-// INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
 
 $title = "index";
@@ -16,7 +15,6 @@ $index = "current";
 </head>
 
 <body>
-  <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php"); ?>
 
   <main id="home_main">
