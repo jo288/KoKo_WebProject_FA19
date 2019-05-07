@@ -65,6 +65,21 @@ They would be able to search the menu and see pictures of the food which would h
     - Allow users to filter for specific dietary restrictions on menu page
   - **Rationale** [Justify your decisions; additional notes.]
     - Filtering for dietary restrictions improves accessibiliy and allows the client to cater to a wider variety of customers
+- Target Audience Need
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - Target audience want other opinions of the restaurant when deciding whether to go or not
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include a review page where users can read other customers's experience at the restaurant
+    - User can filter based on date of review and rating and search for key terms to find diverse set of reviews
+  - **Rationale** [Justify your decisions; additional notes.]
+    - Reading reviews will help target audience decide whether the restaurant suits their preferences for that meal and whether to go to it or not
+- Target Audience Need
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - Target audience may have simple common questions (ex. where is the restaurant located?) about the restaurant and would like a quick response
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Include a Frequently Asked Questions section
+  - **Rationale** [Justify your decisions; additional notes.]
+    - Have a section of frequently asked question so the target audience can quickly get the answer and do not have to wait for the restaurnat owner (client) to respond 
 - Client Requirement
   - **Requirement or Need** [What does your client and audience need or want?]
     - Client wants customers to have access to the menu with the various food options
@@ -182,9 +197,10 @@ The site will have the menu of the restaurant the user will be able to filter fo
 
 The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it.
 
-The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client, and the review form will allow the other members of the target audience. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments, and even images to the site. The review page will have a search for customers to search of reviews for their specific dish orders and will have seperate categories.
+The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client
+and the client will be able to login to see the contact form responses from the users. After viewing the reponses and responding to the user, the client will be able to delete the response. 
 
-If time permits, the contact form might get connected to the menu to allow users to estimate their price (and potentially make orders) and using interactivity elements the site might have a feature to be viewed in either Korean or English.
+The review form will allow the other members of the target audience. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. 
 
 
 ## Work Distribution
@@ -194,15 +210,27 @@ If time permits, the contact form might get connected to the menu to allow users
   - Task distribution
     - Tricia: menu, about
       - 4/17: draw sketches for about and menu pages
+      - 4/23: create database schema for menu, plan php code and sql queries for their page
+      - 4/27: upload pictures of food from koko's to be used in gallery, create menu seed data to be referenced also in gallery
+      - 5/3: finish all html/css and most functionality of page in time for demo
     - Khalid: contact
       - 4/17: draw sketches for contact page
+      - 4/23: create database schema for contact, plan php code and sql queries for their page 
+      - 5/3: finish all html/css and most functionality of page in time for demo
     - Jinju: index, photo gallery
       - 4/17: write up index.php with templates first which can then be used as a template for other pages
       - 4/17: write up a css for the general styling of all the pages
+      - 4/23: create database schema for images, plan php code and sql queries for their page
+      - 5/3: finish all html/css and most functionality of page in time for demo
     - Kaitlyn: reviews
       - 4/17: draw sketches for review page
+      - 4/23: create database schema for reviews, plan php code and sql queries for their page 
+      - 5/3: finish all html/css and most functionality of page in time for demo
     - All members:
       - 4/17: work on design-journey.md to complete Milestone 1
+      - 4/23: work on design-journey.md to complete Milestone 2 
+      - 5/7: put finishing touches of respective parts for Final Submission and work on design-journey
+
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
@@ -483,7 +511,6 @@ Table: reviews
 * field 5: rating: INTEGER {Not}
 * field 6: review_title TEXT
 * field 7: comment TEXT
-* field 8: image_id TEXT
 
 
 ## Database Queries
