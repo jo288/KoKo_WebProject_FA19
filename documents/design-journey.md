@@ -241,8 +241,6 @@ and the client will be able to login to see the contact form responses from the 
 
 In addition, the client and the authorized users can add or delete image in the gallery. This allows the client to easily manage the gallery without manually handling the images on the server after the website is actually deployed.
 
-The site also will have a review form and a contact form. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. The contact form will allow the user to directly interact with the client and the client will be able to login to see the contact form responses from the users. Employees will also be able to delete a response after they have responded to it. The review form will allow the other members of the target audience. In addition, when logged in, an employee can add or delete image in the gallery.
-
 ## Work Distribution
 
 [Describe how each of your responsibilities will be distributed among your group members.]
@@ -832,7 +830,7 @@ The client was satisfied with the needs we met (aesthetic design, infomration ou
 
 The website design is intended to be very user friendly and to represent the customer. The colors and design were chosen in specific to make reading the menu easy, to provide the customer with an aesthetic gallery, form etc. We also intended the design to reflect the restaurant's atmosphere and the food they serve and chose the background image and fonts accordingly. Individual dish pages can be accessed from both the menu and the galllery allowing the users to easily access the information on the menu they find interesting.
 
-The webiste provides direct communication between the resturant and the customer through multiple forms. A direct contact form for direct communcation for the user, and a dashboard for the resturant to view and resolve the user's responses. Similarly, a review form to show the resturant consumers image of the resturant, and third through a gallery to have the resturant staff show the dishes to the consumer.
+The website provides direct communication between the resturant and the customer through multiple forms. A direct contact form for direct communcation for the user, and a dashboard for the resturant to view and resolve the user's responses. Similarly, a review form to show the resturant consumers image of the resturant, and third through a gallery to have the resturant staff show the dishes to the consumer.
 
 The website is designed to directly benefit the consumer through tags, reviews, and an easy menu regardless of the background of the users. Tags allow users who might be vegetarians or vegans to also view dishes easily. Korean text is incorporated for a target audience who might be familar with the language. And in general items are centered for all people to see equally.
 
