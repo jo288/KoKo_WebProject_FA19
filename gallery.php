@@ -95,13 +95,22 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
                         }
                         echo "
                         <div class='album_image'>" . $dishlinkop . "
+                        <div class='album_image_container'>
                             <img class='album_image_file' src='uploads/" . $record["id"] . "." . $record["image_ext"] . "' alt=''>
                             <p class='album_image_desc'>" . $record["description"] . "</p>" . $dishlinked . "
-                        </div>";
-                    }
-                    echo "</div>\n";
+                            </div>";
+
+                        if ($current_user != null) {
+                            ?>
+                            <form id="deleterform" action="delete.php" method="get">
+                                <button name="deleter" value="<?php echo ($record["id"]); ?>" id='deleter' type="submit">Delete</button>
+                            </form>
+                        <?php }
+                    echo "</div>";
                 }
-                ?>
+                echo "</div>\n";
+            }
+            ?>
             </div>
         <?php } else {
 

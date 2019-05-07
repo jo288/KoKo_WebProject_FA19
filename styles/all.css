@@ -414,7 +414,9 @@ h2 {
 }
 .album_image{
 	margin-bottom: 20px;
-	position: relative;
+}
+.album_image_container{
+	position:relative;
 }
 
 .album_image_file{
@@ -436,6 +438,19 @@ h2 {
 .album_image_desc:hover{
 	background-image: radial-gradient(circle, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
 	color:white;
+}
+
+#deleterform{
+	display:inline-block;
+	/* border: black 1px solid; */
+}
+#deleter{
+	margin: 10px 0;
+	padding: 10px;
+	font-size: 14px;
+	color: white;
+	background-color: #333333;
+	border-radius: 3px;
 }
 
 /* REVIEWS PAGE */
@@ -475,7 +490,7 @@ textarea.review{
 }
 
 /*buttons on main review page*/
-.review_button, #deleter {
+.review_button {
 	display:inline-block;
 	text-decoration: none;
   color: whitesmoke;
@@ -505,7 +520,7 @@ textarea.review{
   color: whitesmoke;
 	font-size: 16px;
 	background-color: #333333;
-	width: 200px;
+	width: 150px;
 	height: 30px;
 	border-radius: 3px;
 	margin-top: 20px;
@@ -793,4 +808,27 @@ textarea.contactform{
 #submitter, #uname, #pword {
 	margin: 10px;
 	padding: 5px;
+}
+
+/* DELETE */
+.delete_alert{
+	color: red;
+	margin-top: 250px;
+}
+#delete_main{
+	height:300px;
+	text-align: center;
+}
+#delete_main h2{
+	font-size: 20px;
+}
+#deleteBack{
+	margin-top:20px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+	background-color: #333333;
+	border-radius: 3px;
 }
