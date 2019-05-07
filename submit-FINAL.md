@@ -41,5 +41,5 @@ See the course website for a detailed citation policy with more information on u
 
 Each team member should sign their name and include today's date and time to submit **FINAL VERSION**.
 
-- Full Name of Each Contributing Team Member:Jinju Ouck, Kaitlyn Li, Khalid Nadi, Tricia Park
-- Date & Time: 5/7/2019
+- Full Name of Each Contributing Team Member: Jinju Ouck, Kaitlyn Li, Khalid Nadi, Tricia Park
+- Date & Time: 5/7/2019, 3:53 pm
