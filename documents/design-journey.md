@@ -32,6 +32,13 @@ The client has received former proposals for a site for Koko Restaurant, but wer
   - Client wants a colorful website design with lots of pictures
   - Client wants large and readable fonts for the website.
   - Client wants the contact information to be clearly visible.
+  - Client has no website currently but had a 1300 group make a basic website for them but with very basic interactivity and not very satisfactory styling
+  - Client wants to have the site easily provide information about dishes to client as a top priority (We recomended to them making a gallery and menu)
+  - Client wants to be able to communicate with customers (we recomended a contact form)
+  - Client wants some way of creating proof of the resturant quality (we recomended a review page)
+  - Client wants a delivery system tied with their website (We explained to them that this would be very difficult based on the scope of information learned in this class and the scope of this project)
+
+  After this we met as a group to designate tasks to group members and such
   - Task distribution:
     - Tricia: menu, dish
     - Khalid: contact, about, review upload
@@ -65,6 +72,16 @@ They would be able to search the menu and see pictures of the food which would h
     - Allow users to filter for specific dietary restrictions on menu page
   - **Rationale** [Justify your decisions; additional notes.]
     - Filtering for dietary restrictions improves accessibiliy and allows the client to cater to a wider variety of customers
+    - Target Audience Need
+
+- Target Audience Need
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - Target audience have a lot of options when it comes to choosing a resturant in collegetown and there is no proof of resturant quality
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Have client input reviews and read reviews to be sure of resturant quality
+  - **Rationale** [Justify your decisions; additional notes.]
+    - Reviews create a good way of assuring resturant quality
+
 - Target Audience Need
   - **Requirement or Need** [What does your client and audience need or want?]
     - Target audience want other opinions of the restaurant when deciding whether to go or not
@@ -73,13 +90,15 @@ They would be able to search the menu and see pictures of the food which would h
     - User can filter based on date of review and rating and search for key terms to find diverse set of reviews
   - **Rationale** [Justify your decisions; additional notes.]
     - Reading reviews will help target audience decide whether the restaurant suits their preferences for that meal and whether to go to it or not
+
 - Target Audience Need
   - **Requirement or Need** [What does your client and audience need or want?]
     - Target audience may have simple common questions (ex. where is the restaurant located?) about the restaurant and would like a quick response
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
     - Include a Frequently Asked Questions section
   - **Rationale** [Justify your decisions; additional notes.]
-    - Have a section of frequently asked question so the target audience can quickly get the answer and do not have to wait for the restaurnat owner (client) to respond 
+    - Have a section of frequently asked question so the target audience can quickly get the answer and do not have to wait for the restaurnat owner (client) to respond
+
 - Client Requirement
   - **Requirement or Need** [What does your client and audience need or want?]
     - Client wants customers to have access to the menu with the various food options
@@ -87,6 +106,7 @@ They would be able to search the menu and see pictures of the food which would h
     - Create a page specifically for displaying the menu
   - **Rationale** [Justify your decisions; additional notes.]
     - A separate page for the menu makes the menu easy to find (e.g. can go to page via nav bar) and focuses attention on the various dishes when on the menu page
+
 - Client Requirement
   - **Requirement or Need** [What does your client and audience need or want?]
     - Client wants customers to feel comfortable and welcomed to the website
@@ -94,6 +114,7 @@ They would be able to search the menu and see pictures of the food which would h
     - Use a simple but inviting design with bright colors
   - **Rationale** [Justify your decisions; additional notes.]
     - A simplistic design will make the website more accessible for users, and bright colors will feel more inviting
+
 - Client Requirement
   - **Requirement or Need** [What does your client and audience need or want?]
     - Client wants lots of pictures of the food
@@ -198,7 +219,7 @@ The site will have the menu of the restaurant the user will be able to filter fo
 The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it.
 
 The site also will have a review form and a contact form. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. The contact form will allow the user to directly interact with the client
-and the client will be able to login to see the contact form responses from the users. The client also will be able to delete a response after they have responded to it. The review form will allow the other members of the target audience. In addition, when logged in a client can add or delete image in the gallery. 
+and the client will be able to login to see the contact form responses from the users. The client also will be able to delete a response after they have responded to it. The review form will allow the other members of the target audience. In addition, when logged in a client can add or delete image in the gallery.
 
 
 
@@ -214,7 +235,7 @@ and the client will be able to login to see the contact form responses from the 
       - 5/3: finish all html/css and most functionality in time for demo
     - Khalid: contact
       - 4/17: draw sketches for contact page
-      - 4/23: create database schema for contact, plan php code and sql queries for their page 
+      - 4/23: create database schema for contact, plan php code and sql queries for their page
       - 5/3: finish all html/css and most functionality in time for demo
     - Jinju: index, photo gallery
       - 4/17: write up index.php with templates first which can then be used as a template for other pages
@@ -223,11 +244,11 @@ and the client will be able to login to see the contact form responses from the 
       - 5/3: finish all html/css and most functionality in time for demo
     - Kaitlyn: reviews
       - 4/17: draw sketches for review page
-      - 4/23: create database schema for reviews, plan php code and sql queries for their page 
+      - 4/23: create database schema for reviews, plan php code and sql queries for their page
       - 5/3: finish all html/css and most functionality in time for demo
     - All members:
       - 4/17: work on design-journey.md to complete Milestone 1
-      - 4/23: work on design-journey.md to complete Milestone 2 
+      - 4/23: work on design-journey.md to complete Milestone 2
       - 5/7: put finishing touches of respective parts for Final Submission and work on design-journey
 
 
@@ -250,7 +271,7 @@ Client approved of our initial design. She liked the color scheme and layouts of
 
 [Improve your design based on the feedback you received from your client.]
 
-Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. 
+Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc.
 
 ## Evaluate your Design
 
@@ -701,7 +722,7 @@ For accessing Database Elements from the form and then inputting them:
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
 
-- database had to be updated for diet tags 
+- database had to be updated for diet tags
 
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
