@@ -52,6 +52,8 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
     <main id="gallery_main">
         <h2>Gallery</h2>
 
+        <!-- All images in seed data are our own, taken for the purpose of using them in this project -->
+
         <?php if (isset($_GET["album"])) {
             $album_name = $_GET["album"];
             if (!in_array($album_name, $categories)) {

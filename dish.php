@@ -106,12 +106,12 @@ if (isset($_GET['id'])) {
                             ?>
                             <li><?php echo htmlspecialchars($diet_tag["diet"]) ?></li>
                         <?php
-
                     } ?>
                     </ul>
                 </div>
             </div>
         </div>
+
     </main>
 
     <?php include("includes/footer.php"); ?>

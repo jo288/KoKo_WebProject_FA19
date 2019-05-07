@@ -25,7 +25,7 @@ if (isset($_POST['upload_submit'])) {
         $file_name = basename($file_info["name"]);
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
         $sql = "INSERT INTO images
-      (menu_id, image_name, image_ext, description, source) VALUES (:menu_id,:image_name,:image_ext,:description,:source)";
+      (menu_id, image_name, image_ext, description, source) VALUES (:menu_id,:image_name,:image_ext,:description,:source);";
         $params = array(
             ':menu_id' => $file_menu_id,
             ':image_name' => $file_name,
