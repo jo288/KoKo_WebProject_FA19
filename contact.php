@@ -47,15 +47,13 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
             ?>
                 <!-- <p id='loginmessege'><strong>You need to log in to view the submitted Contact Information. Go to the login page by clicking LOGIN</strong></p> -->
                 <!-- <form action="contact.php#employee" id="login_but" method="get" name="login_but">
-                                                                                                                        <input name="submit" id='loginclick' value="LOGIN" type="submit"> </form> -->
+                                                                                                                                        <input name="submit" id='loginclick' value="LOGIN" type="submit"> </form> -->
 
 
             <?php
         }
     }
-    if ($current_user != null) {
-        include("includes/add.php");
-    }
+
     ?>
 
 

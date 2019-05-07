@@ -111,10 +111,8 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
         </div>
-        <?php
-        if ($current_user != null) {
-            ?>
 
+<<<<<<< HEAD
             <form id="deleterform" action="gallery.php" method="get">
                 <button name="deleter <?php echo ($menu['id']) ?>" id='deleter' type="submit">Delete</button>
             <?php
@@ -125,6 +123,10 @@ if (isset($_GET['id'])) {
         </form>
     </main>
 
+=======
+    </main>
+
+>>>>>>> 6951fbfc6344278a1ae8ec09166d228b8110a7db
     <?php include("includes/footer.php"); ?>
 
 </body>
