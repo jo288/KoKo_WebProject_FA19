@@ -6,8 +6,8 @@
                                         } else {
                                             echo htmlspecialchars($_SERVER['PHP_SELF']);
                                         } ?>" method="post">
+             <p class="form_error2 <?php echo $loginerror; ?>" id="formerror">Invalid UserName or Password</p>
              <ul id='loginlist'>
-                 <p class="form_error2 <?php echo $loginerror; ?>" id="formerror">Invalid UserName or Password</p>
                  <li id='uname'>
                      <label for="username">Username:</label>
                      <input id="username" type="text" name="username" />
