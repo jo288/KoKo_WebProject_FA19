@@ -1,11 +1,9 @@
      <!-- // This code is adpted from Lab 8 -->
      <fieldset id='loginset'>
          <form id="loginForm" action="<?php
-                                        if ($loginerror == '') {
-                                            echo ("contact.php#bottom");
-                                        } else {
-                                            echo htmlspecialchars($_SERVER['PHP_SELF']);
-                                        } ?>" method="post">
+         if ($loginerror == '')
+         {  echo ("contact.php#bottom");   }
+          else {  echo htmlspecialchars($_SERVER['PHP_SELF']); } ?>" method="post">
              <p class="form_error2 <?php echo $loginerror; ?>" id="formerror">Invalid UserName or Password</p>
              <ul id='loginlist'>
                  <li id='uname'>

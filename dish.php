@@ -1,5 +1,4 @@
 <?php
-// INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
 
 $title = "dish";
@@ -87,7 +86,8 @@ if (isset($_GET['id'])) {
                         ?>
                     </div>
                 </div>
-            <?php } ?>
+            <?php
+        } ?>
 
             <div id="menu_info">
                 <p class="single_info">

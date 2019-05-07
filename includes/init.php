@@ -61,11 +61,7 @@ function exec_sql_query($db, $sql, $params = array())
 }
 
 // ^^^ DO NOT MODIFY/REMOVE ^^^
-
 // You may place any of your code here.
-
-
-
 /* Source: Code adapted from Lab 8 init */
 $loginerror = 'hidden';
 $db = open_or_init_sqlite_db("secure/site.sqlite", "secure/init.sql");
@@ -131,7 +127,6 @@ function find_COOKIE($session)
   }
   return NULL;
 }
-
 
 function session_login()
 {

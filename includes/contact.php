@@ -7,9 +7,8 @@ $submiterror = 'hidden';
 $name = '';
 $email = '';
 $response = '';
-$reason  = '';
-$delivery  = '';
-// $faqresponse  = '';
+$reason = '';
+$delivery = '';
 
 if (isset($_POST['faqsubmit'])) {
   $faqresponse = filter_input(INPUT_POST, 'faq', FILTER_SANITIZE_STRING);
@@ -20,7 +19,7 @@ if (isset($_POST['contactsubmit'])) {
   $email = filter_input(INPUT_POST, 'userEmail', FILTER_SANITIZE_EMAIL);
   $response = filter_input(INPUT_POST, 'response', FILTER_SANITIZE_STRING);
   $reason = filter_input(INPUT_POST, 'reason', FILTER_SANITIZE_STRING);
-  $delivery  = filter_input(INPUT_POST, 'delivery', FILTER_SANITIZE_STRING);
+  $delivery = filter_input(INPUT_POST, 'delivery', FILTER_SANITIZE_STRING);
   $valid_order = true;
   if (strlen($email) < 5) {
     $error2 = 'TEST';
@@ -58,7 +57,7 @@ if (isset($_POST['contactsubmit'])) {
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       $review_id = $db->lastInsertId("id");
-      echo ("Contact Messege Successfully Submitted!");
+      // echo ("Contact Messege Successfully Submitted!");
       $submiterror = 'hidden';
     } else {
       $submiterror = '';
@@ -67,43 +66,37 @@ if (isset($_POST['contactsubmit'])) {
 }
 ?>
 
-
 <div id="content-wrap">
   <article id="content">
 
     <?php
     if (isset($valid_order) && $valid_order) {
-      ?>
-      <h1 class=submit>Thank you for your feedback. We will get back to you shortly, <?php echo $name; ?> </h1>
-      <ul>
-        <li> <a>Name: <?php echo $name; ?></a></li>
-        <li> <a>Email: <?php echo $email;  ?></a></li>
-        <li> <a>Reason for contact: <?php echo $reason;  ?></a></li>
-        <li> <a>Delivery Option: <?php
-                                  echo $delivery;
-                                  ?></a></li>
-        <li> <a>Response: <?php echo $response;  ?></a></li>
-      </ul>
-    <?php
-
-  } else {
-    ?>
+      ?><div id='dfeedbacker'>
+          <h3 class=submit>Thank you for your feedback. We will get back to you shortly, <?php echo $name; ?> </h3>
+          <ul id='feedbacker'>
+            <li> <a><strong>Name:</strong> <?php echo $name; ?></a></li>
+            <li> <a><strong>Email:</strong> <?php echo $email; ?></a></li>
+            <li> <a><strong>Reason for contact: </strong> <?php echo $reason; ?></a></li>
+            <li> <a><strong>Delivery Option: </strong><?php echo $delivery; ?></a></li>
+            <li> <a><strong>Response: </strong><?php echo $response; ?></a></li>
+          </ul>
+      </div>
+    <?php 
+  } else { ?>
 
       <h2>Frequently Asked Questions</h2>
       <form action="contact.php" id="faqform" method="post" name="faqform">
         <div class='question'>
           <label for="faq"></label>
           <select id="faq" name="faq">
-
             <option value="hours" <?php if ($faqresponse == "hours") echo "selected"; ?>>
-              What are the store Hours?
-
+              What are the store hours?
             </option>
             <option value="adress" <?php if ($faqresponse == "adress") echo "selected"; ?>>
-              What is the store Adress?
+              What is the store address?
             </option>
             <option value="options" <?php if ($faqresponse == "options") echo "selected"; ?>>
-              What Delivery Options are offered?
+              What delivery options are offered?
             </option>
           </select>
           <input type="submit" name="faqsubmit" id='faqsubmit' value="ANSWER" />
@@ -129,6 +122,7 @@ if (isset($_POST['contactsubmit'])) {
             </ul>
           </fieldset>
         <?php
+
       }
       if ($faqresponse == "options") {
         ?>
@@ -138,10 +132,10 @@ if (isset($_POST['contactsubmit'])) {
               <li>Ithaca To Go</li>
               <li>Deliver Ithaca</li>
               <li>Grubhub</li>
-
             </ul>
           </fieldset>
         <?php
+
       }
       if ($faqresponse == "adress") {
 
@@ -151,17 +145,15 @@ if (isset($_POST['contactsubmit'])) {
             321 College Ave, Ithaca, NY 14850
           </fieldset>
         <?php
+
       }
     }
     ?>
-
-
       <h2>Please leave your feedback here:</h2>
-
       <form id="contact_order" method="post" action="contact.php">
         <fieldset class="review">
           <legend>Contact us Form</legend>
-          <p>Please leave us a messege here between 25 and 500 characters.</p>
+          <p>Please leave us a message here between 25 and 500 characters.</p>
 
           <p class="form_error2 <?php echo $submiterror; ?>" id="formerror">Errors have prevented your form from submission</p>
           <p class="form_error <?php echo $error; ?>" id="nameError">Please provide a name for your response: </p>
@@ -172,9 +164,7 @@ if (isset($_POST['contactsubmit'])) {
           <p class="form_error2 <?php echo $error2; ?>" id="nameError2">Please provide a valid email for your order in the form example@example.___:</p>
           <div class="emailcontainer">
             <label for="emailfield">Email:</label>
-            <input id="emailfield" type="text" name="userEmail" value="<?php
-                                                                        echo htmlspecialchars($email);
-                                                                        ?>" />
+            <input id="emailfield" type="text" name="userEmail" value="<?php echo htmlspecialchars($email); ?>" />
           </div>
           <div>
             <label for="reason">Please select your reason of Contact:</label> <select id="reason" name="reason">
@@ -208,23 +198,19 @@ if (isset($_POST['contactsubmit'])) {
               </option>
             </select>
           </div>
-          <p class="form_error3 <?php
-                                echo $error3;
-                                ?>" id="responseError">Your response did not meet the character requirement:</p>
+          <p class="form_error3 <?php echo $error3; ?>" id="responseError">Your response did not meet the character requirement:</p>
           <div>
             <label for="response">Please share your thoughts here:</label>
             <div>
-              <textarea id="response" name="response"> </textarea>
+              <textarea id="response" name="response" value=" ?>"><?php echo htmlspecialchars($response); ?>   </textarea>
             </div>
           </div>
           <input type="submit" name="contactsubmit" id='contactsubmit' value="ASK" />
         </fieldset>
       </form>
 
-    <?php
-
-  }
-  ?>
+    <?php 
+  } ?>
 
   </article>
 </div>
