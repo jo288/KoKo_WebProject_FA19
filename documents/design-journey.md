@@ -687,11 +687,22 @@ For accessing Database Elements from the form and then inputting them:
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 
+The client can now buy a server from bluehost or host gator and host the site using a domain name from Godaddy. This is likely to provide a more professional look to the site as opposed to using a shared server and offcoarse this is dependent on whether the client still wants to use the site. Based on what we have showed them so far, it appears as if they are please with it so no changes are neccessary at this point.
 
+The client was satisfied with the needs we met (aesthetic design, infomration outlet about hours, resturant history, dishes, menu, resturant communication through contact form, reviews to provide assurance of food quality and characteristics, and most important gallery to display the products in an easy way through tags to match all the different audiences). Similarly, the design was made in a simple and easy to use way with ajax and fewer button clicks to match people of all technological background levels. Since the target audience is focused primarily for Cornell students, on average Cornell students are more familar with technology and utilzation of forms, tags, and galleries.
 ## Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
 
+The website design is intended to be very user friendly and to represent the customer. The colors and design were chosen in specific to make reading the menu easy, to provide the customer with an aesthetic gallery, form etc.
+
+The webiste provides direct communication between the resturant and the customer through multiple forms. A direct contact form for direct communcation for the user, and a dashboard for the resturant to view and resolve the user's responses. Similarly, a review form to show the resturant consumers image of the resturant, and third through a gallery to have the resturant staff show the dishes to the ocnsumer.
+
+The website is designed to directly benefit the consumer through tags, reviews, and an easy menu regardless of the background. Tags allow users who might be vegetarians or vegans to also view dishes easily. Korean text is incorporated for a target audience who might be familar with the language. And in general items are centered for all people to see equally.
+
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
+With more time, we would have made a much more complex dashbaord for the resturant to use and be able to edit the content on the site. In this case the resutrant is able to manage the gallery by inputing or deleting new images. With more time we could have saved them time by having an edit section. Also we could have translated the whole site into Korean and had a button translate between the languages. We could have also included social media icons to connect it with social media pages.
+
 [3. Tell us anything else you need us to know for when we're looking at the project.]
+The resturant is secure and uses transactions for the databases to prevent removal of one item and its lack of inclusion in another database.
