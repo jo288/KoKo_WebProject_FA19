@@ -190,7 +190,7 @@ We may use these colors for designing the website to answer the client's request
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Home*:
     - introduce the client's restaurant with images
-    - Display few of the top menus and a link to see more menu
+    - display few of the top menus and a link to see more menu
   - *About*:
     - explain more in depth about the restaurant
     - provide a brief history/information about Korean cuisine
@@ -200,7 +200,7 @@ We may use these colors for designing the website to answer the client's request
     - clicking on a menu item takes the user to the dish page
   - *Gallery*:
     - display the different albums (by category and dietary restriction) of client's restaurant and the dishes it serves
-    - Clicking on album will take user to new page of pictures in that album
+    - clicking on album will take user to new page of pictures in that album
     - When the image is hovered over, display the title and description of the image as an overlay.
     - clicking on an image takes the user to the dish page
   - *Dish*:
@@ -215,6 +215,9 @@ We may use these colors for designing the website to answer the client's request
   - *Login*:
     - allows employees to log in
     - logging in allows employee to see received contact forms and manage (add/delete) images in the photo gallery
+  - *Upload Image*:
+    - is only visible when the user is logged in
+    - allows the user to upload an image to the gallery
 
 - **Process**
   - Card sort 1:
@@ -525,6 +528,12 @@ Added Pages:
 Dish (dish.php)
 ![Dish page final](dishfinal.jpg)
 
+Upload Image (upload_images.php)
+![Upload Image page final](uploadimage_final.jpg)
+
+Log In (employee.php)
+![Log In page final](login_final.jpg)
+
 ## Database Schema
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
@@ -544,7 +553,7 @@ Table: dietary_restriction
 * field 1: id: INTEGER {PK, U, Not, AI}
 * field 2: dietary_restriction: TEXT {U, Not}
 
-Table: diet_menu
+Table: diet_tags
 * field 1: id: INTEGER {PK, U, Not, AI}
 * field 2: diet_id: INTEGER {Not}
 * field 3: menu_id: INTEGER {Not}
@@ -558,28 +567,13 @@ Table: images
 * field 6: description: TEXT
 
 Table: reviews
-* field 1: id
-* field 2: date
-* field 3: reviewer
-* field 4: email
-* field 5: rating
-* field 6: review_title
-* field 7: comment
-
-Table: diet_tags
-* field 1: id
-* field 2: menu_id
-* field 3: diet_id
-
-Table: users
-* field 1: id
-* field 2: username
-* field 3: password
-
-Table: sessions
-* field 1: id
-* field 2: user_id
-* field 3: session
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: date: DATE {Not}
+* field 3: reviewer: TEXT {Not}
+* field 4: email: TEXT
+* field 5: rating: INTEGER {Not}
+* field 6: review_title TEXT
+* field 7: comment TEXT
 
 Table: users
 * field 1: id: INTEGER {PK, U, Not, AI}
@@ -836,11 +830,11 @@ The client was satisfied with the needs we met (aesthetic design, infomration ou
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
 
-The website design is intended to be very user friendly and to represent the customer. The colors and design were chosen in specific to make reading the menu easy, to provide the customer with an aesthetic gallery, form etc.
+The website design is intended to be very user friendly and to represent the customer. The colors and design were chosen in specific to make reading the menu easy, to provide the customer with an aesthetic gallery, form etc. We also intended the design to reflect the restaurant's atmosphere and the food they serve and chose the background image and fonts accordingly. Individual dish pages can be accessed from both the menu and the galllery allowing the users to easily access the information on the menu they find interesting.
 
-The webiste provides direct communication between the resturant and the customer through multiple forms. A direct contact form for direct communcation for the user, and a dashboard for the resturant to view and resolve the user's responses. Similarly, a review form to show the resturant consumers image of the resturant, and third through a gallery to have the resturant staff show the dishes to the ocnsumer.
+The webiste provides direct communication between the resturant and the customer through multiple forms. A direct contact form for direct communcation for the user, and a dashboard for the resturant to view and resolve the user's responses. Similarly, a review form to show the resturant consumers image of the resturant, and third through a gallery to have the resturant staff show the dishes to the consumer.
 
-The website is designed to directly benefit the consumer through tags, reviews, and an easy menu regardless of the background. Tags allow users who might be vegetarians or vegans to also view dishes easily. Korean text is incorporated for a target audience who might be familar with the language. And in general items are centered for all people to see equally.
+The website is designed to directly benefit the consumer through tags, reviews, and an easy menu regardless of the background of the users. Tags allow users who might be vegetarians or vegans to also view dishes easily. Korean text is incorporated for a target audience who might be familar with the language. And in general items are centered for all people to see equally.
 
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
