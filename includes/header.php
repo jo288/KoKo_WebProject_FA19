@@ -3,7 +3,7 @@
       <!-- Image Created by Jinju Ouck -->
       <a href="index.php"><img alt="KoKo Logo" src="images/kokotemplogo.png" /></a>
     </div>
-    <nav id="menu">
+    <nav id="navmenu">
       <ul>
         <?php
         $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews');

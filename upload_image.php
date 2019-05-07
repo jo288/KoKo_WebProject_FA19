@@ -120,8 +120,8 @@ if (isset($_POST['upload_submit'])) {
             </form>
         <?php } ?>
     </main>
+    <?php include("includes/footer.php"); ?>
 </body>
 
-<?php include("includes/footer.php"); ?>
 
-</html>s
+</html>

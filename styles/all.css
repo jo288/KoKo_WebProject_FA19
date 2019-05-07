@@ -440,11 +440,11 @@ h2 {
 	color:white;
 }
 
-#deleterform{
+.deleterform{
 	display:inline-block;
 	/* border: black 1px solid; */
 }
-#deleter{
+.deleter{
 	margin: 10px 0;
 	padding: 10px;
 	font-size: 14px;
