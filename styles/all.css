@@ -532,7 +532,7 @@ textarea.review {
 }
 /* display of actual reviews*/
 
-div.display_review {
+div.display_review, .display_contact {
 	/* margin: 10px; */
 	padding: 10px 10px 10px 35px;
 	border-bottom: rgb(255, 94, 0) 2px solid;
@@ -552,6 +552,13 @@ div.inner_display_review_right, .inner_display_contactr {
 	overflow: hidden;
 	margin-top: 0px;
 	width: 50%;
+}
+.inner_display_contactr {
+	width: 800px;
+}
+.inner_display_contactr p{
+	width:100%;
+	overflow-wrap: break-word;
 }
 .display_review_title, .display_contact_title {
 	font-weight: bold;
@@ -653,6 +660,7 @@ fieldset.contactform {
 	margin-right: 55px;
 	border: 1px solid;
 	padding: 15px;
+	margin-bottom: 50px;
 }
 textarea.contactform {
 	width: 400px;
@@ -823,4 +831,9 @@ textarea.contactform {
 	margin: 10px auto;
 	text-align: center;
 	color: red;
+}
+
+#contact_form_response {
+	overflow-wrap: break-word;
+	width: 800px;
 }

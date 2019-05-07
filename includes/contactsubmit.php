@@ -33,7 +33,7 @@
                 }
             }
             ?>
-            <div class="display_review">
+            <div class="display_contact">
                 <!--Each table column is echoed into a td cell-->
                 <div class="inner_display_contactl">
                     <p><strong><?php echo htmlspecialchars($record['name']); ?></strong></p>
@@ -43,8 +43,8 @@
                 </div>
                 <div class="inner_display_contactr">
                     <p>
-                    <p><?php echo htmlspecialchars($record['review_title']); ?></p>
-                    <p><?php echo htmlspecialchars($record['text']); ?></p>
+                        <p><?php echo htmlspecialchars($record['review_title']); ?></p>
+                        <p><?php echo htmlspecialchars($record['text']); ?></p>
                 </div>
                 <div>
                     <form action="employee.php" method="get">

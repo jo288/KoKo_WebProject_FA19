@@ -78,7 +78,7 @@ if (isset($_POST['contactsubmit'])) {
           <li> <a><strong>Email:</strong> <?php echo $email; ?></a></li>
           <li> <a><strong>Reason for contact: </strong> <?php echo $reason; ?></a></li>
           <li> <a><strong>Delivery Option: </strong><?php echo $delivery; ?></a></li>
-          <li> <a><strong>Response: </strong><?php echo $response; ?></a></li>
+          <li> <a id="contact_form_response"><strong>Response: </strong><?php echo $response; ?></a></li>
         </ul>
       </div>
     <?php
