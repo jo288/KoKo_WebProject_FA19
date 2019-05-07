@@ -432,7 +432,7 @@ input.review {
 	font-size: 100%;
 	margin: 5px 5px 5px 20px;
 }
-fieldset.review, fieldset.adress, fieldset.hours, fieldset.options, fieldset.feedback {
+fieldset.review, fieldset.adress, fieldset.hours, fieldset.options{
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
@@ -633,6 +633,21 @@ fieldset.contactform {
 	border: 1px solid;
 	/* padding: 15px; */
 }
+
+/* contact verify page */
+	#dfeedbacker{
+	width: 50%;
+	margin: 10px auto 50px auto;
+	padding: 15px;
+}
+
+#feedbacker {
+	list-style-type: none;
+	line-height: 150%;
+	margin-top: 10px;
+
+}
+
 .contactsubmiss {
 	margin-left: 55px;
 	margin-right: 55px;
@@ -692,10 +707,7 @@ textarea.contactform {
 	list-style-type: none;
 	line-height: 150%;
 }
-#feedbacker {
-	list-style-type: none;
-	line-height: 150%;
-}
+
 #login {
 	text-decoration: none;
 	color: whitesmoke;
