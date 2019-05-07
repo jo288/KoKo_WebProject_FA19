@@ -72,16 +72,16 @@ if (isset($_POST['contactsubmit'])) {
     <?php
     if (isset($valid_order) && $valid_order) {
       ?><div id='dfeedbacker'>
-          <h3 class=submit>Thank you for your feedback. We will get back to you shortly, <?php echo $name; ?> </h3>
-          <ul id='feedbacker'>
-            <li> <a><strong>Name:</strong> <?php echo $name; ?></a></li>
-            <li> <a><strong>Email:</strong> <?php echo $email; ?></a></li>
-            <li> <a><strong>Reason for contact: </strong> <?php echo $reason; ?></a></li>
-            <li> <a><strong>Delivery Option: </strong><?php echo $delivery; ?></a></li>
-            <li> <a><strong>Response: </strong><?php echo $response; ?></a></li>
-          </ul>
+        <h3 class=submit>Thank you for your feedback. We will get back to you shortly, <?php echo $name; ?> </h3>
+        <ul id='feedbacker'>
+          <li> <a><strong>Name:</strong> <?php echo $name; ?></a></li>
+          <li> <a><strong>Email:</strong> <?php echo $email; ?></a></li>
+          <li> <a><strong>Reason for contact: </strong> <?php echo $reason; ?></a></li>
+          <li> <a><strong>Delivery Option: </strong><?php echo $delivery; ?></a></li>
+          <li> <a><strong>Response: </strong><?php echo $response; ?></a></li>
+        </ul>
       </div>
-    <?php 
+    <?php
   } else { ?>
 
       <h2>Frequently Asked Questions</h2>
@@ -112,13 +112,13 @@ if (isset($_POST['contactsubmit'])) {
           <fieldset class='hours'>
             <legend>Store Hours</legend>
             <ul id='storehours'>
-              <li>Wednesday 11:30AM–9:30PM</li>
-              <li>Thursday 11:30AM–9:30PM</li>
-              <li>Friday 11:30AM–9:30PM</li>
-              <li>Saturday 11:30AM–9:30PM</li>
-              <li>Sunday 11:30AM–9:30PM</li>
-              <li>Monday 11:30AM–9:30PM</li>
+              <li>Sunday 11:30AM–9:00PM</li>
+              <li>Monday 11:30AM–9:00PM</li>
               <li>Tuesday Closed</li>
+              <li>Wednesday 11:30AM–9:00PM</li>
+              <li>Thursday 11:30AM–9:00PM</li>
+              <li>Friday 11:30AM–9:00PM</li>
+              <li>Saturday 11:30AM–9:00PM</li>
             </ul>
           </fieldset>
         <?php
@@ -129,9 +129,9 @@ if (isset($_POST['contactsubmit'])) {
           <fieldset class='options'>
             <legend>Delivery Options</legend>
             <ul>
-              <li>Ithaca To Go</li>
-              <li>Deliver Ithaca</li>
-              <li>Grubhub</li>
+              <li><a href="https://www.ithacatogo.com/r/1712/restaurants/delivery/Korean/Koko-Ithaca" target="_blank">Ithaca To Go</a></li>
+              <li><a href="https://www.deliverithaca.com/" target="_blank">Deliver Ithaca</a></li>
+              <li><a href="https://www.grubhub.com/delivery/ny-ithaca" target="_blank">Grubhub</a></li>
             </ul>
           </fieldset>
         <?php
@@ -169,16 +169,16 @@ if (isset($_POST['contactsubmit'])) {
           <div>
             <label for="reason">Please select your reason of Contact:</label> <select id="reason" name="reason">
               <option value="RequestInformation" <?php if ($reason == "RequestInformation") echo "selected"; ?>>
-                Request More Information.
+                Request More Information
               </option>
               <option value="Reservation" <?php if ($reason == "Reservation") echo "selected"; ?>>
-                Make a reservation.
+                Make a reservation
               </option>
               <option value="Feedback" <?php if ($reason == "Feedback") echo "selected"; ?>>
-                Provide feedback or Get Help.
+                Provide feedback or Get Help
               </option>
               <option value="Other" <?php if ($reason == "Other") echo "selected"; ?>>
-                Other.
+                Other
               </option>
             </select>
           </div>
@@ -209,7 +209,7 @@ if (isset($_POST['contactsubmit'])) {
         </fieldset>
       </form>
 
-    <?php 
+    <?php
   } ?>
 
   </article>

@@ -23,7 +23,6 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
     <main id="contact_main">
         <?php if ($current_user == null) {
             include("includes/contact.php"); ?>
-            <!-- <h2 id='employee'>Employee Contact Responses</h2> -->
         <?php  } ?>
         <?php
         if ($current_user == null) {

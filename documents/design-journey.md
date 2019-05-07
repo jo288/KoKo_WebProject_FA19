@@ -173,10 +173,11 @@ We may use these colors for designing the website to answer the client's request
   - Reviews
   - Dish
   - Contact
+  - Login
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Home*:
-    - introduce the client's restaurant with images and short introductory sentences
+    - introduce the client's restaurant with images
     - Display few of the top menus and a link to see more menu
   - *About*:
     - explain more in depth about the restaurant
@@ -184,20 +185,24 @@ We may use these colors for designing the website to answer the client's request
   - *Menu*:
     - display menu items with descriptions
     - address dietary restrictions by allowing to filter for vegetarian, vegan, and gluten free foods
+    - clicking on a menu item takes the user to the dish page
   - *Gallery*:
-    - display the different albums of client's restaurant and the dishes it serves
-    - Clicking on album will take user to new page of pictures of that album
-    - Allow the users to select specific tags to display certain pictures
+    - display the different albums (by category and dietary restriction) of client's restaurant and the dishes it serves
+    - Clicking on album will take user to new page of pictures in that album
     - When the image is hovered over, display the title and description of the image as an overlay.
+    - clicking on an image takes the user to the dish page
   - *Dish*:
-    - shows the information (photo, dish name, ingredients, dietary restrictions, price, etc) about a single dish
+    - shows the detailed information (photos, dish name, dietary restrictions, price) about a single dish
     - clicking on menu item in menu page or photo in photo gallery page will take user to dish page
   - *Reviews*:
-    - display customer reviews of clients resturant
-    - Allow users to write own review of restaurant and sort through current reviews based on rating or date of review.
+    - display customer reviews of client's restaurant
+    - Allow users to write a review of restaurant and sort through current reviews based on rating or date of review
   - *Contact*:
     - A way to contact the resturant and submit reservations or orders
     - can ask questions
+  - *Login*:
+    - allows employees to log in
+    - logging in allows employee to see received contact forms and manage (add/delete) images in the photo gallery
 
 - **Process**
   - Card sort 1:
@@ -210,47 +215,47 @@ We may use these colors for designing the website to answer the client's request
 
 [What interactive features will your site have? What PHP elements will you include?]
 
-The site will use PHP templates for header and footer. Header template will include the website's title as well as the navigation bar which will reflect the current page the user is on. Footer template will display the copyright information for the page displayed and basic contact information of the client.
-
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
 
-The site will have the menu of the restaurant the user will be able to filter for dietary restrictions (vegetarian, vegan, gluten free). Clicking on the individual dishes will redirect the user to the page with detailed information on the dish, including the related images from the gallery displayed as a slideshow.
+The site will use PHP templates for header and footer. Header template will include the website's title as well as the navigation bar which will reflect the current page the user is on. Footer template will display the copyright information for the page displayed and basic contact information of the client.
 
-The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it.
+The site will have the menu of the restaurant the user will be able to filter by dietary restrictions (vegetarian, vegan, gluten free). Clicking on the individual dishes will redirect the user to a page with detailed information about the dish, including the related images from the gallery displayed as a slideshow.
 
-The site also will have a review form and a contact form. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. The contact form will allow the user to directly interact with the client
-and the client will be able to login to see the contact form responses from the users. The client also will be able to delete a response after they have responded to it. The review form will allow the other members of the target audience. In addition, when logged in a client can add or delete image in the gallery.
+The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it. Clicking on an image of a dish will redirect the user to a page with detailed information about the dish.
 
-
+The site also will have a review form and a contact form. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. The contact form will allow the user to directly interact with the client and the client will be able to login to see the contact form responses from the users. Employees will also be able to delete a response after they have responded to it. The review form will allow the other members of the target audience. In addition, when logged in, an employee can add or delete image in the gallery.
 
 ## Work Distribution
 
 [Describe how each of your responsibilities will be distributed among your group members.]
 
   - Task distribution
-    - Tricia: menu, about
+    - Tricia: menu, about, dish
       - 4/17: draw sketches for about and menu pages
       - 4/23: create database schema for menu, plan php code and sql queries for their page
-      - 4/27: upload pictures of food from koko's to be used in gallery, create menu seed data to be referenced also in gallery
+      - 4/27: upload pictures of food from koko's to be used in gallery, create menu seed data to be referenced also in gallery, work on dish page
       - 5/3: finish all html/css and most functionality in time for demo
+      - 5/7: finalize menu and dish pages based on peer feedback
     - Khalid: contact
       - 4/17: draw sketches for contact page
       - 4/23: create database schema for contact, plan php code and sql queries for their page
       - 5/3: finish all html/css and most functionality in time for demo
-    - Jinju: index, photo gallery
+      - 5/7: finalize contact and login page based on peer feedback
+    - Jinju: index, photo gallery, about
       - 4/17: write up index.php with templates first which can then be used as a template for other pages
       - 4/17: write up a css for the general styling of all the pages
       - 4/23: create database schema for images, plan php code and sql queries for their page
       - 5/3: finish all html/css and most functionality in time for demo
+      - 5/7: finalize photo gallery page based on peer feedback
     - Kaitlyn: reviews
       - 4/17: draw sketches for review page
       - 4/23: create database schema for reviews, plan php code and sql queries for their page
       - 5/3: finish all html/css and most functionality in time for demo
+      - 5/7: finalize reviews page based on peer feedback
     - All members:
       - 4/17: work on design-journey.md to complete Milestone 1
       - 4/23: work on design-journey.md to complete Milestone 2
       - 5/7: put finishing touches of respective parts for Final Submission and work on design-journey
-
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
@@ -503,34 +508,55 @@ Table: menu
 * field 2: menu name
 * field 3: description
 * field 4: price
-* field 5: dietary restriction id
-* field 6: category id
+* field 6: category_id
 
 Table: categories
 * field 1: id
 * field 2: category
 
-Table: dietary restriction
+Table: diets
 * field 1: id
-* field 2: dietary restriction
+* field 2: diet
 
 Table: images
 * field 1: id
-* field 2: image name
-* field 3: image extention
-* field 4: menu id
-* field 5: image source
-* field 6: review id
+* field 2: image_name
+* field 3: image_ext
+* field 4: menu_id
+* field 5: source
+* field 6: review_id
 
 Table: reviews
-* field 1: id: INTEGER {PK, U, Not, AI}
-* field 2: date: DATE {Not}
-* field 3: reviewer: TEXT {Not}
-* field 4: email: TEXT
-* field 5: rating: INTEGER {Not}
-* field 6: review_title TEXT
-* field 7: comment TEXT
+* field 1: id
+* field 2: date
+* field 3: reviewer
+* field 4: email
+* field 5: rating
+* field 6: review_title
+* field 7: comment
 
+Table: diet_tags
+* field 1: id
+* field 2: menu_id
+* field 3: diet_id
+
+Table: users
+* field 1: id
+* field 2: username
+* field 3: password
+
+Table: sessions
+* field 1: id
+* field 2: user_id
+* field 3: session
+
+Table: contact
+* field 1: id
+* field 2: name
+* field 3: email
+* field 4: reason
+* field 5: text
+* field 6: delivery
 
 ## Database Queries
 
@@ -538,11 +564,17 @@ Table: reviews
 
 ### menu.php queries:
 ```
+For getting all diets
+SELECT * FROM diets;
+
 For getting all categories
 SELECT * FROM categories
 
 For getting all menu items in a certain category
-SELECT menu_name, description FROM menu INNER JOIN categories ON category_id = categories.id WHERE category = :category
+"SELECT id, menu_name, description FROM menu WHERE category_id = :cat;
+
+For getting all menu items in a certain category that matches the filtered diet
+SELECT menu.id, menu_name, description FROM menu INNER JOIN diet_tags ON menu.id = diet_tags.menu_id INNER JOIN diets ON diet_tags.diet_id = diets.id WHERE menu.category_id = :cat AND diets.diet = :diet;
 ```
 
 ### dish.php queries:
@@ -552,6 +584,9 @@ SELECT * FROM menu WHERE id = :id
 
 For getting the images of a single menu item
 SELECT * FROM images WHERE menu_id = :id
+
+For getting all the diet tags of a single menu item
+SELECT diets.diet FROM diet_tags LEFT OUTER JOIN diets ON diet_tags.diet_id = diets.id WHERE menu_id = :id;
 ```
 
 ### gallery.php queries:
@@ -578,6 +613,18 @@ Display reviews:
 SELECT * FROM reviews
 ```
 
+### delete.php queries:
+```
+For deleting image
+DELETE FROM images WHERE id = :id;
+```
+
+### upload_image.php queries:
+```
+For uploading image
+INSERT INTO images (menu_id, image_name, image_ext, description, source) VALUES (:menu_id,:image_name,:image_ext,:description,:source)
+```
+
 ## PHP File Structure
 
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
@@ -589,18 +636,20 @@ SELECT * FROM reviews
 * dish.php
 * reviews.php
 * contact.php
+* employee.php
+* upload_image.php (only visible when logged in)
+* delete.php
 
 
 ## Pseudocode
 
 [For each PHP file, plan out your pseudocode. You probably want a subheading for each file.]
 
-### General Code
-
-#### To extract info from the database:
-
+### General Code To extract info from the database:
+```
 Open the database, select all the values from the table to display, except
 then create a table to input all the database values using html, then using sql code select all the values in the database and put the in array format while executing and storing all the array values in a variable. Then a function opens up all of the elements and prints them out individually as specified to be part of the table ignoring any encodings with in the characters. Every element needs to be printed in the array variable that they were stored in.
+```
 
 ### header.php
 ```
@@ -647,7 +696,6 @@ if menu is set
   if user clicks on the picture
     then redirect to the dish page with the according menu id
     else do nothing
-
 ```
 
 ### reviews.php
@@ -695,11 +743,29 @@ For accessing Database Elements from the form and then inputting them:
 - If it was valid, hide the form and post the users input in its place. Then open the database ot access it and insert the values into the database.
 ```
 
+### upload_image.php
+```
+if upload form is submitted
+  make sure all fields are valid
+  use SQL to add image to the images databse
+  if image was successfully added
+    display success message
+  else
+    display error message
+```
+
+### delete.php
+```
+if delete button for image is clicked
+  use SQL to remove image from images database
+  display success message
+```
+
 ## Additional Comments
 
 [Add any additional comments you have here.]
 
-### Changes from Milestone 1 to Milestone 2
+Changes from Milestone 1 to Milestone 2:
 - More involve interactivity
 - add dishes page
 - search function on the reviews
@@ -708,14 +774,6 @@ For accessing Database Elements from the form and then inputting them:
 - transaction for reviews
 - more involved contact page
 
-### Mistakes on Milestone
-- Interactive features are more complex than Project 3 ( Interactive features demonstrate creativity beyond just copying what's has already been done in this class.)
-  - slideshow on dish page
-  - transactions
-  - possible translation
-- Short description of work distribution includes assigned duties, work expectations, and expected internal deadlines.
-- Needs and wants
-
 --- <!-- ^^^ Milestone 2; vvv Milestone 3 -->
 
 ## Issues & Challenges
@@ -723,7 +781,6 @@ For accessing Database Elements from the form and then inputting them:
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
 
 - database had to be updated for diet tags
-
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
 
@@ -749,9 +806,12 @@ The website is designed to directly benefit the consumer through tags, reviews, 
 With more time, we would have made a much more complex dashbaord for the resturant to use and be able to edit the content on the site. In this case the resutrant is able to manage the gallery by inputing or deleting new images. With more time we could have saved them time by having an edit section. Also we could have translated the whole site into Korean and had a button translate between the languages. We could have also included social media icons to connect it with social media pages.
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]
+
 The resturant is secure and uses transactions for the databases to prevent removal of one item and its lack of inclusion in another database.
 
-##Changes from Milestone 3 to Final Submission
-- created separate login page for client
-- added more functionality for login users (can see contact form responses and delete them, can add or delete images in gallery)
+## Changes from Milestone 3 to Final Submission
+- created separate login page for employees
+- added more functionality for logged in users (can see contact form responses and delete them, can add or delete images in gallery)
 - slightly modified design/styling (more contrast in navigation bar text and background)
+- added Korean text next to the menu item names
+- added color change upon hovering over menu items to help indicate that they are links

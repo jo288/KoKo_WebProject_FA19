@@ -1,12 +1,11 @@
 BEGIN TRANSACTION;
 
-CREATE TABLE users (
+CREATE TABLE `users` (
 	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	username TEXT NOT NULL UNIQUE,
 	password TEXT NOT NULL
 );
 
--- Sessions Table
 CREATE TABLE `sessions` (
 	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	user_id INTEGER NOT NULL,
@@ -19,7 +18,7 @@ CREATE TABLE `contact` (
 	email TEXT NOT NULL,
 	reason TEXT NOT NULL,
 	text TEXT NOT NULL,
-	delivery TEXT TEXT NOT NULL
+	delivery TEXT NOT NULL
 );
 
 CREATE TABLE `menu`
@@ -435,8 +434,5 @@ INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VAL
 INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (53, 55, 'champong1.jpg', 'jpg', 'Cham Pong', 'Tricia Park');
 INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (54, 55, 'champong2.jpg', 'jpg', 'Cham Pong', 'Tricia Park');
 INSERT INTO images (id, menu_id, image_name, image_ext, description, source) VALUES (55, 48, 'ddookbaegi.jpg', 'jpg', 'Ddook Bae Gi Bul Go Gi', 'Tricia Park');
-
-
--- TODO: FOR HASHED PASSWORDS, LEAVE A COMMENT WITH THE PLAIN TEXT PASSWORD!
 
 COMMIT;
