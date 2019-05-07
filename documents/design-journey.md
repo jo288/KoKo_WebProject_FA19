@@ -523,28 +523,32 @@ Dish (dish.php)
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
 Table: menu
-* field 1: id
-* field 2: menu name
-* field 3: description
-* field 4: price
-* field 5: dietary restriction id
-* field 6: category id
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: menu_name: TEXT {Not}
+* field 3: description: TEXT
+* field 4: price: INTEGER
+* field 6: category_id: INTEGER {Not}
 
 Table: categories
-* field 1: id
-* field 2: category
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: category: TEXT {U, Not}
 
-Table: dietary restriction
-* field 1: id
-* field 2: dietary restriction
+Table: dietary_restriction
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: dietary_restriction: TEXT {U, Not}
+
+Table: diet_menu
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: diet_id: INTEGER {Not}
+* field 3: menu_id: INTEGER {Not}
 
 Table: images
-* field 1: id
-* field 2: image name
-* field 3: image extention
-* field 4: menu id
-* field 5: image source
-* field 6: review id
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: image_name: TEXT
+* field 3: image_extention: TEXT {Not}
+* field 4: menu_id: INTEGER
+* field 5: image_source: TEXT {Not}
+* field 6: description: TEXT
 
 Table: reviews
 * field 1: id: INTEGER {PK, U, Not, AI}
@@ -555,6 +559,15 @@ Table: reviews
 * field 6: review_title TEXT
 * field 7: comment TEXT
 
+Table: users
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: username: TEXT {U, Not}
+* field 3: password: TEXT {Not}
+
+Table: sessions
+* field 1: id: INTEGER {PK, U, Not, AI}
+* field 2: user_id: INTEGER {Not}
+* field 3: session: TEXT {U, Not}
 
 ## Database Queries
 
