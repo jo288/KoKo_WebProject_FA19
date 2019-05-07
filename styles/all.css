@@ -187,6 +187,7 @@ main {
 .home_topmenu p{
 	padding: 5px;
 	color:white;
+	text-align: center;
 }
 .home_topmenu img{
 	width: 100%;
@@ -440,11 +441,11 @@ h2 {
 	color:white;
 }
 
-#deleterform{
+.deleterform{
 	display:inline-block;
 	/* border: black 1px solid; */
 }
-#deleter{
+.deleter{
 	margin: 10px 0;
 	padding: 10px;
 	font-size: 14px;
@@ -503,6 +504,10 @@ textarea.review{
 	border-radius: 3px;
 	margin-right: 50px;
 }
+#deleter{
+	margin-bottom: 50px;
+}
+
 
 #write_review_button{
 	/* margin-left: 1100px; */
@@ -830,4 +835,50 @@ textarea.contactform{
 	padding: 5px;
 	background-color: #333333;
 	border-radius: 3px;
+}
+
+/* UPLOAD */
+#upload_main{
+	width:80%;
+}
+#upload_main h2{
+	margin: 30px 0;
+}
+
+#upload {
+	width: 50%;
+	margin: 30px auto;
+	border: 1px solid black;
+}
+
+#upload ul{
+	list-style: none;
+	padding: 30px;
+}
+#upload ul li{
+	margin: 10px 0;
+}
+#upload ul li label{
+	display:inline-block;
+	width: 140px;
+}
+#upload textarea{
+	margin-top: 10px;
+}
+
+#uploadButton{
+	display:inline-block;
+	text-decoration: none;
+  color: whitesmoke;
+	font-size: 16px;
+	background-color: #333333;
+	padding: 5px 10px;
+	height: 30px;
+	border-radius: 3px;
+	margin-right: 50px;
+}
+.upload_alert{
+	margin: 10px auto;
+	text-align: center;
+	color: red;
 }

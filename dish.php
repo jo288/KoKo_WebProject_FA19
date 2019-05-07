@@ -87,7 +87,8 @@ if (isset($_GET['id'])) {
                         ?>
                     </div>
                 </div>
-            <?php } ?>
+            <?php 
+        } ?>
 
             <div id="menu_info">
                 <p class="single_info">
@@ -106,12 +107,12 @@ if (isset($_GET['id'])) {
                             ?>
                             <li><?php echo htmlspecialchars($diet_tag["diet"]) ?></li>
                         <?php
+
                     } ?>
                     </ul>
                 </div>
             </div>
         </div>
-
     </main>
 
     <?php include("includes/footer.php"); ?>

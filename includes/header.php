@@ -3,17 +3,17 @@
       <!-- Image Created by Jinju Ouck -->
       <a href="index.php"><img alt="KoKo Logo" src="images/kokotemplogo.png" /></a>
     </div>
-    <nav id="menu">
+    <nav id="navmenu">
       <ul>
         <?php
+        $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews');
         if ($current_user != null) {
-          $contact = 'Add Image';
-          $employee = 'Responses';
+          $nav['upload_image.php'] = 'Upload Image';
+          $nav['employee.php'] = 'Responses';
         } else {
-          $contact = 'Contact';
-          $employee = 'Login';
+          $nav['contact.php'] = 'Contact';
+          $nav['employee.php'] = 'Login';
         }
-        $nav = array('index.php' => 'Home', 'about.php' => 'About', 'menu.php' => 'Menu', 'gallery.php' => 'Gallery',  'reviews.php' => 'Reviews', 'contact.php' => $contact, 'employee.php' => $employee);
 
         $current = basename($_SERVER['PHP_SELF']);
 

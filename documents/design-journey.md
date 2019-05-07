@@ -197,10 +197,9 @@ The site will have the menu of the restaurant the user will be able to filter fo
 
 The user can also view the images of the dishes in the gallery page, which will include albums of different menu categories, dietary restrictions, etc. Clicking on an album will allow the users to view the photos inside it.
 
-The site also will have a contact form and a review form. The contact form will allow the user to directly interact with the client
-and the client will be able to login to see the contact form responses from the users. After viewing the reponses and responding to the user, the client will be able to delete the response. 
+The site also will have a review form and a contact form. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. The contact form will allow the user to directly interact with the client
+and the client will be able to login to see the contact form responses from the users. The client also will be able to delete a response after they have responded to it. The review form will allow the other members of the target audience. In addition, when logged in a client can add or delete image in the gallery. 
 
-The review form will allow the other members of the target audience. The review form will be sticky and provide responsive feedback to the user. The review page will also allow the client to get feedback about their restaurant and allow them to upload reviews, ratings, comments. The review page will have a search for customers to search of reviews for their specific dish orders. 
 
 
 ## Work Distribution
@@ -212,20 +211,20 @@ The review form will allow the other members of the target audience. The review 
       - 4/17: draw sketches for about and menu pages
       - 4/23: create database schema for menu, plan php code and sql queries for their page
       - 4/27: upload pictures of food from koko's to be used in gallery, create menu seed data to be referenced also in gallery
-      - 5/3: finish all html/css and most functionality of page in time for demo
+      - 5/3: finish all html/css and most functionality in time for demo
     - Khalid: contact
       - 4/17: draw sketches for contact page
       - 4/23: create database schema for contact, plan php code and sql queries for their page 
-      - 5/3: finish all html/css and most functionality of page in time for demo
+      - 5/3: finish all html/css and most functionality in time for demo
     - Jinju: index, photo gallery
       - 4/17: write up index.php with templates first which can then be used as a template for other pages
       - 4/17: write up a css for the general styling of all the pages
       - 4/23: create database schema for images, plan php code and sql queries for their page
-      - 5/3: finish all html/css and most functionality of page in time for demo
+      - 5/3: finish all html/css and most functionality in time for demo
     - Kaitlyn: reviews
       - 4/17: draw sketches for review page
       - 4/23: create database schema for reviews, plan php code and sql queries for their page 
-      - 5/3: finish all html/css and most functionality of page in time for demo
+      - 5/3: finish all html/css and most functionality in time for demo
     - All members:
       - 4/17: work on design-journey.md to complete Milestone 1
       - 4/23: work on design-journey.md to complete Milestone 2 
@@ -251,8 +250,7 @@ Client approved of our initial design. She liked the color scheme and layouts of
 
 [Improve your design based on the feedback you received from your client.]
 
-Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. Also the review page will now allow uploading images to the gallery which is something that will allow more interaction with the users and allow the client to have a larger array of images to display on the website.
-
+Based on the design feedback we decided to introduce a dish page in order to see the individual dishes with a slideshow gallery. The dish page will display the desired dish linked from the gallery or the menu. The contact form was changed to include more items that the client wanted like access to Ithaca To Go, Deliver Ithaca w/Grubhub, pickup, more information, etc. 
 
 ## Evaluate your Design
 
@@ -553,7 +551,7 @@ For search (note: will use parameter markers):
 SELECT * FROM reviews WHERE comment LIKE "%search_field%"
 
 For adding a review (will use parameter markers):
-INSERT INTO reviews (id, date, reviewer, email, rating, review_title, comment, image_id) VALUES (values form the form)
+INSERT INTO reviews (id, date, reviewer, email, rating, review_title, comment) VALUES (values form the form)
 
 Display reviews:
 SELECT * FROM reviews
@@ -652,8 +650,6 @@ For uploading a users review (incl image):
   - check that the email matches the appropriate specifications otherwise show an error message
   - check that a rating was given, if not show error message
   - check that a review comment was given, if not show error message
-  - if user upload some file:
-    - check that file is a jpeg or png otherwise display error message
   - if all fields satisfied, then display successfully submitted message and add review to database
 
   if pressed cancel button:
@@ -705,7 +701,7 @@ For accessing Database Elements from the form and then inputting them:
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
 
-- database had to be updated for diet tags
+- database had to be updated for diet tags 
 
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
@@ -714,11 +710,27 @@ For accessing Database Elements from the form and then inputting them:
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 
+The client can now buy a server from bluehost or host gator and host the site using a domain name from Godaddy. This is likely to provide a more professional look to the site as opposed to using a shared server and offcoarse this is dependent on whether the client still wants to use the site. Based on what we have showed them so far, it appears as if they are please with it so no changes are neccessary at this point.
 
+The client was satisfied with the needs we met (aesthetic design, infomration outlet about hours, resturant history, dishes, menu, resturant communication through contact form, reviews to provide assurance of food quality and characteristics, and most important gallery to display the products in an easy way through tags to match all the different audiences). Similarly, the design was made in a simple and easy to use way with ajax and fewer button clicks to match people of all technological background levels. Since the target audience is focused primarily for Cornell students, on average Cornell students are more familar with technology and utilzation of forms, tags, and galleries.
 ## Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
 
+The website design is intended to be very user friendly and to represent the customer. The colors and design were chosen in specific to make reading the menu easy, to provide the customer with an aesthetic gallery, form etc.
+
+The webiste provides direct communication between the resturant and the customer through multiple forms. A direct contact form for direct communcation for the user, and a dashboard for the resturant to view and resolve the user's responses. Similarly, a review form to show the resturant consumers image of the resturant, and third through a gallery to have the resturant staff show the dishes to the ocnsumer.
+
+The website is designed to directly benefit the consumer through tags, reviews, and an easy menu regardless of the background. Tags allow users who might be vegetarians or vegans to also view dishes easily. Korean text is incorporated for a target audience who might be familar with the language. And in general items are centered for all people to see equally.
+
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
 
+With more time, we would have made a much more complex dashbaord for the resturant to use and be able to edit the content on the site. In this case the resutrant is able to manage the gallery by inputing or deleting new images. With more time we could have saved them time by having an edit section. Also we could have translated the whole site into Korean and had a button translate between the languages. We could have also included social media icons to connect it with social media pages.
+
 [3. Tell us anything else you need us to know for when we're looking at the project.]
+The resturant is secure and uses transactions for the databases to prevent removal of one item and its lack of inclusion in another database.
+
+##Changes from Milestone 3 to Final Submission
+- created separate login page for client
+- added more functionality for login users (can see contact form responses and delete them, can add or delete images in gallery)
+- slightly modified design/styling (more contrast in navigation bar text and background)
