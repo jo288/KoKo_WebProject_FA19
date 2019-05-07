@@ -37,6 +37,12 @@ $db = open_or_init_sqlite_db('secure/site.sqlite', 'secure/init.sql');
             );
             $records = exec_sql_query($db, $sql, $params);
             if ($records) {
+              $filenames = glob("./uploads/" . $_GET["deleter"] . ".*");
+              if (unlink($filenames[0])) {
+                echo "<h2 class='delete_alert'> Image deleted </h2>";
+                echo "<a id='deleteBack' href='gallery.php'><h2>Back To Gallery</h2></a>";
+              }
+
               echo "<h2 class='delete_alert'> Image deleted </h2>";
               echo "<a id='deleteBack' href='gallery.php'><h2>Back To Gallery</h2></a>";
             } else {

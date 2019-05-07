@@ -9,8 +9,11 @@ $email = '';
 $response = '';
 $reason  = '';
 $delivery  = '';
-$faqresponse  = '';
+// $faqresponse  = '';
 
+if (isset($_POST['faqsubmit'])) {
+  $faqresponse = filter_input(INPUT_POST, 'faq', FILTER_SANITIZE_STRING);
+}
 
 if (isset($_POST['contactsubmit'])) {
   $name = filter_input(INPUT_POST, 'order_name', FILTER_SANITIZE_STRING);
@@ -90,29 +93,27 @@ if (isset($_POST['contactsubmit'])) {
       <form action="contact.php" id="faqform" method="post" name="faqform">
         <div class='question'>
           <label for="faq"></label>
-          <select id="faq" name="faq" value="<?php
-                                              echo htmlspecialchars($faqresponse);
-                                              ?>">
+          <select id="faq" name="faq">
 
-            <option value=hours>
+            <option value="hours" <?php if ($faqresponse == "hours") echo "selected"; ?>>
               What are the store Hours?
 
             </option>
-            <option value="adress">
+            <option value="adress" <?php if ($faqresponse == "adress") echo "selected"; ?>>
               What is the store Adress?
             </option>
-            <option value="options">
+            <option value="options" <?php if ($faqresponse == "options") echo "selected"; ?>>
               What Delivery Options are offered?
             </option>
-            <input type="submit" name="faqsubmit" id='faqsubmit' value="ANSWER" />
           </select>
+          <input type="submit" name="faqsubmit" id='faqsubmit' value="ANSWER" />
         </div>
       </form>
 
       <?php
 
       if (isset($_POST['faqsubmit'])) {
-        $faqresponse = filter_input(INPUT_POST, 'faq', FILTER_SANITIZE_STRING);
+        // $faqresponse = filter_input(INPUT_POST, 'faq', FILTER_SANITIZE_STRING);
         if ($faqresponse == "hours") {
           ?>
           <fieldset class='hours'>
@@ -170,45 +171,41 @@ if (isset($_POST['contactsubmit'])) {
           </div>
           <p class="form_error2 <?php echo $error2; ?>" id="nameError2">Please provide a valid email for your order in the form example@example.___:</p>
           <div class="emailcontainer">
-            <label for="email_field">Email:</label>
+            <label for="emailfield">Email:</label>
             <input id="emailfield" type="text" name="userEmail" value="<?php
                                                                         echo htmlspecialchars($email);
                                                                         ?>" />
           </div>
           <div>
-            <label for="reason">Please select your reason of Contact:</label> <select id="reason" name="reason" value="<?php
-                                                                                                                        echo htmlspecialchars($reason);
-                                                                                                                        ?>">
-              <option value="RequestInformation">
+            <label for="reason">Please select your reason of Contact:</label> <select id="reason" name="reason">
+              <option value="RequestInformation" <?php if ($reason == "RequestInformation") echo "selected"; ?>>
                 Request More Information.
               </option>
-              <option value="Reservation">
+              <option value="Reservation" <?php if ($reason == "Reservation") echo "selected"; ?>>
                 Make a reservation.
               </option>
-              <option value="Feedback">
+              <option value="Feedback" <?php if ($reason == "Feedback") echo "selected"; ?>>
                 Provide feedback or Get Help.
               </option>
-              <option value="Other">
+              <option value="Other" <?php if ($reason == "Other") echo "selected"; ?>>
                 Other.
               </option>
             </select>
           </div>
           <div>
-            <label for="delivery">Delivery Method:</label> <select id="delivery" name="delivery" value="<?php
-                                                                                                        echo htmlspecialchars($delivery);
-                                                                                                        ?>">
-              <option value="IthacaToGo">
+            <label for="delivery">Delivery Method:</label> <select id="delivery" name="delivery">
+              <option value="IthacaToGo" <?php if ($delivery == "IthacaToGo") echo "selected"; ?>>
                 Ithaca To Go
               </option>
-              <option value="DeliverIthaca">
+              <option value="DeliverIthaca" <?php if ($delivery == "DeliverIthaca") echo "selected"; ?>>
                 Deliver Ithaca
               </option>
-              <option value="GrubHub">
+              <option value="GrubHub" <?php if ($delivery == "GrubHub") echo "selected"; ?>>
                 Grubhub
               </option>
-              <option value="Pickup">
+              <option value="Pickup" <?php if ($delivery == "Pickup") echo "selected"; ?>>
                 Pick Up From Store
-              </option><?php echo htmlspecialchars($response);  ?>
+              </option>
             </select>
           </div>
           <p class="form_error3 <?php
@@ -217,8 +214,7 @@ if (isset($_POST['contactsubmit'])) {
           <div>
             <label for="response">Please share your thoughts here:</label>
             <div>
-              <textarea id="response" name="response" value=" ?>"><?php
-                                                                  echo htmlspecialchars($response);  ?> </textarea>
+              <textarea id="response" name="response"> </textarea>
             </div>
           </div>
           <input type="submit" name="contactsubmit" id='contactsubmit' value="ASK" />
