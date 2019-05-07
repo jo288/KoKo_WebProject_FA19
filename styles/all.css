@@ -466,7 +466,6 @@ h2 {
 	margin-top: 20px;
 	margin-left: 20px;
 	margin-bottom: 20px;
-	/* text-align: center; */
 }
 
 input.review{
@@ -483,6 +482,7 @@ fieldset.review, fieldset.adress,fieldset.hours,fieldset.options{
 }
 
 textarea.review{
+	margin-top: 5px;
   width: 400px;
   height: 200px;
 	font-size: 17px;
@@ -511,7 +511,19 @@ textarea.review{
 	width: 150px;
 	height: 40px;
 	padding: 10px;
+}
 
+/*add/cancel review buttons*/
+.input_review{
+	display:inline-block;
+	text-decoration: none;
+  color: whitesmoke;
+	font-size: 16px;
+	background-color: #333333;
+	width: 150px;
+	height: 30px;
+	border-radius: 3px;
+	margin-top: 20px;
 }
 
 /* next and back button*/
@@ -594,6 +606,10 @@ div.inner_display_review{
 	font-size: 18px;
 	margin-bottom: 5px;
 }
+
+
+
+
 /* Logout Button */
 #logout_but{
 	color: red;
