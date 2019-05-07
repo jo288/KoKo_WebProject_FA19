@@ -201,11 +201,11 @@ if (isset($_POST['cancel_review'])) {
       foreach ($records as $record) { ?>
         <div class="display_review">
           <!--Each table column is echoed into a td cell-->
-          <div id="left" class="inner_display_review">
+          <div class="inner_display_review_left">
             <p><?php echo htmlspecialchars($record['reviewer']); ?></p>
             <p><?php echo htmlspecialchars($record['date']); ?></p>
           </div>
-          <div id="right" class="inner_display_review">
+          <div class="inner_display_review_right">
             <p>
               <?php $stars = intval($record["rating"]);
               for ($i = 1; $i <= 5; $i++) {
@@ -216,7 +216,7 @@ if (isset($_POST['cancel_review'])) {
                 }
               }
               ?></p>
-            <p id="display_review_title"><?php echo htmlspecialchars($record['review_title']); ?></p>
+            <p class="display_review_title"><?php echo htmlspecialchars($record['review_title']); ?></p>
             <p><?php echo htmlspecialchars($record['comment']); ?></p>
           </div>
         </div>
@@ -231,9 +231,10 @@ if (isset($_POST['cancel_review'])) {
           <input type="hidden" name="filter" value="<?php echo $filter; ?>" />
           <input type="hidden" name="search" value="<?php echo $search; ?>" />
           <button id="review_back_button" class="review_button" type="submit" name="submit_back"
-             <?php if ($page <= 0) echo "disabled"; ?>>< Back </button> 
+             <?php if ($page <= 0) echo "disabled"; ?>> &lt; Back  
+          </button>
           <button id="review_next_button" class="review_button" type="submit" name="submit_next" 
-            <?php if (sizeof($records) < 4) echo "disabled"; ?>> Next >
+            <?php if (sizeof($records) < 4) echo "disabled"; ?>> Next &gt;
           </button>
          </form>
       </div>
